@@ -71,7 +71,14 @@
       width: auto;
       object-fit: contain;
     }
-
+    
+    /* 🌟 Timeline logo hover + consistency */
+    .timeline-item img {
+      transition: transform 0.3s ease;
+    }
+    .timeline-item:hover img {
+      transform: scale(1.05);
+    }
     /* Smooth logo carousel */
     @keyframes scroll-slow {
       0% { transform: translateX(0); }
