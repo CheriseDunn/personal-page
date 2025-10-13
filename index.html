@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <!-- =============================== -->
+  <!-- 🌐 META + SEO CONFIGURATION -->
+  <!-- =============================== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Cherise Dunn - Global Leader in Health Technology & Innovation</title>
+  <title>Dr. Cherise Dunn – Global Leader in Health Technology & Innovation</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Personal website for Dr. Cherise Dunn, a Harvard Fellow and Oppenheimer Memorial Trust Fellow building resilient, equitable healthcare systems for emerging economies.">
-  <meta property="og:title" content="Dr. Cherise Dunn - Global Leader in Health Technology & Innovation">
-  <meta property="og:description" content="Explore the work of Dr. Cherise Dunn, an expert in health system design, digital manufacturing, and innovation policy.">
+  <meta name="description" content="Dr. Cherise Dunn – Harvard Fellow and Oppenheimer Memorial Trust Fellow advancing innovation and digital manufacturing for global health equity.">
+  <meta property="og:title" content="Dr. Cherise Dunn – Global Leader in Health Technology & Innovation">
+  <meta property="og:description" content="Explore Dr. Dunn’s global impact across innovation, policy, and health systems design.">
   <meta property="og:image" content="./Logos/Harvard_University_logo.svg.png">
-  <meta property="og:url" content="https://cherisedunn.github.io/personal-page/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Tailwind -->
+  <!-- =============================== -->
+  <!-- 🎨 STYLING + TAILWIND CONFIG -->
+  <!-- =============================== -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 
   <script>
@@ -35,409 +37,491 @@
     }
   </script>
 
+  <!-- =============================== -->
+  <!-- 🧩 GLOBAL CUSTOM CSS -->
+  <!-- =============================== -->
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Hero banner background */
     .hero-bg {
-      background-image: linear-gradient(rgba(0, 33, 71, 0.85), rgba(0, 33, 71, 0.85)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400');
+      background-image: linear-gradient(rgba(0, 33, 71, 0.85), rgba(0, 33, 71, 0.85)),
+        url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400');
       background-size: cover;
       background-position: center;
-      background-attachment: fixed;
     }
+
+    /* Timeline reveal animation */
     .timeline-item {
       opacity: 0;
       transform: translateY(50px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
+
     .timeline-item.is-visible {
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* Uniform logo scaling */
     .timeline-logo img {
-      max-height: 3.5rem;
+      max-height: 48px;
       width: auto;
       object-fit: contain;
-      transition: transform 0.3s ease;
     }
-    .timeline-logo img:hover { transform: scale(1.05); }
-    @media (max-width: 768px) { .timeline-logo img { max-height: 2.8rem; } }
+
+    /* Smooth logo carousel */
+    @keyframes scroll-slow {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .animate-scroll-slow {
+      display: flex;
+      animation: scroll-slow 25s linear infinite;
+    }
   </style>
 </head>
 
 <body class="bg-off-white text-navy">
 
-  <!-- Header -->
+  <!-- =============================== -->
+  <!-- 🧭 HEADER + NAVIGATION -->
+  <!-- =============================== -->
   <header class="bg-off-white/80 shadow-sm sticky top-0 z-50 backdrop-blur-lg">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#" class="text-xl font-bold text-navy tracking-tight">DR. CHERISE DUNN</a>
       <div class="hidden md:flex items-center space-x-8">
-        <a href="#about" class="text-navy/80 hover:text-crimson font-medium">About</a>
-        <a href="#expertise" class="text-navy/80 hover:text-crimson font-medium">Expertise</a>
-        <a href="#engagements" class="text-navy/80 hover:text-crimson font-medium">Engagements</a>
-        <a href="#insights" class="text-navy/80 hover:text-crimson font-medium">Insights</a>
-        <a href="#contact" class="bg-crimson text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-crimson-darker transition duration-300">Advisory Inquiries</a>
+        <a href="#about" class="hover:text-crimson font-medium">About</a>
+        <a href="#expertise" class="hover:text-crimson font-medium">Expertise</a>
+        <a href="#engagements" class="hover:text-crimson font-medium">Engagements</a>
+        <a href="#insights" class="hover:text-crimson font-medium">Insights</a>
+        <a href="#contact" class="bg-crimson text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-crimson-darker transition">Advisory Inquiries</a>
       </div>
-      <div class="flex items-center md:hidden">
-        <button id="mobile-menu-button" class="text-navy" aria-expanded="false" aria-controls="mobile-menu">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-        </button>
-      </div>
+
+      <!-- 📱 MOBILE MENU BUTTON -->
+      <button id="mobile-menu-button" class="md:hidden text-navy" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
     </nav>
+
+    <!-- 📱 MOBILE DROPDOWN MENU -->
     <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
-      <a href="#about" class="block text-navy/80 hover:text-crimson py-2">About</a>
-      <a href="#expertise" class="block text-navy/80 hover:text-crimson py-2">Expertise</a>
-      <a href="#engagements" class="block text-navy/80 hover:text-crimson py-2">Engagements</a>
-      <a href="#insights" class="block text-navy/80 hover:text-crimson py-2">Insights</a>
-      <a href="#contact" class="block bg-crimson text-white text-center mt-2 px-4 py-2 rounded-lg font-semibold hover:bg-crimson-darker transition duration-300">Advisory Inquiries</a>
+      <a href="#about" class="block py-2 hover:text-crimson">About</a>
+      <a href="#expertise" class="block py-2 hover:text-crimson">Expertise</a>
+      <a href="#engagements" class="block py-2 hover:text-crimson">Engagements</a>
+      <a href="#insights" class="block py-2 hover:text-crimson">Insights</a>
+      <a href="#contact" class="block bg-crimson text-white text-center mt-2 px-4 py-2 rounded-lg hover:bg-crimson-darker">Advisory Inquiries</a>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- =============================== -->
+  <!-- 🏔 HERO SECTION -->
+  <!-- =============================== -->
   <section class="hero-bg text-white">
     <div class="container mx-auto px-6 py-24 md:py-32 text-center">
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Designing Resilient Health Systems for a Digital Age.</h1>
-      <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-200 mb-8">Harvard Fellow and Oppenheimer Memorial Trust Fellow leveraging technology and policy to build resilient, equitable healthcare systems for emerging economies.</p>
-      <a href="#expertise" class="bg-crimson text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-crimson-darker transition duration-300">Explore My Expertise</a>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+        Designing Resilient Health Systems for a Digital Age.
+      </h1>
+      <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-200 mb-8">
+        Global innovator and Harvard Fellow leveraging technology and policy to build resilient, equitable healthcare systems.
+      </p>
+      <a href="#expertise" class="bg-crimson text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-crimson-darker transition">
+        Explore My Expertise
+      </a>
     </div>
   </section>
 
-  <!-- Carousel -->
+  <!-- =============================== -->
+  <!-- 🏛 FEATURED IN: LOGO CAROUSEL -->
+  <!-- =============================== -->
   <section class="bg-light-grey py-16">
     <div class="container mx-auto px-6">
-      <h3 class="text-center text-navy/60 font-semibold uppercase tracking-wider mb-10">Trusted by Global Institutions & Featured In</h3>
-      <div class="overflow-hidden relative">
-        <div class="flex animate-[scroll_30s_linear_infinite] space-x-12 justify-center items-center">
-          <img src="./Logos/G20-Brasil-2024.png" alt="G20 Logo" class="h-12 timeline-logo">
-          <img src="./Logos/BRICS_2023_Logo.svg" alt="BRICS Logo" class="h-12 timeline-logo">
-          <img src="./Logos/Harvard_University_logo.svg.png" alt="Harvard" class="h-14 timeline-logo">
-          <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" alt="MIT" class="h-14 timeline-logo">
-          <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" alt="US State Dept" class="h-14 timeline-logo">
-          <img src="./Logos/Fast_Company_logo.svg" alt="Fast Company" class="h-12 timeline-logo">
-          <img src="./Logos/TEDx-Cape-Town-Logo.png" alt="TEDx" class="h-8 timeline-logo">
+      <h3 class="text-center text-navy/60 font-semibold uppercase tracking-wider mb-10">
+        Trusted by Global Institutions & Featured In
+      </h3>
+      <div class="relative overflow-hidden">
+        <div class="flex space-x-12 animate-scroll-slow">
+          <img src="./Logos/G20-Brasil-2024.png" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition">
+          <img src="./Logos/BRICS_2023_Logo.svg" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition">
+          <img src="./Logos/Harvard_University_logo.svg.png" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition">
+          <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition">
+          <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition">
+          <img src="./Logos/Fast_Company_logo.svg" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition">
+          <img src="./Logos/TEDx Cape Town Logo.png" class="h-10 object-contain grayscale opacity-70 hover:opacity-100 transition">
         </div>
       </div>
     </div>
   </section>
-
-<!-- Continue below -->
-  <!-- About Section -->
+  <!-- =============================== -->
+  <!-- 💡 ABOUT SECTION -->
+  <!-- =============================== -->
   <section id="about" class="bg-off-white py-20 md:py-28">
     <div class="container mx-auto px-6 grid md:grid-cols-3 gap-16 items-start">
+
+      <!-- 👩 MAIN BIOGRAPHY -->
       <div class="md:col-span-2">
         <h2 class="text-3xl md:text-4xl font-bold text-navy mb-6">A New Model for Global Innovation</h2>
         <div class="space-y-6 text-navy/80 leading-relaxed">
-          <p>My journey began not in a boardroom, but in a lab. A PhD in Medical Biochemistry provided a foundational understanding of human health, but it was the distance from a lab bench to a patient's bedside that defined my mission: to bridge the vast gap between brilliant ideas and real-world human impact.</p>
-          <p>This conviction led me to co-found <strong class="text-navy">SOUTH AFRICA MAKES</strong>, where we challenged the status quo of global healthcare supply chains. Using pioneering digital manufacturing, we developed a model for local, context-specific innovation that now serves as a case study for emerging economies worldwide.</p>
-          <p>My operating principle is clear: <strong class="text-navy">'innovation without inclusion is not progress.'</strong> This is the evidence-based perspective I bring to policy discussions at the African Union, G20, and BRICS forums, advocating for frameworks that ensure the Fourth Industrial Revolution empowers the underserved.</p>
+          <p>My journey began not in a boardroom, but in a lab. A PhD in Medical Biochemistry provided a foundational understanding of human health, but it was the distance from a lab bench to a patient's bedside that defined my mission: to bridge the vast gap between brilliant ideas and real-world impact.</p>
+          <p>This conviction led me to co-found <strong class="text-navy">SOUTH AFRICA MAKES</strong>, where we challenged the status quo of global healthcare supply chains using digital manufacturing. We developed a model for local innovation that now serves as a case study for emerging economies worldwide.</p>
+          <p>My guiding principle is simple: <strong>'innovation without inclusion is not progress.'</strong> This perspective informs my contributions to African Union, G20, and BRICS policy forums on equitable innovation ecosystems.</p>
           <p>I’m driven to ensure that the next generation of digital health systems are not only intelligent — but also inclusive.</p>
         </div>
       </div>
 
-      <!-- Sidebar: At a Glance -->
+      <!-- 📜 SIDEBAR: AT A GLANCE -->
       <aside class="md:col-span-1 sticky top-28">
-        <div class="space-y-6">
-          <div class="group relative rounded-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=800&auto=format&fit=crop" alt="Dr. Dunn speaking at a global summit" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-            <div class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-50 transition-all duration-300 flex items-end p-4">
-              <p class="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-semibold">Presenting at a Global Forum</p>
-            </div>
-          </div>
-          <div class="group relative rounded-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop" alt="Dr. Dunn collaborating with innovators" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-            <div class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-50 transition-all duration-300 flex items-end p-4">
-              <p class="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-semibold">Collaborating with Innovators</p>
-            </div>
-          </div>
-
-          <div class="bg-light-grey/50 p-6 rounded-lg">
-            <h3 class="text-lg font-bold text-navy mb-4">At a Glance</h3>
-            <p class="text-sm text-navy/80 mb-4">10+ years of experience leading global partnerships and innovation initiatives across emerging markets and the U.S.</p>
-            <ul class="text-sm text-navy/80 space-y-2">
-              <li><strong class="text-navy">Co-founder & COO:</strong> SOUTH AFRICA MAKES</li>
-              <li><strong class="text-navy">Education:</strong> MPH, Harvard University; PhD, Medical Biochemistry</li>
-              <li><strong class="text-navy">Honors:</strong> Harvard Fellow; Oppenheimer Memorial Trust Fellow; Mail & Guardian Top 200 Young South Africans</li>
-            </ul>
-            <a href="./assets/dr-cherise-dunn-cv.pdf" download="Dr-Cherise-Dunn-CV.pdf" class="mt-4 inline-block w-full text-center bg-crimson text-white px-4 py-2.5 rounded-lg font-semibold text-sm hover:bg-crimson-darker transition duration-300">Download Full CV</a>
-          </div>
+        <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
+          <h3 class="text-lg font-bold text-navy mb-4">At a Glance</h3>
+          <p class="text-sm text-navy/80 mb-4">10+ years leading global partnerships and innovation initiatives across emerging markets and the U.S.</p>
+          <ul class="text-sm text-navy/80 space-y-2">
+            <li><strong>Co-founder & COO:</strong> SOUTH AFRICA MAKES</li>
+            <li><strong>Education:</strong> MPH, Harvard University; PhD, Medical Biochemistry</li>
+            <li><strong>Honors:</strong> Harvard Fellow; Oppenheimer Memorial Trust Fellow; Mail & Guardian Top 200 Young South Africans</li>
+          </ul>
+          <a href="./assets/dr-cherise-dunn-cv.pdf" download="Dr-Cherise-Dunn-CV.pdf"
+             class="mt-4 inline-block w-full text-center bg-crimson text-white px-4 py-2.5 rounded-lg font-semibold text-sm hover:bg-crimson-darker transition">
+             Download Full CV
+          </a>
         </div>
       </aside>
     </div>
   </section>
 
-  <!-- Areas of Expertise -->
+  <!-- =============================== -->
+  <!-- 🧬 AREAS OF EXPERTISE SECTION -->
+  <!-- =============================== -->
   <section id="expertise" class="bg-light-grey py-20 md:py-28">
     <div class="container mx-auto px-6">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-navy">Areas of Expertise</h2>
-        <p class="mt-4 text-lg text-navy/80 max-w-2xl mx-auto">Providing strategic counsel at the intersection of technology, policy, and global health — translating innovation into impact through AI ethics, ecosystem development, and health systems transformation.</p>
+        <p class="mt-4 text-lg text-navy/80 max-w-2xl mx-auto">
+          Providing strategic counsel at the intersection of technology, policy, and health system transformation.
+        </p>
       </div>
 
+      <!-- 🧩 Expertise Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <div class="bg-off-white p-8 rounded-lg shadow-lg">
+        <div class="bg-off-white p-8 rounded-lg shadow-lg hover:-translate-y-1 transition-transform duration-300">
           <h3 class="font-bold text-lg text-crimson mb-2">Health System Transformation</h3>
-          <p class="text-navy/80">Advising on digital-first, value-based health models that strengthen resilience and equity.</p>
+          <p>Advising on digital-first, value-based, and equitable healthcare models.</p>
         </div>
-        <div class="bg-off-white p-8 rounded-lg shadow-lg">
-          <h3 class="font-bold text-lg text-crimson mb-2">Supply Chain Resilience & Digitalization</h3>
-          <p class="text-navy/80">Building agile, localized supply chains through digital manufacturing and additive technologies.</p>
+        <div class="bg-off-white p-8 rounded-lg shadow-lg hover:-translate-y-1 transition-transform duration-300">
+          <h3 class="font-bold text-lg text-crimson mb-2">Supply Chain Resilience</h3>
+          <p>Building localized supply networks through additive manufacturing and digital logistics.</p>
         </div>
-        <div class="bg-off-white p-8 rounded-lg shadow-lg">
+        <div class="bg-off-white p-8 rounded-lg shadow-lg hover:-translate-y-1 transition-transform duration-300">
           <h3 class="font-bold text-lg text-crimson mb-2">AI & Technology Strategy</h3>
-          <p class="text-navy/80">Guiding integration and commercialization of emerging technologies for public good.</p>
+          <p>Guiding ethical AI integration and commercialization for global health impact.</p>
         </div>
-        <div class="bg-off-white p-8 rounded-lg shadow-lg">
+        <div class="bg-off-white p-8 rounded-lg shadow-lg hover:-translate-y-1 transition-transform duration-300">
           <h3 class="font-bold text-lg text-crimson mb-2">Strategic Ecosystem Development</h3>
-          <p class="text-navy/80">Forging multi-stakeholder alliances between government, academia, and industry to accelerate innovation.</p>
+          <p>Forging partnerships between government, academia, and industry to accelerate innovation.</p>
         </div>
-        <div class="bg-off-white p-8 rounded-lg shadow-lg">
+        <div class="bg-off-white p-8 rounded-lg shadow-lg hover:-translate-y-1 transition-transform duration-300">
           <h3 class="font-bold text-lg text-crimson mb-2">Health-Tech Go-to-Market</h3>
-          <p class="text-navy/80">Creating commercialization pathways for MedTech and digital health innovations.</p>
+          <p>Creating commercialization pathways for MedTech and digital health innovations.</p>
         </div>
-        <div class="bg-off-white p-8 rounded-lg shadow-lg">
+        <div class="bg-off-white p-8 rounded-lg shadow-lg hover:-translate-y-1 transition-transform duration-300">
           <h3 class="font-bold text-lg text-crimson mb-2">Future-Ready Talent Strategy</h3>
-          <p class="text-navy/80">Designing workforce skilling frameworks for the Fourth Industrial Revolution.</p>
+          <p>Designing skilling frameworks and workforce strategies for the Fourth Industrial Revolution.</p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Global Influence & Engagements -->
+  <!-- =============================== -->
+  <!-- 🌍 GLOBAL IMPACT TIMELINE -->
+  <!-- =============================== -->
   <section id="engagements" class="bg-off-white py-20 md:py-28">
     <div class="container mx-auto px-6">
       <div class="text-center mb-20">
         <h2 class="text-3xl md:text-4xl font-bold text-navy">A Record of Global Impact</h2>
-        <p class="mt-4 text-lg text-navy/80 max-w-3xl mx-auto">A timeline of selected engagements demonstrating a track record of advising at the highest levels of government, industry, and academia.</p>
+        <p class="mt-4 text-lg text-navy/80 max-w-3xl mx-auto">
+          A timeline of selected engagements, showcasing contributions at the highest levels of government, academia, and industry.
+        </p>
       </div>
 
+      <!-- Timeline container -->
       <div class="relative max-w-3xl mx-auto">
-        <div class="absolute left-10 md:left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-light-grey"></div>
+        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-light-grey"></div>
         <div class="space-y-20">
-          <!-- Timeline Item 1 -->
-          <div class="timeline-item relative flex">
-            <div class="w-full md:w-1/2 md:pr-12 pl-28 md:pl-0 md:text-right">
+
+          <!-- Harvard -->
+          <div class="timeline-item relative flex flex-col md:flex-row items-center">
+            <div class="hidden md:block w-1/2 pr-12 text-right">
               <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
                 <p class="text-sm text-navy/60">2024 – Cambridge, USA</p>
                 <p class="font-bold text-lg text-crimson mt-1">Harvard University Fellow</p>
-                <p class="text-sm text-navy/80 mt-2">Awarded the Harvard South Africa Fellowship to pursue a Master of Public Health at the T.H. Chan School of Public Health.</p>
+                <p class="text-sm text-navy/80 mt-2">
+                  Awarded the prestigious Harvard South Africa Fellowship to pursue an MPH at the T.H. Chan School of Public Health.
+                </p>
               </div>
             </div>
-            <div class="absolute left-10 md:left-1/2 transform -translate-x-1/2 bg-off-white p-1 rounded-full z-10 timeline-logo">
-              <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg p-2">
-                <img src="./Logos/Harvard_University_logo.svg.png" alt="Harvard Logo" loading="lazy">
+            <div class="timeline-logo absolute left-1/2 transform -translate-x-1/2 bg-off-white p-2 rounded-full shadow-lg">
+              <img src="./Logos/Harvard_University_logo.svg.png" alt="Harvard University Logo" class="h-12 object-contain" loading="lazy">
+            </div>
+            <div class="md:hidden w-full text-center mt-20">
+              <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
+                <p class="text-sm text-navy/60">2024 – Cambridge, USA</p>
+                <p class="font-bold text-lg text-crimson mt-1">Harvard University Fellow</p>
+                <p class="text-sm text-navy/80 mt-2">Awarded the prestigious Harvard South Africa Fellowship to pursue an MPH at the T.H. Chan School of Public Health.</p>
               </div>
             </div>
-            <div class="hidden md:block w-1/2"></div>
           </div>
-          <!-- Timeline Item 2 -->
-          <div class="timeline-item relative flex">
-            <div class="hidden md:block w-1/2"></div>
-            <div class="absolute left-10 md:left-1/2 transform -translate-x-1/2 bg-off-white p-1 rounded-full z-10 timeline-logo">
-              <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg p-2">
-                <img src="./Logos/G20-Brasil-2024.png" alt="G20 Logo" loading="lazy">
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 pl-28 md:pl-12">
+
+          <!-- G20 -->
+          <div class="timeline-item relative flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/2 md:pl-12 order-2 md:order-1 mt-20 md:mt-0">
               <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
                 <p class="text-sm text-navy/60">2024 – Macapá, Brazil</p>
                 <p class="font-bold text-lg text-crimson mt-1">G20 Startup20 Forum</p>
-                <p class="text-sm text-navy/80 mt-2">Represented South Africa in the official G20 Startup20 Forum, signing an MoU to advance 3D Printing for Development and inclusive innovation frameworks.</p>
+                <p class="text-sm text-navy/80 mt-2">
+                  Represented South Africa in a policy-shaping forum, signing a strategic MoU to advance 3D Printing for Development.
+                </p>
               </div>
+            </div>
+            <div class="timeline-logo absolute left-1/2 transform -translate-x-1/2 bg-off-white p-2 rounded-full shadow-lg">
+              <img src="./Logos/G20-Brasil-2024.png" alt="G20 Logo" class="h-12 object-contain" loading="lazy">
             </div>
           </div>
 
-          <!-- Timeline Item 3 -->
-          <div class="timeline-item relative flex">
-            <div class="w-full md:w-1/2 md:pr-12 pl-28 md:pl-0 md:text-right">
+          <!-- Stanford -->
+          <div class="timeline-item relative flex flex-col md:flex-row items-center">
+            <div class="hidden md:block w-1/2 pr-12 text-right">
               <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-                <p class="text-sm text-navy/60">2023 – Cape Town, South Africa</p>
+                <p class="text-sm text-navy/60">2023 – Cape Town, SA</p>
                 <p class="font-bold text-lg text-crimson mt-1">Stanford University Collaboration</p>
-                <p class="text-sm text-navy/80 mt-2">Hosted Stanford’s Vice Provost of Undergraduate Education to co-develop mentorship frameworks linking Stanford and South African youth innovators.</p>
+                <p class="text-sm text-navy/80 mt-2">
+                  Hosted the Vice Provost of Undergraduate Education to establish a peer mentorship framework linking Stanford and South African youth innovators.
+                </p>
               </div>
             </div>
-            <div class="absolute left-10 md:left-1/2 transform -translate-x-1/2 bg-off-white p-1 rounded-full z-10 timeline-logo">
-              <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg p-2">
-                <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" alt="Stanford Collaboration Logo" loading="lazy">
-              </div>
+            <div class="timeline-logo absolute left-1/2 transform -translate-x-1/2 bg-off-white p-2 rounded-full shadow-lg">
+              <img src="./Logos/Stanford_Seal.svg" alt="Stanford Logo" class="h-12 object-contain" loading="lazy">
             </div>
-            <div class="hidden md:block w-1/2"></div>
           </div>
 
-          <!-- Timeline Item 4 -->
-          <div class="timeline-item relative flex">
-            <div class="hidden md:block w-1/2"></div>
-            <div class="absolute left-10 md:left-1/2 transform -translate-x-1/2 bg-off-white p-1 rounded-full z-10 timeline-logo">
-              <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg p-2">
-                <img src="./Logos/BRICS_2023_Logo.svg" alt="BRICS Logo" loading="lazy">
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 pl-28 md:pl-12">
+          <!-- White House -->
+          <div class="timeline-item relative flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/2 md:pl-12 order-2 md:order-1 mt-20 md:mt-0">
               <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-                <p class="text-sm text-navy/60">2023 – Gqeberha, South Africa</p>
-                <p class="font-bold text-lg text-crimson mt-1">BRICS Young Innovator Finalist</p>
-                <p class="text-sm text-navy/80 mt-2">Recognized for AI-driven topology optimization research for pediatric medical devices at the BRICS Young Innovators Summit.</p>
+                <p class="text-sm text-navy/60">2022 – Pretoria, SA</p>
+                <p class="font-bold text-lg text-crimson mt-1">White House OSTP</p>
+                <p class="text-sm text-navy/80 mt-2">
+                  Presented to the U.S. Office of Science & Technology Policy on leveraging point-of-care manufacturing for health equity.
+                </p>
               </div>
+            </div>
+            <div class="timeline-logo absolute left-1/2 transform -translate-x-1/2 bg-off-white p-2 rounded-full shadow-lg">
+              <img src="./Logos/US-WhiteHouse-Emblem.svg.png" alt="White House Logo" class="h-12 object-contain" loading="lazy">
             </div>
           </div>
 
-          <!-- Timeline Item 5 -->
-          <div class="timeline-item relative flex">
-            <div class="w-full md:w-1/2 md:pr-12 pl-28 md:pl-0 md:text-right">
+          <!-- U.S. Department of State -->
+          <div class="timeline-item relative flex flex-col md:flex-row items-center">
+            <div class="hidden md:block w-1/2 pr-12 text-right">
               <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-                <p class="text-sm text-navy/60">2022 – Washington, D.C., USA</p>
-                <p class="font-bold text-lg text-crimson mt-1">U.S. White House OSTP</p>
-                <p class="text-sm text-navy/80 mt-2">Presented to the Office of Science & Technology Policy on leveraging distributed manufacturing for health equity in low-resource settings.</p>
+                <p class="text-sm text-navy/60">2022 – Cape Town, SA</p>
+                <p class="font-bold text-lg text-crimson mt-1">U.S. Deputy Secretary of State</p>
+                <p class="text-sm text-navy/80 mt-2">
+                  Hosted Hon. Wendy Sherman to discuss emerging technologies and bilateral trade partnerships in South Africa’s healthcare sector.
+                </p>
               </div>
             </div>
-            <div class="absolute left-10 md:left-1/2 transform -translate-x-1/2 bg-off-white p-1 rounded-full z-10 timeline-logo">
-              <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg p-2">
-                <img src="./Logos/US-WhiteHouse-Emblem.svg.png" alt="White House Logo" loading="lazy">
-              </div>
+            <div class="timeline-logo absolute left-1/2 transform -translate-x-1/2 bg-off-white p-2 rounded-full shadow-lg">
+              <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" alt="US Department of State Logo" class="h-12 object-contain" loading="lazy">
             </div>
-            <div class="hidden md:block w-1/2"></div>
           </div>
 
-          <!-- Timeline Item 6 -->
-          <div class="timeline-item relative flex">
-            <div class="hidden md:block w-1/2"></div>
-            <div class="absolute left-10 md:left-1/2 transform -translate-x-1/2 bg-off-white p-1 rounded-full z-10 timeline-logo">
-              <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg p-2">
-                <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" alt="US Department of State Logo" loading="lazy">
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 pl-28 md:pl-12">
+          <!-- BRICS -->
+          <div class="timeline-item relative flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/2 md:pl-12 order-2 md:order-1 mt-20 md:mt-0">
               <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-                <p class="text-sm text-navy/60">2018 – Washington, D.C., USA</p>
-                <p class="font-bold text-lg text-crimson mt-1">U.S. Department of State – IVLP</p>
-                <p class="text-sm text-navy/80 mt-2">Selected for the International Visitor Leadership Program (IVLP), the U.S. government’s premier professional exchange for emerging global leaders.</p>
+                <p class="text-sm text-navy/60">2023 – Gqeberha, SA</p>
+                <p class="font-bold text-lg text-crimson mt-1">BRICS Young Innovator Prize</p>
+                <p class="text-sm text-navy/80 mt-2">
+                  Finalist presentation on AI and topology optimization for pediatric medical devices.
+                </p>
               </div>
+            </div>
+            <div class="timeline-logo absolute left-1/2 transform -translate-x-1/2 bg-off-white p-2 rounded-full shadow-lg">
+              <img src="./Logos/BRICS_2023_Logo.svg" alt="BRICS Logo" class="h-10 object-contain" loading="lazy">
             </div>
           </div>
 
-        </div> <!-- end .space-y-20 -->
-      </div> <!-- end timeline container -->
+          <!-- Fast Company -->
+          <div class="timeline-item relative flex flex-col md:flex-row items-center">
+            <div class="hidden md:block w-1/2 pr-12 text-right">
+              <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
+                <p class="text-sm text-navy/60">2021 – South Africa</p>
+                <p class="font-bold text-lg text-crimson mt-1">Fast Company “Most Innovative Companies”</p>
+                <p class="text-sm text-navy/80 mt-2">
+                  SOUTH AFRICA MAKES recognized as one of the top innovation companies in Africa by Fast Company magazine.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-logo absolute left-1/2 transform -translate-x-1/2 bg-off-white p-2 rounded-full shadow-lg">
+              <img src="./Logos/Fast_Company_logo.svg" alt="Fast Company Logo" class="h-10 object-contain" loading="lazy">
+            </div>
+          </div>
+
+          <!-- TEDx -->
+          <div class="timeline-item relative flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/2 md:pl-12 order-2 md:order-1 mt-20 md:mt-0">
+              <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
+                <p class="text-sm text-navy/60">2019 – Cape Town, SA</p>
+                <p class="font-bold text-lg text-crimson mt-1">TEDx Speaker</p>
+                <p class="text-sm text-navy/80 mt-2">
+                  Delivered “Made for Africa. Made in Africa.” at TEDxWomen’s #BoldandBrilliant Festival.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-logo absolute left-1/2 transform -translate-x-1/2 bg-off-white p-2 rounded-full shadow-lg">
+              <img src="./Logos/TEDx Cape Town Logo.png" alt="TEDx Logo" class="h-8 object-contain" loading="lazy">
+            </div>
+          </div>
+
+          <!-- IVLP -->
+          <div class="timeline-item relative flex flex-col md:flex-row items-center">
+            <div class="hidden md:block w-1/2 pr-12 text-right">
+              <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
+                <p class="text-sm text-navy/60">2018 – Washington D.C., USA</p>
+                <p class="font-bold text-lg text-crimson mt-1">U.S. State Department IVLP Fellow</p>
+                <p class="text-sm text-navy/80 mt-2">
+                  Selected for the International Visitor Leadership Program (IVLP), the premier U.S. exchange for global emerging leaders.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-logo absolute left-1/2 transform -translate-x-1/2 bg-off-white p-2 rounded-full shadow-lg">
+              <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" alt="US Department of State Logo" class="h-12 object-contain" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-
-  <!-- Featured Insights & Media -->
+  <!-- =============================== -->
+  <!-- 📰 INSIGHTS & MEDIA -->
+  <!-- =============================== -->
   <section id="insights" class="bg-light-grey py-20 md:py-28">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-navy">Featured Insights & Media</h2>
-        <p class="mt-4 text-lg text-navy/80 max-w-2xl mx-auto">Explore my research, talks, and publications on the future of health innovation and equity.</p>
+        <p class="mt-4 text-lg text-navy/80 max-w-3xl mx-auto">
+          Showcasing key platforms where Dr Dunn’s work has influenced global innovation and public health strategy.
+        </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- TEDx Talk -->
-        <div class="bg-off-white rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
-          <a href="https://www.youtube.com/watch?v=ePO3FomVpwo" target="_blank" rel="noopener noreferrer" class="block">
-            <div class="relative">
-              <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=600&auto=format&fit=crop" alt="Dr. Dunn giving a TEDx Talk" class="w-full h-56 object-cover" loading="lazy">
-              <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
-                <svg class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
-              </div>
-            </div>
-            <div class="p-6">
-              <p class="text-sm text-crimson font-semibold mb-1 uppercase tracking-wider">Keynote</p>
-              <h3 class="font-bold text-xl text-navy mb-2 group-hover:text-crimson transition-colors duration-300">Made for Africa. Made in Africa.</h3>
-              <p class="text-navy/80 text-sm">TEDx talk on the power of digital manufacturing to transform healthcare access across Africa.</p>
-            </div>
-          </a>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- TEDx -->
+        <div class="bg-off-white p-6 rounded-lg shadow-lg hover:-translate-y-1 transition-transform duration-300">
+          <img src="./Logos/TEDx Cape Town Logo.png" alt="TEDx" class="h-10 mb-4 object-contain">
+          <h3 class="font-bold text-lg text-crimson mb-2">TEDx Women – #BoldAndBrilliant</h3>
+          <p class="text-navy/80 text-sm mb-4">
+            “Made for Africa. Made in Africa.” – a talk on re-imagining health innovation through local production and inclusion.
+          </p>
+          <a href="https://www.youtube.com/results?search_query=cherise+dunn+tedx"
+             class="text-crimson font-semibold hover:underline">Watch Talk →</a>
         </div>
-        <!-- International Feature -->
-        <div class="bg-off-white rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
-          <a href="#" target="_blank" rel="noopener noreferrer" class="block">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop" alt="An open business magazine on a desk" class="w-full h-56 object-cover" loading="lazy">
-            <div class="p-6">
-              <p class="text-sm text-crimson font-semibold mb-1 uppercase tracking-wider">International Feature</p>
-              <h3 class="font-bold text-xl text-navy mb-2 group-hover:text-crimson transition-colors duration-300">Brand Eins: Future of Additive Manufacturing</h3>
-              <p class="text-navy/80 text-sm">Featured as an international expert in Germany’s top business publication, discussing the intersection of policy and innovation in healthcare manufacturing.</p>
-            </div>
-          </a>
+
+        <!-- Brand Eins -->
+        <div class="bg-off-white p-6 rounded-lg shadow-lg hover:-translate-y-1 transition-transform duration-300">
+          <img src="./Logos/BrandEins_Logo.svg" alt="Brand Eins" class="h-10 mb-4 object-contain">
+          <h3 class="font-bold text-lg text-crimson mb-2">Brand Eins Magazine – Germany</h3>
+          <p class="text-navy/80 text-sm mb-4">
+            Profiled for leadership in Africa’s 4IR and health-industrialisation movement.
+          </p>
+          <a href="https://www.brandeins.de/"
+             class="text-crimson font-semibold hover:underline">Read Article →</a>
         </div>
 
         <!-- Thought Leadership -->
-        <div class="bg-off-white rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
-          <a href="#" target="_blank" rel="noopener noreferrer" class="block">
-            <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=600&auto=format&fit=crop" alt="People collaborating around a laptop with charts" class="w-full h-56 object-cover" loading="lazy">
-            <div class="p-6">
-              <p class="text-sm text-crimson font-semibold mb-1 uppercase tracking-wider">Thought Leadership</p>
-              <h3 class="font-bold text-xl text-navy mb-2 group-hover:text-crimson transition-colors duration-300">Policy & Progress: Building an Inclusive 4IR</h3>
-              <p class="text-navy/80 text-sm">Article exploring how inclusive policy frameworks and frontier technologies can redefine global health resilience.</p>
-            </div>
-          </a>
+        <div class="bg-off-white p-6 rounded-lg shadow-lg hover:-translate-y-1 transition-transform duration-300">
+          <img src="./Logos/Harvard_University_logo.svg.png" alt="Harvard Insights" class="h-10 mb-4 object-contain">
+          <h3 class="font-bold text-lg text-crimson mb-2">Harvard Public Health Review</h3>
+          <p class="text-navy/80 text-sm mb-4">
+            “Designing Resilient Health Systems for the Digital Age” – an essay on equity and innovation in global health.
+          </p>
+          <a href="#"
+             class="text-crimson font-semibold hover:underline">Coming Soon →</a>
         </div>
-
-      </div> <!-- grid end -->
-    </div> <!-- container end -->
-  </section>
-
-  <!-- Testimonial -->
-  <section class="bg-navy text-white">
-    <div class="container mx-auto px-6 py-20 text-center">
-      <blockquote class="text-2xl md:text-3xl font-light italic max-w-3xl mx-auto mb-6">
-        “Dr. Dunn provides a rare, critical perspective on innovation — deeply technical yet profoundly human. Her insights have been invaluable to our policy-making process.”
-      </blockquote>
-      <cite class="font-semibold not-italic block">Senior Advisor, U.S. Department of State Delegation</cite>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="bg-light-grey py-20 md:py-28">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-navy">Strategic Advisory & Engagements</h2>
-      <p class="mt-4 text-lg text-navy/80 max-w-2xl mx-auto">I advise a select group of organizations — including NGOs, government bodies, and corporations — on navigating the future of health and technology. For inquiries regarding advisory boards, policy consultation, or strategic partnerships, please reach out directly.</p>
-      <div class="mt-12 max-w-lg mx-auto">
-        <a href="mailto:cherise.dunn@hsph.harvard.edu" class="inline-block w-full text-center bg-crimson text-white px-6 py-4 rounded-lg font-semibold text-lg hover:bg-crimson-darker transition duration-300">Email for Advisory Inquiries</a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-navy text-gray-400">
-    <div class="container mx-auto px-6 py-12 text-center">
-      <div class="flex justify-center mb-6">
-        <a href="https://www.linkedin.com/in/dr-cherise-dunn/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors duration-300">
-          <span class="sr-only">LinkedIn</span>
-          <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" />
+  <!-- =============================== -->
+  <!-- 💬 TESTIMONIAL -->
+  <!-- =============================== -->
+  <section class="bg-off-white py-20 md:py-28">
+    <div class="container mx-auto px-6 text-center max-w-3xl">
+      <blockquote class="italic text-lg text-navy/80 mb-6">
+        “Cherise is a transformational leader who connects policy, technology, and people to reshape the future of health innovation in Africa and beyond.”
+      </blockquote>
+      <p class="font-bold text-crimson">— Dean Michelle A. Williams, Harvard T.H. Chan School of Public Health</p>
+    </div>
+  </section>
+
+  <!-- =============================== -->
+  <!-- 📩 CONTACT / ADVISORY CTA -->
+  <!-- =============================== -->
+  <section id="contact" class="bg-crimson text-white py-20 md:py-28">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Engage Dr Cherise Dunn for Strategic Advisory or Keynotes</h2>
+      <p class="max-w-2xl mx-auto text-white/90 mb-8">
+        Dr Dunn partners with governments, universities and global organisations to advance innovation, digital manufacturing and equitable health systems in Africa and the world.
+      </p>
+      <a href="mailto:contact@cherisedunn.com"
+         class="bg-white text-crimson font-bold px-8 py-4 rounded-lg hover:bg-off-white transition">
+         Contact Now
+      </a>
+    </div>
+  </section>
+
+  <!-- =============================== -->
+  <!-- ⚓ FOOTER -->
+  <!-- =============================== -->
+  <footer class="bg-navy text-white py-10">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      <p class="text-sm text-white/70">© 2025 Dr Cherise Dunn. All Rights Reserved.</p>
+      <div class="flex items-center space-x-4">
+        <a href="https://www.linkedin.com/in/cherisedunn" target="_blank"
+           class="hover:text-crimson transition">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.8 0-5 2.2-5 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5v-14c0-2.8-2.2-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.3c-1 0-1.8-.8-1.8-1.8 0-1 .8-1.8 1.8-1.8 1 0 1.8.8 1.8 1.8 0 1-.8 1.8-1.8 1.8zm13.5 11.3h-3v-5.2c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7v5.3h-3v-10h2.8v1.3h.1c.4-.8 1.4-1.7 3-1.7 3.3 0 3.9 2.1 3.9 4.9v5.5z"/>
           </svg>
         </a>
       </div>
-      <p>&copy; 2025 Dr. Cherise Dunn. All Rights Reserved.</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- =============================== -->
+  <!-- ⚙️ JS INTERACTIVITY -->
+  <!-- =============================== -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const mobileMenuButton = document.getElementById('mobile-menu-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const firstMenuItem = mobileMenu.querySelector('a');
-
-      // Toggle mobile menu
-      mobileMenuButton.addEventListener('click', () => {
-        const isExpanded = mobileMenu.classList.toggle('hidden');
-        mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-        if (!isExpanded) firstMenuItem.focus();
+      // Mobile menu toggle
+      const btn = document.getElementById('mobile-menu-button');
+      const menu = document.getElementById('mobile-menu');
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded',
+          menu.classList.contains('hidden') ? 'false' : 'true');
       });
 
-      // Close on link click
-      document.querySelectorAll('#mobile-menu a, #mobile-menu button').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-          mobileMenuButton.setAttribute('aria-expanded', 'false');
-          mobileMenuButton.focus();
-        });
-      });
-
-      // Timeline reveal animation
-      const timelineItems = document.querySelectorAll('.timeline-item');
-      const timelineObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      // Timeline fade-in animation
+      const items = document.querySelectorAll('.timeline-item');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) e.target.classList.add('is-visible');
         });
       }, { threshold: 0.2 });
-      timelineItems.forEach(item => timelineObserver.observe(item));
+      items.forEach(i => observer.observe(i));
     });
   </script>
 </body>
