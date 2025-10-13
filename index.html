@@ -79,16 +79,16 @@
     .timeline-item:hover img {
       transform: scale(1.05);
     }
-    /* Smooth logo carousel */
-    @keyframes scroll-slow {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+  /* Smooth logo carousel */
+@keyframes scroll-slow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
-    .animate-scroll-slow {
-      display: flex;
-      animation: scroll-slow 25s linear infinite;
-    }
+.animate-scroll-slow {
+  display: flex;
+  animation: scroll-slow 45s linear infinite;
+}
   </style>
 </head>
 
@@ -164,27 +164,42 @@
   </div>
 </section>
 
-  <!-- =============================== -->
-  <!-- 🏛 FEATURED IN: LOGO CAROUSEL -->
-  <!-- =============================== -->
-  <section class="bg-light-grey py-16">
-    <div class="container mx-auto px-6">
-      <h3 class="text-center text-navy/60 font-semibold uppercase tracking-wider mb-10">
-        Trusted by Global Institutions & Featured In
-      </h3>
-      <div class="relative overflow-hidden">
-        <div class="flex space-x-12 animate-scroll-slow">
-          <img src="./Logos/G20-Brasil-2024.png" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition">
-          <img src="./Logos/BRICS_2023_Logo.svg" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition">
-          <img src="./Logos/Harvard_University_logo.svg.png" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition">
-          <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition">
-          <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition">
-          <img src="./Logos/Fast_Company_logo.svg" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition">
-          <img src="./Logos/TEDx Cape Town Logo.png" class="h-10 object-contain grayscale opacity-70 hover:opacity-100 transition">
+<!-- =============================== -->
+<!-- 🏛 FEATURED IN: LOGO CAROUSEL -->
+<!-- =============================== -->
+<section class="bg-light-grey py-16">
+  <div class="container mx-auto px-6">
+    <h3 class="text-center text-navy/60 font-semibold uppercase tracking-wider mb-10">
+      Trusted by Global Institutions & Featured In
+    </h3>
+
+    <div class="relative overflow-hidden">
+      <!-- Double row for seamless looping -->
+      <div class="flex space-x-12 animate-scroll-slow w-[200%]">
+        <!-- 🖼️ Logo Set (repeated twice) -->
+        <div class="flex space-x-12">
+          <img src="./Logos/G20-Brasil-2024.png" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="G20 Logo">
+          <img src="./Logos/BRICS_2023_Logo.svg" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="BRICS Logo">
+          <img src="./Logos/Harvard_University_logo.svg.png" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Harvard Logo">
+          <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="MIT Logo">
+          <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="US State Department Logo">
+          <img src="./Logos/Fast_Company_logo.svg" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Fast Company Logo">
+          <img src="./Logos/TEDx Cape Town Logo.png" class="h-10 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="TEDx Logo">
+        </div>
+        <div class="flex space-x-12">
+          <!-- Repeat same logos again for continuous scroll -->
+          <img src="./Logos/G20-Brasil-2024.png" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="G20 Logo">
+          <img src="./Logos/BRICS_2023_Logo.svg" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="BRICS Logo">
+          <img src="./Logos/Harvard_University_logo.svg.png" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Harvard Logo">
+          <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="MIT Logo">
+          <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="US State Department Logo">
+          <img src="./Logos/Fast_Company_logo.svg" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Fast Company Logo">
+          <img src="./Logos/TEDx Cape Town Logo.png" class="h-10 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="TEDx Logo">
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
   
   <!-- =============================== -->
   <!-- 💡 ABOUT SECTION -->
