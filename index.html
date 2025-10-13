@@ -53,33 +53,33 @@
       background-position: center;
     }
 
-    /* Timeline reveal animation */
-    .timeline-item {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
+/* 🌟 Timeline layout tweaks */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
 
-    .timeline-item.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.timeline-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    /* Uniform logo scaling */
-    .timeline-logo img {
-      max-height: 48px;
-      width: auto;
-      object-fit: contain;
-    }
-    
-    /* 🌟 Timeline logo hover + consistency */
-    .timeline-item img {
-      transition: transform 0.3s ease;
-    }
-    .timeline-item:hover img {
-      transform: scale(1.05);
-    }
-  /* Smooth logo carousel */
+/* Bring logos closer to the spine & enlarge */
+.timeline-item > div:nth-child(2) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.timeline-item img {
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover img {
+  transform: scale(1.05);
+}
+  
+    /* Smooth logo carousel */
 @keyframes scroll-slow {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -295,10 +295,15 @@
       </p>
     </div>
 
-    <!-- 🧭 Vertical timeline container -->
-    <div class="relative max-w-5xl mx-auto">
-      <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-light-grey"></div>
-      <div class="space-y-20">
+    <!-- 🧭 Vertical timeline -->
+    <div class="relative max-w-6xl mx-auto">
+      <!-- Timeline spine -->
+      <div class="absolute left-1/2 -translate-x-1/2 h-full w-1 bg-light-grey"></div>
+
+      <div class="space-y-28">
+        <!-- Timeline Item Template -->
+        <!-- Each entry alternates left / right on desktop -->
+        <!-- Start latest → earliest -->
         
         <!-- 2025 Harvard Leadership Lab -->
         <div class="timeline-item flex flex-col md:flex-row items-center md:justify-between md:even:flex-row-reverse">
