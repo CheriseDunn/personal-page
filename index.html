@@ -286,7 +286,7 @@
   </section>
 
 <!-- ============================= -->
-<!-- 🌍 A RECORD OF GLOBAL IMPACT -->
+<!-- 🌍 A RECORD OF GLOBAL IMPACT (Year-Grouped + Nodes) -->
 <!-- ============================= -->
 <section id="engagements" class="bg-off-white py-20 md:py-28 block w-full">
   <div class="container mx-auto px-6">
@@ -301,155 +301,168 @@
 
     <!-- 🧭 Vertical Timeline Spine -->
     <div class="relative max-w-5xl mx-auto">
+      <!-- Central line -->
       <div class="absolute left-1/2 -translate-x-1/2 h-full w-1 bg-light-grey"></div>
 
-      <div class="space-y-24">
+      <!-- 🔴 Timeline Nodes (Crimson circles for each year) -->
+      <style>
+        .timeline-node {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 1.25rem;
+          height: 1.25rem;
+          background-color: #9E1B32; /* Crimson node */
+          border-radius: 9999px;
+          border: 3px solid #FAFAF8; /* Off-white outline */
+          box-shadow: 0 0 0 4px #DCDCDC; /* Soft glow */
+        }
+      </style>
 
-        <!-- ====================== -->
-        <!-- 🗓️ 2025 -->
-        <!-- ====================== -->
-        <div class="timeline-item flex flex-col md:flex-row items-center md:justify-between">
-          <!-- Left (Text) -->
-          <div class="w-full md:w-1/2 md:text-right md:pr-8">
-            <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-              <p class="text-sm text-navy/60">2025 – Cambridge, USA</p>
-              <p class="font-bold text-lg text-crimson mt-1">Harvard Leadership & Governance</p>
-              <ul class="list-disc list-inside text-sm text-navy/80 mt-2 space-y-1">
-                <li>Public Health Leadership Lab Fellow</li>
-                <li>Chair of Operations, Harvard Graduate Student Council</li>
-              </ul>
-              <p class="text-sm text-navy/70 mt-2">Advancing innovation strategy and student governance at Harvard University.</p>
-            </div>
-          </div>
-          <!-- Right (Logos) -->
-          <div class="w-full md:w-1/2 flex justify-center md:justify-start mt-6 md:mt-0">
-            <div class="flex space-x-6">
-              <img src="./Logos/Harvard_University_logo.svg.png" alt="Harvard" class="h-20 w-auto object-contain">
-            </div>
+      <!-- ====================== -->
+      <!-- 🗓️ 2025 -->
+      <!-- ====================== -->
+      <div class="timeline-item flex flex-col md:flex-row items-center md:justify-between relative">
+        <div class="timeline-node top-6 md:top-8"></div>
+        <!-- Left (Text) -->
+        <div class="w-full md:w-1/2 md:text-right md:pr-8">
+          <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-navy/60">2025 – Cambridge, USA</p>
+            <p class="font-bold text-lg text-crimson mt-1">Harvard Leadership & Governance</p>
+            <ul class="list-disc list-inside text-sm text-navy/80 mt-2 space-y-1">
+              <li>Public Health Leadership Lab Fellow</li>
+              <li>Chair of Operations, Harvard Graduate Student Council</li>
+            </ul>
+            <p class="text-sm text-navy/70 mt-2">Advancing innovation strategy and governance at Harvard University.</p>
           </div>
         </div>
-
-        <!-- ====================== -->
-        <!-- 🗓️ 2024 -->
-        <!-- ====================== -->
-        <div class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between">
-          <!-- Left (Text) -->
-          <div class="w-full md:w-1/2 md:text-left md:pl-8">
-            <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-              <p class="text-sm text-navy/60">2024 – Cambridge, USA · Macapá, Brazil</p>
-              <p class="font-bold text-lg text-crimson mt-1">Global Innovation & Fellowship Year</p>
-              <ul class="list-disc list-inside text-sm text-navy/80 mt-2 space-y-1">
-                <li>G20 Startup20 Delegate – South Africa</li>
-                <li>MIT AI Venture Studio Platinum Team Award</li>
-                <li>Harvard South Africa & Oppenheimer Memorial Trust Fellow</li>
-              </ul>
-              <p class="text-sm text-navy/70 mt-2">Recognized for advancing global policy, AI innovation, and equitable health systems across leading institutions.</p>
-            </div>
-          </div>
-          <!-- Right (Logos) -->
-          <div class="w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-0">
-            <div class="flex flex-wrap justify-center gap-6">
-              <img src="./Logos/G20-Brasil-2024.png" alt="G20" class="h-20 object-contain">
-              <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" alt="MIT" class="h-20 object-contain">
-              <img src="./Logos/Harvard_University_logo.svg.png" alt="Harvard" class="h-20 object-contain">
-              <img src="./Logos/OMT_logo.svg" alt="Oppenheimer Memorial Trust" class="h-20 object-contain">
-            </div>
+        <!-- Right (Logos) -->
+        <div class="w-full md:w-1/2 flex justify-center md:justify-start mt-6 md:mt-0">
+          <div class="flex space-x-6">
+            <img src="./Logos/Harvard_University_logo.svg.png" alt="Harvard" class="h-20 w-auto object-contain">
           </div>
         </div>
+      </div>
 
-        <!-- ====================== -->
-        <!-- 🗓️ 2023 -->
-        <!-- ====================== -->
-        <div class="timeline-item flex flex-col md:flex-row items-center md:justify-between">
-          <!-- Left (Text) -->
-          <div class="w-full md:w-1/2 md:text-right md:pr-8">
-            <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-              <p class="text-sm text-navy/60">2023 – Gqeberha & Cape Town, South Africa</p>
-              <p class="font-bold text-lg text-crimson mt-1">African Innovation Partnerships</p>
-              <ul class="list-disc list-inside text-sm text-navy/80 mt-2 space-y-1">
-                <li>BRICS Young Innovator Prize Finalist</li>
-                <li>Stanford University Innovation Partnership Host</li>
-              </ul>
-              <p class="text-sm text-navy/70 mt-2">Bridging AI-driven design, youth innovation, and Stanford–Africa collaboration networks.</p>
-            </div>
-          </div>
-          <!-- Right (Logos) -->
-          <div class="w-full md:w-1/2 flex justify-center md:justify-start mt-6 md:mt-0">
-            <div class="flex space-x-6">
-              <img src="./Logos/BRICS_2023_Logo.svg" alt="BRICS" class="h-20 object-contain">
-              <img src="./Logos/Stanford_University_logo.svg" alt="Stanford" class="h-20 object-contain">
-            </div>
+      <!-- ====================== -->
+      <!-- 🗓️ 2024 -->
+      <!-- ====================== -->
+      <div class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between relative">
+        <div class="timeline-node top-6 md:top-8"></div>
+        <!-- Left (Text) -->
+        <div class="w-full md:w-1/2 md:text-left md:pl-8">
+          <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-navy/60">2024 – Cambridge, USA · Macapá, Brazil</p>
+            <p class="font-bold text-lg text-crimson mt-1">Global Innovation & Fellowship Year</p>
+            <ul class="list-disc list-inside text-sm text-navy/80 mt-2 space-y-1">
+              <li>G20 Startup20 Delegate – South Africa</li>
+              <li>MIT AI Venture Studio Platinum Team Award</li>
+              <li>Harvard South Africa & Oppenheimer Memorial Trust Fellow</li>
+            </ul>
+            <p class="text-sm text-navy/70 mt-2">Recognized for advancing global policy, AI innovation, and equitable health systems.</p>
           </div>
         </div>
-
-        <!-- ====================== -->
-        <!-- 🗓️ 2022 -->
-        <!-- ====================== -->
-        <div class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between">
-          <!-- Left (Text) -->
-          <div class="w-full md:w-1/2 md:text-left md:pl-8">
-            <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-              <p class="text-sm text-navy/60">2022 – Pretoria, South Africa</p>
-              <p class="font-bold text-lg text-crimson mt-1">Health Diplomacy & Policy Engagement</p>
-              <p class="text-sm text-navy/80 mt-2">Presented emerging technology strategies to U.S. Deputy Secretary of State Wendy Sherman, advancing bilateral innovation collaboration.</p>
-            </div>
-          </div>
-          <!-- Right (Logos) -->
-          <div class="w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-0">
-            <div class="flex space-x-6">
-              <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" alt="US Department of State" class="h-20 object-contain">
-            </div>
+        <!-- Right (Logos) -->
+        <div class="w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-0">
+          <div class="flex flex-wrap justify-center gap-6">
+            <img src="./Logos/G20-Brasil-2024.png" alt="G20" class="h-20 object-contain">
+            <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" alt="MIT" class="h-20 object-contain">
+            <img src="./Logos/Harvard_University_logo.svg.png" alt="Harvard" class="h-20 object-contain">
+            <img src="./Logos/OMT_logo.svg" alt="OMT" class="h-20 object-contain">
           </div>
         </div>
+      </div>
 
-        <!-- ====================== -->
-        <!-- 🗓️ 2021–2019 -->
-        <!-- ====================== -->
-        <div class="timeline-item flex flex-col md:flex-row items-center md:justify-between">
-          <!-- Left (Text) -->
-          <div class="w-full md:w-1/2 md:text-right md:pr-8">
-            <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-              <p class="text-sm text-navy/60">2019–2021 – South Africa</p>
-              <p class="font-bold text-lg text-crimson mt-1">STEM Leadership & Innovation Advocacy</p>
-              <ul class="list-disc list-inside text-sm text-navy/80 mt-2 space-y-1">
-                <li>Fast Company “Most Innovative Companies” Award (2021)</li>
-                <li>Inspiring Fifty Women in STEM (2019)</li>
-                <li>TEDx Cape Town Speaker — “Made for Africa. Made in Africa.”</li>
-              </ul>
-              <p class="text-sm text-navy/70 mt-2">Recognized for pioneering digital manufacturing for equitable access and inspiring women in technology and leadership.</p>
-            </div>
-          </div>
-          <!-- Right (Logos) -->
-          <div class="w-full md:w-1/2 flex justify-center md:justify-start mt-6 md:mt-0">
-            <div class="flex flex-wrap justify-center gap-6">
-              <img src="./Logos/Fast_Company_logo.svg" alt="Fast Company" class="h-20 object-contain">
-              <img src="./Logos/Inspiring_Fifty_logo.svg" alt="Inspiring Fifty" class="h-20 object-contain">
-              <img src="./Logos/TEDx Cape Town Logo.png" alt="TEDx" class="h-20 object-contain">
-            </div>
+      <!-- ====================== -->
+      <!-- 🗓️ 2023 -->
+      <!-- ====================== -->
+      <div class="timeline-item flex flex-col md:flex-row items-center md:justify-between relative">
+        <div class="timeline-node top-6 md:top-8"></div>
+        <!-- Left (Text) -->
+        <div class="w-full md:w-1/2 md:text-right md:pr-8">
+          <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-navy/60">2023 – Gqeberha & Cape Town, South Africa</p>
+            <p class="font-bold text-lg text-crimson mt-1">African Innovation Partnerships</p>
+            <ul class="list-disc list-inside text-sm text-navy/80 mt-2 space-y-1">
+              <li>BRICS Young Innovator Prize Finalist</li>
+              <li>Stanford University Innovation Partnership Host</li>
+            </ul>
+            <p class="text-sm text-navy/70 mt-2">Bridging AI-driven design, youth innovation, and Stanford–Africa collaboration networks.</p>
           </div>
         </div>
-
-        <!-- ====================== -->
-        <!-- 🗓️ 2018 -->
-        <!-- ====================== -->
-        <div class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between">
-          <!-- Left (Text) -->
-          <div class="w-full md:w-1/2 md:text-left md:pl-8">
-            <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-              <p class="text-sm text-navy/60">2018 – Washington D.C., USA</p>
-              <p class="font-bold text-lg text-crimson mt-1">International Leadership Recognition</p>
-              <p class="text-sm text-navy/80 mt-2">Selected as a Fellow of the U.S. Department of State’s International Visitor Leadership Program (IVLP) for global women in innovation and entrepreneurship.</p>
-            </div>
-          </div>
-          <!-- Right (Logos) -->
-          <div class="w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-0">
-            <div class="flex space-x-6">
-              <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" alt="US Department of State" class="h-20 object-contain">
-            </div>
+        <!-- Right (Logos) -->
+        <div class="w-full md:w-1/2 flex justify-center md:justify-start mt-6 md:mt-0">
+          <div class="flex space-x-6">
+            <img src="./Logos/BRICS_2023_Logo.svg" alt="BRICS" class="h-20 object-contain">
+            <img src="./Logos/Stanford_University_logo.svg" alt="Stanford" class="h-20 object-contain">
           </div>
         </div>
+      </div>
 
-      </div> <!-- ✅ End of timeline items -->
+      <!-- ====================== -->
+      <!-- 🗓️ 2022 -->
+      <!-- ====================== -->
+      <div class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between relative">
+        <div class="timeline-node top-6 md:top-8"></div>
+        <div class="w-full md:w-1/2 md:text-left md:pl-8">
+          <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-navy/60">2022 – Pretoria, South Africa</p>
+            <p class="font-bold text-lg text-crimson mt-1">Health Diplomacy & Policy Engagement</p>
+            <p class="text-sm text-navy/80 mt-2">Presented emerging-technology strategies to U.S. Deputy Secretary of State Wendy Sherman, advancing bilateral innovation collaboration.</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-0">
+          <div class="flex space-x-6">
+            <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" alt="US Department of State" class="h-20 object-contain">
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================== -->
+      <!-- 🗓️ 2019–2021 -->
+      <!-- ====================== -->
+      <div class="timeline-item flex flex-col md:flex-row items-center md:justify-between relative">
+        <div class="timeline-node top-6 md:top-8"></div>
+        <div class="w-full md:w-1/2 md:text-right md:pr-8">
+          <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-navy/60">2019–2021 – South Africa</p>
+            <p class="font-bold text-lg text-crimson mt-1">STEM Leadership & Innovation Advocacy</p>
+            <ul class="list-disc list-inside text-sm text-navy/80 mt-2 space-y-1">
+              <li>Fast Company “Most Innovative Companies” Award (2021)</li>
+              <li>Inspiring Fifty Women in STEM (2019)</li>
+              <li>TEDx Cape Town Speaker — “Made for Africa. Made in Africa.”</li>
+            </ul>
+            <p class="text-sm text-navy/70 mt-2">Recognized for pioneering digital manufacturing for equitable access and inspiring women in technology and leadership.</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 flex justify-center md:justify-start mt-6 md:mt-0">
+          <div class="flex flex-wrap justify-center gap-6">
+            <img src="./Logos/Fast_Company_logo.svg" alt="Fast Company" class="h-20 object-contain">
+            <img src="./Logos/Inspiring_Fifty_logo.svg" alt="Inspiring Fifty" class="h-20 object-contain">
+            <img src="./Logos/TEDx Cape Town Logo.png" alt="TEDx" class="h-20 object-contain">
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================== -->
+      <!-- 🗓️ 2018 -->
+      <!-- ====================== -->
+      <div class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between relative">
+        <div class="timeline-node top-6 md:top-8"></div>
+        <div class="w-full md:w-1/2 md:text-left md:pl-8">
+          <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
+            <p class="text-sm text-navy/60">2018 – Washington D.C., USA</p>
+            <p class="font-bold text-lg text-crimson mt-1">International Leadership Recognition</p>
+            <p class="text-sm text-navy/80 mt-2">Selected as a Fellow of the U.S. Department of State’s International Visitor Leadership Program (IVLP) for global women in innovation and entrepreneurship.</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-0">
+          <div class="flex space-x-6">
+            <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" alt="US Department of State" class="h-20 object-contain">
+          </div>
+        </div>
+      </div>
+
     </div> <!-- ✅ End of timeline container -->
   </div> <!-- ✅ End of main container -->
 </section>
