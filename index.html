@@ -186,47 +186,48 @@
 
     <!-- ♻️ Smooth Infinite Scroll Carousel -->
     <div class="relative overflow-hidden">
-      <!-- Optional Gradient Fades (left/right edges) -->
+      <!-- Optional Gradient Fades -->
       <div class="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-light-grey to-transparent z-10"></div>
       <div class="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-light-grey to-transparent z-10"></div>
 
-      <div class="flex space-x-12 sm:space-x-16 animate-scroll-slow w-[200%]">
-        <!-- 🎯 Primary Row -->
-        <div class="flex space-x-12 sm:space-x-16">
-          <img src="./Logos/G20_Brazil_2024.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="G20 Brazil 2024 Logo">
-          <img src="./Logos/15th_BRICS_summit_logo.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="BRICS Summit Logo">
-          <img src="./Logos/Harvard_University_logo.svg.png" loading="lazy" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Harvard University Logo">
-          <img src="./Logos/Harvard_Chan_SPH_logo.png" loading="lazy" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Harvard Chan School Logo">
-          <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" loading="lazy" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="MIT Logo">
-          <img src="./Logos/Stanford-Symbol.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Stanford University Symbol">
-          <img src="./Logos/IVLP_Logo.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="International Visitor Leadership Program Logo">
-          <img src="./Logos/Inspiring_Fifty_Africa.svg" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Inspiring Fifty Africa Logo">
-          <img src="./Logos/Fast_Company_logo.svg" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Fast Company Logo">
-          <img src="./Logos/Standard_Bank_Top_Women_logo.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Standard Bank Top Women Logo">
-          <img src="./Logos/Mail_and_Guardian_logo.svg" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Mail & Guardian Logo">
-          <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" loading="lazy" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="U.S. Department of State Logo">
-          <img src="./Logos/US-WhiteHouse-Emblem.svg.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="White House Emblem">
-          <img src="./Logos/TEDx_Logo.png" loading="lazy" class="h-10 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="TEDx Logo">
-          <img src="./Logos/Wesgro_logo.png" loading="lazy" class="h-10 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Wesgro Logo">
+      <!-- 🧩 Scroll Wrapper -->
+      <div class="flex animate-scroll-slow">
+        <!-- 🎯 Row 1 -->
+        <div class="flex items-center space-x-12 sm:space-x-16 flex-shrink-0 px-6">
+          <img src="./Logos/G20_Brazil_2024.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="G20 Brazil 2024">
+          <img src="./Logos/15th_BRICS_summit_logo.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="BRICS Summit">
+          <img src="./Logos/Harvard_University_logo.svg.png" loading="lazy" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Harvard University">
+          <img src="./Logos/Harvard_Chan_SPH_logo.png" loading="lazy" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Harvard Chan School">
+          <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" loading="lazy" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="MIT">
+          <img src="./Logos/Stanford-Symbol.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Stanford">
+          <img src="./Logos/IVLP_Logo.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="IVLP">
+          <img src="./Logos/Inspiring_Fifty_Africa.svg" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Inspiring Fifty Africa">
+          <img src="./Logos/Fast_Company_logo.svg" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Fast Company">
+          <img src="./Logos/Standard_Bank_Top_Women_logo.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Standard Bank Top Women">
+          <img src="./Logos/Mail_and_Guardian_logo.svg" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Mail & Guardian">
+          <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" loading="lazy" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="U.S. Department of State">
+          <img src="./Logos/US-WhiteHouse-Emblem.svg.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="White House">
+          <img src="./Logos/TEDx_Logo.png" loading="lazy" class="h-10 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="TEDx">
+          <img src="./Logos/Wesgro_logo.png" loading="lazy" class="h-10 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Wesgro">
         </div>
 
-        <!-- 🔁 Duplicated Row for Continuous Loop -->
-        <div class="flex space-x-12 sm:space-x-16">
-          <img src="./Logos/G20_Brazil_2024.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="G20 Brazil 2024 Logo">
-          <img src="./Logos/15th_BRICS_summit_logo.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="BRICS Summit Logo">
-          <img src="./Logos/Harvard_University_logo.svg.png" loading="lazy" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Harvard University Logo">
-          <img src="./Logos/Harvard_Chan_SPH_logo.png" loading="lazy" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Harvard Chan School Logo">
-          <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" loading="lazy" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="MIT Logo">
-          <img src="./Logos/Stanford-Symbol.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Stanford University Symbol">
-          <img src="./Logos/IVLP_Logo.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="International Visitor Leadership Program Logo">
-          <img src="./Logos/Inspiring_Fifty_Africa.svg" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Inspiring Fifty Africa Logo">
-          <img src="./Logos/Fast_Company_logo.svg" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Fast Company Logo">
-          <img src="./Logos/Standard_Bank_Top_Women_logo.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Standard Bank Top Women Logo">
-          <img src="./Logos/Mail_and_Guardian_logo.svg" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Mail & Guardian Logo">
-          <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" loading="lazy" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="U.S. Department of State Logo">
-          <img src="./Logos/US-WhiteHouse-Emblem.svg.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="White House Emblem">
-          <img src="./Logos/TEDx_Logo.png" loading="lazy" class="h-10 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="TEDx Logo">
-          <img src="./Logos/Wesgro_logo.png" loading="lazy" class="h-10 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Wesgro Logo">
+        <!-- 🔁 Row 2 (duplicate for seamless loop) -->
+        <div class="flex items-center space-x-12 sm:space-x-16 flex-shrink-0 px-6">
+          <img src="./Logos/G20_Brazil_2024.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="G20 Brazil 2024">
+          <img src="./Logos/15th_BRICS_summit_logo.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="BRICS Summit">
+          <img src="./Logos/Harvard_University_logo.svg.png" loading="lazy" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Harvard University">
+          <img src="./Logos/Harvard_Chan_SPH_logo.png" loading="lazy" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Harvard Chan School">
+          <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" loading="lazy" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="MIT">
+          <img src="./Logos/Stanford-Symbol.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Stanford">
+          <img src="./Logos/IVLP_Logo.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="IVLP">
+          <img src="./Logos/Inspiring_Fifty_Africa.svg" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Inspiring Fifty Africa">
+          <img src="./Logos/Fast_Company_logo.svg" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Fast Company">
+          <img src="./Logos/Standard_Bank_Top_Women_logo.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Standard Bank Top Women">
+          <img src="./Logos/Mail_and_Guardian_logo.svg" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Mail & Guardian">
+          <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" loading="lazy" class="h-14 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="U.S. Department of State">
+          <img src="./Logos/US-WhiteHouse-Emblem.svg.png" loading="lazy" class="h-12 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="White House">
+          <img src="./Logos/TEDx_Logo.png" loading="lazy" class="h-10 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="TEDx">
+          <img src="./Logos/Wesgro_logo.png" loading="lazy" class="h-10 object-contain grayscale opacity-70 hover:opacity-100 transition" alt="Wesgro">
         </div>
       </div>
     </div>
@@ -238,11 +239,11 @@
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
-
     .animate-scroll-slow {
+      display: flex;
+      width: max-content;
       animation: scroll-slow 45s linear infinite;
     }
-
     .animate-scroll-slow:hover {
       animation-play-state: paused;
     }
