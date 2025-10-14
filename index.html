@@ -720,14 +720,14 @@ document.addEventListener('DOMContentLoaded',()=>{
 </script>
 
 <!-- =============================== -->
-<!-- 📸 PHOTO COLLAGE SECTION with AOS + Parallax -->
+<!-- 📸 PHOTO COLLAGE SECTION (5 images, AOS + Parallax) -->
 <!-- =============================== -->
-<!-- Add this in your <head> section once -->
+<!-- Include this in your <head> once -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <style>
   /* 🌄 Gentle parallax background */
   .parallax-bg {
-    background-image: url('./Images/bg-texture.jpg'); /* Replace with subtle texture or gradient */
+    background-image: url('./Images/bg-texture.jpg'); /* Replace with your own image or gradient */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -735,12 +735,12 @@ document.addEventListener('DOMContentLoaded',()=>{
     position: relative;
   }
 
-  /* 🔲 Optional overlay for soft tint */
+  /* 🎨 Soft white overlay for readability */
   .parallax-bg::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.85); /* Adjust opacity/tone as needed */
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(2px);
   }
 </style>
@@ -751,31 +751,46 @@ document.addEventListener('DOMContentLoaded',()=>{
     <p class="mt-3 text-navy/70">Leadership in Action</p>
   </div>
 
-  <div class="relative max-w-6xl mx-auto flex flex-wrap justify-center gap-6 md:gap-10">
+  <!-- 🖼️ 5 Image Layout -->
+  <div class="relative max-w-7xl mx-auto flex flex-wrap justify-center gap-6 md:gap-10">
     <img src="./Images/Dr-Cherise-Dunn-1.jpg"
          loading="lazy"
          data-aos="fade-up"
          data-aos-delay="100"
-         class="rounded-2xl shadow-lg w-[300px] md:w-[400px] hover:scale-[1.02] transition-transform duration-300 ease-out"
+         class="rounded-2xl shadow-lg w-[280px] md:w-[360px] hover:scale-[1.02] transition-transform duration-300 ease-out"
          alt="Dr Dunn speaking at a conference">
 
     <img src="./Images/Dr-Cherise-Dunn-2.jpg"
          loading="lazy"
          data-aos="fade-up"
          data-aos-delay="200"
-         class="rounded-2xl shadow-lg w-[300px] md:w-[400px] hover:scale-[1.02] transition-transform duration-300 ease-out"
+         class="rounded-2xl shadow-lg w-[280px] md:w-[360px] hover:scale-[1.02] transition-transform duration-300 ease-out"
          alt="Dr Dunn with leadership team">
 
     <img src="./Images/Dr-Cherise-Dunn-3.jpg"
          loading="lazy"
          data-aos="fade-up"
          data-aos-delay="300"
-         class="rounded-2xl shadow-lg w-[300px] md:w-[400px] hover:scale-[1.02] transition-transform duration-300 ease-out"
-         alt="Dr Dunn during a conference discussion">
+         class="rounded-2xl shadow-lg w-[280px] md:w-[360px] hover:scale-[1.02] transition-transform duration-300 ease-out"
+         alt="Dr Dunn delivering a keynote address">
+
+    <img src="./Images/Dr-Cherise-Dunn-4.jpg"
+         loading="lazy"
+         data-aos="fade-up"
+         data-aos-delay="400"
+         class="rounded-2xl shadow-lg w-[280px] md:w-[360px] hover:scale-[1.02] transition-transform duration-300 ease-out"
+         alt="Dr Dunn mentoring students">
+
+    <img src="./Images/Dr-Cherise-Dunn-5.jpg"
+         loading="lazy"
+         data-aos="fade-up"
+         data-aos-delay="500"
+         class="rounded-2xl shadow-lg w-[280px] md:w-[360px] hover:scale-[1.02] transition-transform duration-300 ease-out"
+         alt="Dr Dunn at a global leadership summit">
   </div>
 
-  <p class="relative text-sm text-navy/60 mt-8 text-center" data-aos="fade-up" data-aos-delay="400">
-    Moments of impact from Dr. Dunn’s leadership journey and global engagements.
+  <p class="relative text-sm text-navy/60 mt-8 text-center" data-aos="fade-up" data-aos-delay="600">
+    Moments of leadership, collaboration, and innovation from Dr. Dunn’s journey across global platforms.
   </p>
 </section>
 
