@@ -419,9 +419,9 @@
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-start">
           <div class="flex flex-wrap justify-center gap-6">
-            <img src="./Logos/Harvard_University_logo.svg" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="Harvard University logo">
-            <img src="./Logos/Harvard_Chan_SPH_logo.svg" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="Harvard T.H. Chan School of Public Health logo">
-            <img src="./Logos/MIT_Logo_and_Wordmark.svg" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="Massachusetts Institute of Technology logo">
+            <img src="./Logos/Harvard_University_logo.svg.png" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="Harvard University logo">
+            <!-- Harvard Chan logo file not present in Logos/ (see list below) -->
+            <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="Massachusetts Institute of Technology logo">
           </div>
         </div>
       </article>
@@ -443,9 +443,9 @@
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-end">
           <div class="flex flex-wrap justify-center gap-6">
-            <img src="./Logos/Harvard_University_logo.svg" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="Harvard University logo">
-            <img src="./Logos/G20_Brasil_2024_Logo.png" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="G20 Brazil 2024 logo">
-            <img src="./Logos/MIT_Logo_and_Wordmark.svg" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="Massachusetts Institute of Technology logo">
+            <img src="./Logos/Harvard_University_logo.svg.png" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="Harvard University logo">
+            <img src="./Logos/G20_Brazil_2024.png" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="G20 Brazil 2024 logo">
+            <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="Massachusetts Institute of Technology logo">
           </div>
         </div>
       </article>
@@ -466,8 +466,8 @@
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-start">
           <div class="flex flex-wrap justify-center gap-6">
-            <img src="./Logos/BRICS_2023_Logo.svg" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="BRICS 2023 logo">
-            <img src="./Logos/Stanford_University_logo.svg" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="Stanford University logo">
+            <img src="./Logos/15th_BRICS_summit_logo.png" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="BRICS Summit logo">
+            <img src="./Logos/Stanford-Symbol.png" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="Stanford University symbol">
           </div>
         </div>
       </article>
@@ -507,8 +507,8 @@
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-start">
           <div class="flex flex-wrap justify-center gap-6">
-            <img src="./Logos/Africa_Makes_logo.svg" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="Africa Makes Foundation logo">
-            <img src="./Logos/OMT_logo.svg" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="Oppenheimer Memorial Trust logo">
+            <!-- Africa_Makes_logo.svg is missing -->
+            <img src="./Logos/OMT_Logo.png" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="Oppenheimer Memorial Trust logo">
           </div>
         </div>
       </article>
@@ -529,8 +529,8 @@
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-end">
           <div class="flex flex-wrap justify-center gap-6">
-            <img src="./Logos/TEDx_Cape_Town_Logo.png" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="TEDx Cape Town logo">
-            <img src="./Logos/Inspiring_Fifty_logo.svg" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="Inspiring Fifty logo">
+            <img src="./Logos/TEDx_Logo.png" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="TEDx logo">
+            <!-- Inspiring_Fifty_logo.svg is missing -->
           </div>
         </div>
       </article>
@@ -549,56 +549,12 @@
           </div>
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-start">
-          <img src="./Logos/IVLP_Logo.svg" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="U.S. Department of State IVLP logo">
+          <img src="./Logos/IVLP_Logo.png" loading="lazy" decoding="async" class="h-20 w-20 object-contain" alt="U.S. Department of State – IVLP logo">
         </div>
       </article>
     </div>
   </div>
 </section>
-
-<!-- =============================== -->
-<!-- ✨ TIMELINE FADE-IN + NODE ANIMATION -->
-<!-- =============================== -->
-<style>
-  .timeline-node {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #9E1B32;
-    border-radius: 9999px;
-    width: 1.2rem;
-    height: 1.2rem;
-    animation: pulseCrimson 2s infinite;
-  }
-  @keyframes pulseCrimson {
-    0%, 100% { transform: translateX(-50%) scale(1); opacity: 1; }
-    50% { transform: translateX(-50%) scale(1.3); opacity: 0.6; }
-  }
-  .timeline-item {
-    opacity: 0;
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    transform: translateY(20px);
-  }
-  .timeline-item.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-</style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelectorAll('.timeline-item');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-    items.forEach(item => observer.observe(item));
-  });
-</script>
 
   <!-- =============================== -->
   <!-- 📸 PHOTO COLLAGE SECTION -->
