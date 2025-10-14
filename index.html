@@ -805,7 +805,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   });
 </script>
 
-  <!-- =============================== -->
+<!-- =============================== -->
 <!-- 🎥 FEATURED TALKS & MEDIA SECTION -->
 <!-- =============================== -->
 <section id="features" class="bg-light-grey/70 py-20 md:py-28">
@@ -814,101 +814,92 @@ document.addEventListener('DOMContentLoaded',()=>{
     <div class="text-center mb-16" data-aos="fade-up" data-aos-delay="50">
       <h2 class="text-3xl md:text-4xl font-bold text-navy">Featured Talks &amp; Media</h2>
       <p class="mt-4 text-lg text-navy/90 max-w-2xl mx-auto">
-        Selected features, keynotes, and publications highlighting Dr. Dunn’s leadership in innovation, equity, and digital transformation.
+        Selected talks and interviews highlighting Dr. Dunn’s leadership in innovation, equity, and digital transformation.
       </p>
     </div>
 
-    <!-- 🎬 TEDx Video Embed -->
-    <div class="max-w-4xl mx-auto mb-16 aspect-w-16 aspect-h-9" data-aos="fade-up" data-aos-delay="100">
-      <iframe class="rounded-xl shadow-lg w-full h-[360px] md:h-[500px]"
-              src="https://www.youtube.com/embed/ePO3FomVpwo"
-              title="Dr. Cherise Dunn TEDx Talk – Made for Africa. Made in Africa."
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              loading="lazy">
-      </iframe>
+    <!-- 🎬 TEDx Video (Primary) -->
+    <div class="max-w-4xl mx-auto mb-16 aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group" data-aos="fade-up" data-aos-delay="100">
+      <img src="https://img.youtube.com/vi/ePO3FomVpwo/hqdefault.jpg"
+           alt="Dr. Cherise Dunn TEDx Talk – Made for Africa. Made in Africa."
+           class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.02] transition-transform duration-300"
+           loading="lazy"
+           onclick="loadVideo(this, 'ePO3FomVpwo')">
+      <div class="absolute inset-0 flex items-center justify-center">
+        <button aria-label="Play video"
+                class="bg-white/80 hover:bg-white rounded-full p-4 transition">
+          ▶
+        </button>
+      </div>
     </div>
 
     <!-- 🎥 Additional Talks Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto mt-20">
 
       <!-- Video 1 -->
-      <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="150">
-        <iframe class="w-full h-full rounded-xl"
-                src="https://www.youtube.com/embed/8Jy7xyOT6UM"
-                title="Panel Discussion – Advancing Africa’s Digital Future"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy">
-        </iframe>
+      <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group" data-aos="fade-up" data-aos-delay="150">
+        <img src="https://img.youtube.com/vi/8Jy7xyOT6UM/hqdefault.jpg"
+             alt="Panel Discussion – Advancing Africa’s Digital Future"
+             class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.02] transition-transform duration-300"
+             loading="lazy"
+             onclick="loadVideo(this, '8Jy7xyOT6UM')">
+        <div class="absolute inset-0 flex items-center justify-center">
+          <button aria-label="Play video"
+                  class="bg-white/80 hover:bg-white rounded-full p-4 transition">
+            ▶
+          </button>
+        </div>
       </div>
 
       <!-- Video 2 -->
-      <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
-        <iframe class="w-full h-full rounded-xl"
-                src="https://www.youtube.com/embed/B92jngV144o"
-                title="Keynote – Leadership and Innovation in Global Health"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy">
-        </iframe>
+      <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://img.youtube.com/vi/B92jngV144o/hqdefault.jpg"
+             alt="Keynote – Leadership and Innovation in Global Health"
+             class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.02] transition-transform duration-300"
+             loading="lazy"
+             onclick="loadVideo(this, 'B92jngV144o')">
+        <div class="absolute inset-0 flex items-center justify-center">
+          <button aria-label="Play video"
+                  class="bg-white/80 hover:bg-white rounded-full p-4 transition">
+            ▶
+          </button>
+        </div>
       </div>
 
-    </div>
-
-    <!-- 🗞️ Media Highlights Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-24">
-
-      <!-- Fast Company -->
-      <div class="bg-white rounded-xl shadow-md hover:shadow-lg hover:shadow-crimson/20 p-6 text-center hover:-translate-y-1 transition-transform duration-300" data-aos="fade-up" data-aos-delay="250">
-        <img src="./Logos/Fast_Company_logo.svg"
-             alt="Dr. Dunn featured in Fast Company’s Most Innovative Companies issue"
-             class="w-28 h-auto mx-auto mb-4 object-contain"
-             loading="lazy">
-        <p class="text-sm text-navy/90">
-          Featured in Fast Company’s <em>Most Innovative Companies</em> issue for leading health innovation in Africa.
-        </p>
+      <!-- Video 3 (Placeholder) -->
+      <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group" data-aos="fade-up" data-aos-delay="250">
+        <img src="https://img.youtube.com/vi/XXXXXXXXXXX/hqdefault.jpg"
+             alt="Future Talk or Media Feature – Coming Soon"
+             class="w-full h-full object-cover cursor-pointer opacity-80"
+             loading="lazy"
+             onclick="loadVideo(this, 'XXXXXXXXXXX')">
+        <div class="absolute inset-0 flex items-center justify-center">
+          <button aria-label="Play video"
+                  class="bg-white/80 hover:bg-white rounded-full p-4 transition">
+            ▶
+          </button>
+        </div>
       </div>
 
-      <!-- TEDx Cape Town -->
-      <div class="bg-white rounded-xl shadow-md hover:shadow-lg hover:shadow-crimson/20 p-6 text-center hover:-translate-y-1 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
-        <img src="./Logos/TEDx-Cape-Town-Logo.svg"
-             alt="Dr. Dunn speaking at TEDx Cape Town – Made for Africa. Made in Africa."
-             class="w-28 h-auto mx-auto mb-4 object-contain"
-             loading="lazy">
-        <p class="text-sm text-navy/90">
-          TEDx Cape Town Speaker: “Made for Africa. Made in Africa.”
-        </p>
+      <!-- Video 4 (Placeholder) -->
+      <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group" data-aos="fade-up" data-aos-delay="300">
+        <img src="https://img.youtube.com/vi/YYYYYYYYYYY/hqdefault.jpg"
+             alt="Upcoming Keynote or Interview – Coming Soon"
+             class="w-full h-full object-cover cursor-pointer opacity-80"
+             loading="lazy"
+             onclick="loadVideo(this, 'YYYYYYYYYYY')">
+        <div class="absolute inset-0 flex items-center justify-center">
+          <button aria-label="Play video"
+                  class="bg-white/80 hover:bg-white rounded-full p-4 transition">
+            ▶
+          </button>
+        </div>
       </div>
 
-      <!-- Harvard University -->
-      <div class="bg-white rounded-xl shadow-md hover:shadow-lg hover:shadow-crimson/20 p-6 text-center hover:-translate-y-1 transition-transform duration-300" data-aos="fade-up" data-aos-delay="350">
-        <img src="./Logos/Harvard_University_logo.svg"
-             alt="Harvard University recognizing Dr. Dunn through the Harvard South Africa Fellowship Program"
-             class="w-28 h-auto mx-auto mb-4 object-contain"
-             loading="lazy">
-        <p class="text-sm text-navy/90">
-          Recognized for advancing health equity and technology through the Harvard South Africa Fellowship Program.
-        </p>
-      </div>
-
-      <!-- MIT -->
-      <div class="bg-white rounded-xl shadow-md hover:shadow-lg hover:shadow-crimson/20 p-6 text-center hover:-translate-y-1 transition-transform duration-300" data-aos="fade-up" data-aos-delay="400">
-        <img src="./Logos/MIT_Logo_and_Wordmark.svg"
-             alt="MIT AI Venture Studio Platinum Team Award recognizing Dr. Dunn’s leadership in AI-driven medical innovation"
-             class="w-28 h-auto mx-auto mb-4 object-contain"
-             loading="lazy">
-        <p class="text-sm text-navy/90">
-          MIT AI Venture Studio Platinum Team Award for AI-driven medical innovation.
-        </p>
-      </div>
     </div>
 
     <!-- Optional CTA -->
-    <p class="text-center mt-12 text-navy/70" data-aos="fade-up" data-aos-delay="450">
+    <p class="text-center mt-16 text-navy/70" data-aos="fade-up" data-aos-delay="350">
       Explore more talks and features on 
       <a href="https://www.linkedin.com/in/cherisedunn" class="text-crimson font-semibold hover:underline">
         LinkedIn
@@ -916,6 +907,23 @@ document.addEventListener('DOMContentLoaded',()=>{
     </p>
   </div>
 </section>
+
+<!-- 🧩 Lightweight JS for Click-to-Play -->
+<script>
+  function loadVideo(img, videoId) {
+    const wrapper = img.parentElement;
+    wrapper.innerHTML = `
+      <iframe class="w-full h-full rounded-xl"
+        src="https://www.youtube.com/embed/${videoId}?autoplay=1"
+        title="YouTube video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>`;
+  }
+</script>
+
 
   <!-- =============================== -->
   <!-- 📬 ENGAGEMENT & CONTACT SECTION -->
