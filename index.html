@@ -397,15 +397,19 @@
     </div>
 
     <div class="relative max-w-5xl mx-auto">
+      <!-- the vertical timeline line -->
       <div class="absolute left-1/2 -translate-x-1/2 h-full w-1 bg-light-grey" aria-hidden="true"></div>
 
-      <!-- ========= 2025 ========= -->
+      <!-- ======= Each Year Entry ======= -->
+      <!-- 2025 -->
       <article class="timeline-item flex flex-col md:flex-row items-center md:justify-between relative gap-6">
-        <div class="timeline-node"></div>
+        <div class="timeline-node" aria-hidden="true"></div>
         <div class="w-full md:w-1/2 md:text-right md:pr-8">
-          <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-            <h3 class="text-2xl font-bold text-crimson mb-3"><time datetime="2025">2025</time></h3>
-            <ul class="list-disc list-inside text-sm text-navy/80 space-y-1">
+          <div class="bg-white/90 border border-light-grey/30 p-6 rounded-xl shadow-sm">
+            <h3 class="text-3xl font-bold mb-3">
+              <time datetime="2025" class="inline-block bg-crimson text-white px-3 py-1 rounded-full">2025</time>
+            </h3>
+            <ul class="list-disc list-inside text-[15px] leading-relaxed text-navy/85 space-y-2">
               <li>MIT AI Venture Studio – Platinum Team Award</li>
               <li>Public Health Leadership Lab Fellow, Harvard T.H. Chan School</li>
               <li>Chair of Operations, Harvard Graduate Student Council</li>
@@ -417,19 +421,21 @@
         <div class="w-full md:w-1/2 flex justify-center md:justify-start">
           <div class="flex flex-wrap justify-center gap-6">
             <img src="./Logos/Harvard_University_logo.svg.png" class="h-20 w-20 object-contain" alt="Harvard University logo">
-            <img src="./Logos/Harvard_Chan_SPH_logo.png" class="h-20 w-20 object-contain" alt="Harvard T.H. Chan School of Public Health logo">
-            <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" class="h-20 w-20 object-contain" alt="Massachusetts Institute of Technology logo">
+            <img src="./Logos/Harvard_Chan_SPH_logo.png" class="h-20 w-20 object-contain" alt="Harvard Chan School logo">
+            <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" class="h-20 w-20 object-contain" alt="MIT logo">
           </div>
         </div>
       </article>
 
-      <!-- ========= 2024 ========= -->
+      <!-- 2024 -->
       <article class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between relative gap-6">
-        <div class="timeline-node"></div>
+        <div class="timeline-node" aria-hidden="true"></div>
         <div class="w-full md:w-1/2 md:text-left md:pl-8">
-          <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-            <h3 class="text-2xl font-bold text-crimson mb-3"><time datetime="2024">2024</time></h3>
-            <ul class="list-disc list-inside text-sm text-navy/80 space-y-1">
+          <div class="bg-white/90 border border-light-grey/30 p-6 rounded-xl shadow-sm">
+            <h3 class="text-3xl font-bold mb-3">
+              <time datetime="2024" class="inline-block bg-crimson text-white px-3 py-1 rounded-full">2024</time>
+            </h3>
+            <ul class="list-disc list-inside text-[15px] leading-relaxed text-navy/85 space-y-2">
               <li>Harvard South Africa Fellow</li>
               <li>G20 Startup20 Delegate representing South Africa (Macapá, Brazil)</li>
               <li>Student Leadership Council, MIT AI Ventures</li>
@@ -439,84 +445,92 @@
         <div class="w-full md:w-1/2 flex justify-center md:justify-end">
           <div class="flex flex-wrap justify-center gap-6">
             <img src="./Logos/Harvard_University_logo.svg.png" class="h-20 w-20 object-contain" alt="Harvard University logo">
-            <img src="./Logos/G20_Brazil_2024.png" class="h-20 w-20 object-contain" alt="G20 Brazil 2024 logo">
-            <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" class="h-20 w-20 object-contain" alt="Massachusetts Institute of Technology logo">
+            <img src="./Logos/G20_Brazil_2024.png" class="h-20 w-20 object-contain" alt="G20 Brazil logo">
+            <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" class "h-20 w-20 object-contain" alt="MIT logo">
           </div>
         </div>
       </article>
 
-      <!-- ========= 2023 ========= -->
+      <!-- 2023 -->
       <article class="timeline-item flex flex-col md:flex-row items-center md:justify-between relative gap-6">
-        <div class="timeline-node"></div>
+        <div class="timeline-node" aria-hidden="true"></div>
         <div class="w-full md:w-1/2 md:text-right md:pr-8">
-          <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-            <h3 class="text-2xl font-bold text-crimson mb-3"><time datetime="2023">2023</time></h3>
-            <ul class="list-disc list-inside text-sm text-navy/80 space-y-1">
+          <div class="bg-white/90 border border-light-grey/30 p-6 rounded-xl shadow-sm">
+            <h3 class="text-3xl font-bold mb-3">
+              <time datetime="2023" class="inline-block bg-crimson text-white px-3 py-1 rounded-full">2023</time>
+            </h3>
+            <ul class="list-disc list-inside text-[15px] leading-relaxed text-navy/85 space-y-2">
               <li>BRICS Young Innovator Prize Finalist – AI-driven Medical Device Design</li>
-              <li>Hosted Stanford University's Vice Provost of Undergraduate Education, Prof Sarah Church, showcasing Africa Makes’ collaboration with Stanford to mentor youth in design thinking and 3D printing (Jul 2023)</li>
-              <li>Explored educational and cultural implications of technology with U.S. Assistant Secretary for the Bureau of Educational and Cultural Affairs, Lee Satterfield — highlighting 3D printing as a tool for cultural exchange (Mar 2023)</li>
+              <li>Hosted Stanford University Vice Provost Prof Sarah Church — showcasing Africa Makes’ partnership in mentoring youth in 3D printing (Jul 2023)</li>
+              <li>Explored educational & cultural technology with U.S. Assistant Secretary Lee Satterfield — 3D printing as a tool for cultural exchange (Mar 2023)</li>
             </ul>
           </div>
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-start">
           <div class="flex flex-wrap justify-center gap-6">
-            <img src="./Logos/15th_BRICS_summit_logo.png" class="h-20 w-20 object-contain" alt="BRICS 2023 logo">
-            <img src="./Logos/Stanford-Symbol.png" class="h-20 w-20 object-contain" alt="Stanford University logo">
+            <img src="./Logos/15th_BRICS_summit_logo.png" class="h-20 w-20 object-contain" alt="BRICS logo">
+            <img src="./Logos/Stanford-Symbol.png" class="h-20 w-20 object-contain" alt="Stanford logo">
             <img src="./Logos/US-WhiteHouse-Emblem.svg.png" class="h-20 w-20 object-contain" alt="U.S. Government emblem">
           </div>
         </div>
       </article>
 
-      <!-- ========= 2022 ========= -->
+      <!-- 2022 -->
       <article class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between relative gap-6">
-        <div class="timeline-node"></div>
+        <div class="timeline-node" aria-hidden="true"></div>
         <div class="w-full md:w-1/2 md:text-left md:pl-8">
-          <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-            <h3 class="text-2xl font-bold text-crimson mb-3"><time datetime="2022">2022</time></h3>
-            <ul class="list-disc list-inside text-sm text-navy/80 space-y-1">
-              <li>Hosted U.S. Deputy Secretary of State Wendy Sherman (Jun 2022) — Discussed innovation in cardiology and surgical guides, bilateral partnerships, and emerging technologies in healthcare.</li>
-              <li>Presented to Dr. Alondra Nelson, Head of the White House Office of Science and Technology Policy (Dec 2022), on point-of-care manufacturing for global health equity.</li>
-              <li>Nedbank YouthX Technology & Innovation Changemaker — Mentored youth entrepreneurs using technology for good across South Africa.</li>
+          <div class="bg-white/90 border border-light-grey/30 p-6 rounded-xl shadow-sm">
+            <h3 class="text-3xl font-bold mb-3">
+              <time datetime="2022" class="inline-block bg-crimson text-white px-3 py-1 rounded-full">2022</time>
+            </h3>
+            <ul class="list-disc list-inside text-[15px] leading-relaxed text-navy/85 space-y-2">
+              <li>Hosted U.S. Deputy Secretary of State Wendy Sherman (Jun 2022) — discussed innovation in cardiology, surgical guides, and bilateral technology partnerships.</li>
+              <li>Presented to Dr. Alondra Nelson (Dec 2022), Head of OSTP / White House — on point-of-care manufacturing in health settings.</li>
+              <li>Nedbank YouthX Technology & Innovation Changemaker — mentoring tech entrepreneurs (2022).</li>
             </ul>
           </div>
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-end">
           <div class="flex flex-wrap justify-center gap-6">
-            <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" class="h-20 w-20 object-contain" alt="U.S. Department of State logo">
-            <img src="./Logos/US-WhiteHouse-Emblem.svg.png" class="h-20 w-20 object-contain" alt="White House OSTP logo">
-            <img src="./Logos/Brand_eins_(2020-06-26).svg" class="h-20 w-20 object-contain" alt="Nedbank YouthX or technology innovation logo">
+            <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" class="h-20 w-20 object-contain" alt="U.S. State Department logo">
+            <img src="./Logos/US-WhiteHouse-Emblem.svg.png" class="h-20 w-20 object-contain" alt="White House emblem">
+            <img src="./Logos/Brand_eins_(2020-06-26).svg" class="h-20 w-20 object-contain" alt="Brand Eins / innovation logo">
           </div>
         </div>
       </article>
 
-      <!-- ========= 2021 ========= -->
+      <!-- 2021 -->
       <article class="timeline-item flex flex-col md:flex-row items-center md:justify-between relative gap-6">
-        <div class="timeline-node"></div>
+        <div class="timeline-node" aria-hidden="true"></div>
         <div class="w-full md:w-1/2 md:text-right md:pr-8">
-          <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-            <h3 class="text-2xl font-bold text-crimson mb-3"><time datetime="2021">2021</time></h3>
-            <ul class="list-disc list-inside text-sm text-navy/80 space-y-1">
+          <div class="bg-white/90 border border-light-grey/30 p-6 rounded-xl shadow-sm">
+            <h3 class="text-3xl font-bold mb-3">
+              <time datetime="2021" class="inline-block bg-crimson text-white px-3 py-1 rounded-full">2021</time>
+            </h3>
+            <ul class="list-disc list-inside text-[15px] leading-relaxed text-navy/85 space-y-2">
               <li>Fast Company “Most Innovative Companies” Award – South Africa Makes</li>
               <li>Winner – Wesgro’s Young Innovators in the Cape Health Tech Sector</li>
-              <li>Featured in Wesgro’s “Pioneers in the Health Tech Industry”</li>
+              <li>Featured in Wesgro’s Pioneers in the Health Tech Industry</li>
             </ul>
           </div>
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-start">
           <div class="flex flex-wrap justify-center gap-6">
             <img src="./Logos/Fast_Company_logo.svg" class="h-20 w-20 object-contain" alt="Fast Company logo">
-            <img src="./Logos/Mail_and_Guardian_logo.svg" class="h-20 w-20 object-contain" alt="Wesgro or South Africa Makes logo">
+            <img src="./Logos/Mail_and_Guardian_logo.svg" class="h-20 w-20 object-contain" alt="Mail & Guardian logo">
           </div>
         </div>
       </article>
 
-      <!-- ========= 2020 ========= -->
+      <!-- 2020 -->
       <article class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between relative gap-6">
-        <div class="timeline-node"></div>
+        <div class="timeline-node" aria-hidden="true"></div>
         <div class="w-full md:w-1/2 md:text-left md:pl-8">
-          <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-            <h3 class="text-2xl font-bold text-crimson mb-3"><time datetime="2020">2020</time></h3>
-            <ul class="list-disc list-inside text-sm text-navy/80 space-y-1">
+          <div class="bg-white/90 border border-light-grey/30 p-6 rounded-xl shadow-sm">
+            <h3 class="text-3xl font-bold mb-3">
+              <time datetime="2020" class="inline-block bg-crimson text-white px-3 py-1 rounded-full">2020</time>
+            </h3>
+            <ul class="list-disc list-inside text-[15px] leading-relaxed text-navy/85 space-y-2">
               <li>Founder – Africa Makes Foundation (STEM & Digital Manufacturing for Youth)</li>
               <li>Oppenheimer Memorial Trust Fellow (Biomedical Innovation Focus)</li>
             </ul>
@@ -524,19 +538,21 @@
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-end">
           <div class="flex flex-wrap justify-center gap-6">
-            <!-- Upload Africa Makes logo -->
+            <!-- Missing Africa Makes logo: insert when uploaded -->
             <img src="./Logos/OMT_Logo.svg" class="h-20 w-20 object-contain" alt="Oppenheimer Memorial Trust logo">
           </div>
         </div>
       </article>
 
-      <!-- ========= 2019 ========= -->
+      <!-- 2019 -->
       <article class="timeline-item flex flex-col md:flex-row items-center md:justify-between relative gap-6">
-        <div class="timeline-node"></div>
+        <div class="timeline-node" aria-hidden="true"></div>
         <div class="w-full md:w-1/2 md:text-right md:pr-8">
-          <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-            <h3 class="text-2xl font-bold text-crimson mb-3"><time datetime="2019">2019</time></h3>
-            <ul class="list-disc list-inside text-sm text-navy/80 space-y-1">
+          <div class="bg-white/90 border border-light-grey/30 p-6 rounded-xl shadow-sm">
+            <h3 class="text-3xl font-bold mb-3">
+              <time datetime="2019" class="inline-block bg-crimson text-white px-3 py-1 rounded-full">2019</time>
+            </h3>
+            <ul class="list-disc list-inside text-[15px] leading-relaxed text-navy/85 space-y-2">
               <li>TEDx Cape Town Speaker – “Made for Africa. Made in Africa.”</li>
               <li>Top 12 Influential Young Women to Watch in SA – Standard Bank Top Women Leaders, 16th Edition</li>
               <li>Named among Inspiring Fifty Women in STEM (South Africa)</li>
@@ -551,13 +567,15 @@
         </div>
       </article>
 
-      <!-- ========= 2018 ========= -->
+      <!-- 2018 -->
       <article class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between relative gap-6">
-        <div class="timeline-node"></div>
+        <div class="timeline-node" aria-hidden="true"></div>
         <div class="w-full md:w-1/2 md:text-left md:pl-8">
-          <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-            <h3 class="text-2xl font-bold text-crimson mb-3"><time datetime="2018">2018</time></h3>
-            <ul class="list-disc list-inside text-sm text-navy/80 space-y-1">
+          <div class="bg-white/90 border border-light-grey/30 p-6 rounded-xl shadow-sm">
+            <h3 class="text-3xl font-bold mb-3">
+              <time datetime="2018" class="inline-block bg-crimson text-white px-3 py-1 rounded-full">2018</time>
+            </h3>
+            <ul class="list-disc list-inside text-[15px] leading-relaxed text-navy/85 space-y-2">
               <li>U.S. Department of State – IVLP Fellow, Women in Business Program</li>
             </ul>
           </div>
@@ -566,9 +584,54 @@
           <img src="./Logos/IVLP_Logo.png" class="h-20 w-20 object-contain" alt="U.S. Department of State IVLP logo">
         </div>
       </article>
+
     </div>
   </div>
 </section>
+
+<!-- =============================== -->
+<!-- ✨ TIMELINE FADE-IN + NODE ANIMATION -->
+<!-- =============================== -->
+<style>
+  .timeline-node {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #9E1B32;
+    border-radius: 9999px;
+    width: 1.2rem;
+    height: 1.2rem;
+    animation: pulseCrimson 2s infinite;
+  }
+  @keyframes pulseCrimson {
+    0%, 100% { transform: translateX(-50%) scale(1); opacity: 1; }
+    50% { transform: translateX(-50%) scale(1.3); opacity: 0.6; }
+  }
+  .timeline-item {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(20px);
+  }
+  .timeline-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.timeline-item');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    items.forEach(item => observer.observe(item));
+  });
+</script>
 
   <!-- =============================== -->
   <!-- 📸 PHOTO COLLAGE SECTION -->
