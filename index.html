@@ -129,40 +129,52 @@
     </div>
   </header>
 
-  <!-- =============================== -->
-  <!-- 🏔 HERO SECTION -->
-  <!-- =============================== -->
-  <section class="bg-navy text-white py-24 md:py-32">
-    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-      <!-- Left: Text -->
-      <div>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
-          Building Equitable Health Systems for a Digital World
-        </h1>
-        <p class="text-lg text-gray-300 mb-8">
-          Dr. Cherise Dunn is a global health innovator, Harvard Fellow, and Oppenheimer Memorial Trust Fellow
-          advancing inclusive technology and policy solutions for the future of healthcare.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="#expertise"
-             class="bg-crimson text-white px-6 py-3 rounded-lg font-semibold hover:bg-crimson-darker transition">
-            Explore Expertise
-          </a>
-          <a href="#contact"
-             class="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-navy transition">
-            Get in Touch
-          </a>
-        </div>
-      </div>
+<!-- =============================== -->
+<!-- 🏔 HERO SECTION (ENHANCED) -->
+<!-- =============================== -->
+<section class="bg-navy text-white py-28 md:py-36 relative overflow-hidden">
+  <div class="container mx-auto px-6 grid md:grid-cols-2 gap-10 items-center relative z-10">
 
-      <!-- Right: Image -->
-      <div class="relative">
-        <img src="./Images/Dr Cherise Dunn Hero Headshot.jpeg" alt="Dr. Cherise Dunn"
-             class="w-full rounded-2xl shadow-xl object-cover" />
-        <div class="absolute inset-0 bg-gradient-to-t from-navy/50 to-transparent rounded-2xl"></div>
+    <!-- 🧭 Left: Text -->
+    <div>
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+        Building <span class="text-crimson">Equitable Health Systems</span><br class="hidden md:block">
+        for a Digital World
+      </h1>
+
+      <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-lg">
+        Dr. Cherise Dunn is a global health innovator, Harvard Fellow, and Oppenheimer Memorial Trust Fellow
+        advancing inclusive technology and policy solutions for the future of healthcare.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#expertise"
+           class="bg-crimson text-white px-6 py-3 rounded-lg font-semibold hover:bg-crimson-darker transition">
+          Explore Expertise
+        </a>
+        <a href="#contact"
+           class="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-navy transition">
+          Get in Touch
+        </a>
       </div>
     </div>
-  </section>
+
+    <!-- 👩‍⚕️ Right: Portrait -->
+    <div class="relative flex justify-center">
+      <div class="relative">
+        <img src="./Images/Dr-Cherise-Dunn-Hero.jpg"
+             alt="Dr. Cherise Dunn professional portrait"
+             class="w-full max-w-md rounded-2xl shadow-2xl object-cover border-4 border-white/10">
+        <div class="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent rounded-2xl"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 🌌 Subtle gradient overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-navy via-navy/95 to-navy/80 opacity-90"></div>
+</section>
+
 
   <!-- =============================== -->
   <!-- 🏛 FEATURED IN: LOGO CAROUSEL -->
@@ -201,49 +213,73 @@
     </div>
   </section>
 
-  <!-- =============================== -->
-  <!-- 💡 ABOUT SECTION -->
-  <!-- =============================== -->
-  <section id="about" class="bg-off-white py-20 md:py-28">
-    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-16 items-start">
+<!-- =============================== -->
+<!-- 💡 ABOUT SECTION (IMPROVED) -->
+<!-- =============================== -->
+<section id="about" class="bg-off-white py-20 md:py-28">
+  <div class="container mx-auto px-6 grid md:grid-cols-3 gap-16 items-start">
 
-      <!-- 👩‍🔬 MAIN BIOGRAPHY -->
-      <div class="md:col-span-2">
-        <h2 class="text-3xl md:text-4xl font-bold text-navy mb-6">
-          A New Model for Global Innovation
-        </h2>
-        <div class="space-y-6 text-navy/80 leading-relaxed">
-          <p>My journey started in a lab, but my work is defined by its real-world application. I specialize in turning breakthrough ideas into practical, impactful solutions that work on the ground.</p>
-          <p>When faced with the challenge of healthcare access, I didn’t just write a paper — I co-founded <strong class="text-navy">South Africa Makes</strong>. We built a new system from the ground up, using pioneering digital manufacturing to create a localized innovation model that serves as a case study for others.</p>
-          <p>This hands-on experience is what I bring to the table. I believe that true progress happens when technology, policy, and human-centered design come together. My focus is on ensuring the next wave of digital health systems are not only intelligent but inclusive and implementable.</p>
-        </div>
-      </div>
+    <!-- 👩‍🔬 MAIN BIOGRAPHY -->
+    <div class="md:col-span-2 space-y-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-navy mb-6">
+        A New Model for Global Innovation
+      </h2>
 
-      <!-- 🧭 AT A GLANCE CARD -->
-      <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
-        <h3 class="text-lg font-bold text-navy mb-4">At a Glance</h3>
-        <p class="text-sm text-navy/80 mb-4 leading-relaxed">
-          Dr. Cherise Dunn is a <strong>Harvard- and Oppenheimer-funded health technology innovator</strong> 
-          dedicated to advancing equitable, digitally enabled healthcare systems. 
-          With a PhD in Medical Biochemistry and a Master of Public Health from the Harvard T.H. Chan School, 
-          she bridges science, policy, and technology to deliver scalable innovation.
+      <!-- 🎓 Education -->
+      <div>
+        <h3 class="text-xl font-semibold text-crimson mb-2">Education</h3>
+        <p class="text-navy/80 leading-relaxed">
+          Dr. Cherise Dunn holds a PhD in Medical Biochemistry from the University of Cape Town and a Master of Public Health in Health Management from the Harvard T.H. Chan School of Public Health. 
+          Her academic foundation blends scientific rigor with strategic leadership in global health, digital transformation, and innovation policy.
         </p>
-        <ul class="text-sm text-navy/80 space-y-2">
-          <li><strong class="text-navy">Leadership:</strong> Chair of Operations, Harvard Graduate Student Council · Founder & CEO, Impact Mechanica</li>
-          <li><strong class="text-navy">Education:</strong> MPH, Harvard T.H. Chan School of Public Health · PhD, University of Cape Town</li>
-          <li><strong class="text-navy">Fellowships:</strong> Harvard South Africa Fellow · Oppenheimer Memorial Trust Fellow</li>
-          <li><strong class="text-navy">Expertise:</strong> Digital Health Systems · Additive Manufacturing · Policy for Inclusive Innovation</li>
-          <li><strong class="text-navy">Advisory:</strong> U.S. Department of State · African Union Health Platforms</li>
-          <li><strong class="text-navy">Recognition:</strong> Inspiring Fifty Women in STEM · Fast Company Most Innovative Companies</li>
-        </ul>
-        <a href="./assets/dr-cherise-dunn-cv.pdf" 
-          download="Dr-Cherise-Dunn-CV.pdf"
-          class="mt-5 inline-block w-full text-center bg-crimson text-white px-4 py-2.5 rounded-lg font-semibold text-sm hover:bg-crimson-darker transition duration-300">
-          Download Full CV
-        </a>
       </div>
-    </div> <!-- ✅ closes grid container -->
-  </section> <!-- ✅ closes ABOUT section -->
+
+      <!-- 🚀 Entrepreneurship -->
+      <div>
+        <h3 class="text-xl font-semibold text-crimson mb-2">Entrepreneurship</h3>
+        <p class="text-navy/80 leading-relaxed">
+          As Founder &amp; CEO of <strong class="text-navy">Impact Mechanica</strong> and Co-Founder of <strong class="text-navy">South Africa Makes</strong>, 
+          Dr. Dunn translates breakthrough research into real-world impact. Her ventures use advanced manufacturing and AI to deliver practical, 
+          scalable solutions for health equity and technology adoption across emerging markets.
+        </p>
+        <blockquote class="border-l-4 border-crimson pl-4 italic text-crimson mt-4">
+          “Innovation is only meaningful when it improves lives — not just systems.”
+        </blockquote>
+      </div>
+
+      <!-- 🌍 Global Policy & Systems Design -->
+      <div>
+        <h3 class="text-xl font-semibold text-crimson mb-2">Global Policy &amp; Systems Design</h3>
+        <p class="text-navy/80 leading-relaxed">
+          Dr. Dunn advises organizations and governments on developing inclusive innovation ecosystems that balance technology advancement with public health outcomes. 
+          Her work spans the G20, BRICS, and Harvard–MIT networks, with a focus on enabling sustainable, human-centered health systems through design thinking and evidence-based policymaking.
+        </p>
+      </div>
+    </div>
+
+    <!-- 🧭 AT A GLANCE CARD -->
+    <div class="bg-light-grey/50 p-6 rounded-lg shadow-lg">
+      <h3 class="text-lg font-bold text-navy mb-4">At a Glance</h3>
+      <p class="text-sm text-navy/80 mb-4 leading-relaxed">
+        Dr. Cherise Dunn is a <strong>Harvard- and Oppenheimer-funded health technology innovator</strong> 
+        dedicated to advancing equitable, digitally enabled healthcare systems.
+      </p>
+      <ul class="text-sm text-navy/80 space-y-2">
+        <li><strong class="text-navy">Leadership:</strong> Chair of Operations, Harvard Graduate Student Council · Founder &amp; CEO, Impact Mechanica</li>
+        <li><strong class="text-navy">Education:</strong> MPH, Harvard T.H. Chan School · PhD, University of Cape Town</li>
+        <li><strong class="text-navy">Fellowships:</strong> Harvard South Africa Fellow · Oppenheimer Memorial Trust Fellow</li>
+        <li><strong class="text-navy">Expertise:</strong> Digital Health Systems · Additive Manufacturing · Policy for Inclusive Innovation</li>
+        <li><strong class="text-navy">Advisory:</strong> U.S. Department of State · African Union Health Platforms</li>
+        <li><strong class="text-navy">Recognition:</strong> Inspiring Fifty Women in STEM · Fast Company Most Innovative Companies</li>
+      </ul>
+      <a href="./assets/dr-cherise-dunn-cv.pdf" 
+         download="Dr-Cherise-Dunn-CV.pdf"
+         class="mt-5 inline-block w-full text-center bg-crimson text-white px-4 py-2.5 rounded-lg font-semibold text-sm hover:bg-crimson-darker transition duration-300">
+         Download Full CV
+      </a>
+    </div>
+  </div>
+</section>
 
   <!-- =============================== -->
   <!-- 🧬 AREAS OF EXPERTISE SECTION -->
