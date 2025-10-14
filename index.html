@@ -892,17 +892,16 @@ document.addEventListener('DOMContentLoaded',()=>{
       </p>
     </div>
 
-    <!-- 🎥 Video Gallery -->
+    <!-- 🎥 Video Gallery (3 videos) -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
       <!-- Video 1 – TEDx -->
-      <div class="group" data-aos="fade-zoom-in" data-aos-delay="100" data-aos-duration="900">
-        <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg">
+      <div class="video-card group" data-video-id="ePO3FomVpwo" data-aos="fade-zoom-in" data-aos-delay="100" data-aos-duration="900">
+        <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg video-wrapper">
           <img src="https://img.youtube.com/vi/ePO3FomVpwo/hqdefault.jpg"
                alt="TEDx Cape Town – Made for Africa. Made in Africa."
                class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
-               loading="lazy"
-               onclick="loadVideo(this, 'ePO3FomVpwo')">
+               loading="lazy">
           <div class="absolute inset-0 flex items-center justify-center">
             <button aria-label="Play video"
                     class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
@@ -910,19 +909,18 @@ document.addEventListener('DOMContentLoaded',()=>{
             </button>
           </div>
         </div>
-        <h3 class="mt-4 text-center text-navy font-semibold text-base md:text-lg">
+        <h3 class="video-title mt-4 text-center text-navy font-semibold text-base md:text-lg cursor-pointer">
           TEDx Cape Town – “Made for Africa. Made in Africa.”
         </h3>
       </div>
 
-      <!-- Video 2 -->
-      <div class="group" data-aos="fade-zoom-in" data-aos-delay="150" data-aos-duration="900">
-        <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg">
+      <!-- Video 2 – Cape Health Tech Innovators -->
+      <div class="video-card group" data-video-id="8Jy7xyOT6UM" data-aos="fade-zoom-in" data-aos-delay="150" data-aos-duration="900">
+        <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg video-wrapper">
           <img src="https://img.youtube.com/vi/8Jy7xyOT6UM/hqdefault.jpg"
-               alt="Panel Discussion – Advancing Africa’s Digital Future"
+               alt="Cape Health Tech Innovators | Dr Cherise Dunn, Co-founder and COO of South Africa Makes"
                class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
-               loading="lazy"
-               onclick="loadVideo(this, '8Jy7xyOT6UM')">
+               loading="lazy">
           <div class="absolute inset-0 flex items-center justify-center">
             <button aria-label="Play video"
                     class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
@@ -930,19 +928,18 @@ document.addEventListener('DOMContentLoaded',()=>{
             </button>
           </div>
         </div>
-        <h3 class="mt-4 text-center text-navy font-semibold text-base md:text-lg">
-          Panel Discussion – “Empowering Africa’s Digital Future”
+        <h3 class="video-title mt-4 text-center text-navy font-semibold text-base md:text-lg cursor-pointer">
+          Cape Health Tech Innovators | Dr Cherise Dunn, Co-founder and COO of South Africa Makes
         </h3>
       </div>
 
-      <!-- Video 3 -->
-      <div class="group" data-aos="fade-zoom-in" data-aos-delay="200" data-aos-duration="900">
-        <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg">
+      <!-- Video 3 – YouthX -->
+      <div class="video-card group" data-video-id="B92jngV144o" data-aos="fade-zoom-in" data-aos-delay="200" data-aos-duration="900">
+        <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg video-wrapper">
           <img src="https://img.youtube.com/vi/B92jngV144o/hqdefault.jpg"
-               alt="Keynote – Leadership and Innovation in Global Health"
+               alt="YouthX | Tech & Innovation: Software, App & Product dev | Inside the mind of Dr. Cherise Dunn"
                class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
-               loading="lazy"
-               onclick="loadVideo(this, 'B92jngV144o')">
+               loading="lazy">
           <div class="absolute inset-0 flex items-center justify-center">
             <button aria-label="Play video"
                     class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
@@ -950,8 +947,8 @@ document.addEventListener('DOMContentLoaded',()=>{
             </button>
           </div>
         </div>
-        <h3 class="mt-4 text-center text-navy font-semibold text-base md:text-lg">
-          Keynote – “Leadership and Innovation in Global Health”
+        <h3 class="video-title mt-4 text-center text-navy font-semibold text-base md:text-lg cursor-pointer">
+          YouthX | Tech & Innovation: Software, App & Product dev | Inside the mind of Dr. Cherise Dunn
         </h3>
       </div>
 
@@ -967,10 +964,9 @@ document.addEventListener('DOMContentLoaded',()=>{
   </div>
 </section>
 
-<!-- 🧩 Click-to-play JavaScript -->
+<!-- 🧩 Click-to-play JavaScript (thumbnail AND title are clickable) -->
 <script>
-  function loadVideo(img, videoId) {
-    const wrapper = img.parentElement;
+  function playVideo(wrapper, videoId) {
     wrapper.innerHTML = `
       <iframe class="w-full h-full rounded-xl"
         src="https://www.youtube.com/embed/${videoId}?autoplay=1"
@@ -980,6 +976,17 @@ document.addEventListener('DOMContentLoaded',()=>{
         allowfullscreen
         loading="lazy"></iframe>`;
   }
+
+  document.querySelectorAll('.video-card').forEach(card => {
+    const videoId = card.getAttribute('data-video-id');
+    const wrapper = card.querySelector('.video-wrapper');
+    const title = card.querySelector('.video-title');
+
+    // Click thumbnail/player area
+    wrapper.addEventListener('click', () => playVideo(wrapper, videoId));
+    // Click title (also plays)
+    title.addEventListener('click', () => playVideo(wrapper, videoId));
+  });
 </script>
 
 <!-- =============================== -->
