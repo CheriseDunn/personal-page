@@ -388,26 +388,46 @@
 <!-- 🌍 A RECORD OF GLOBAL IMPACT -->
 <!-- ============================= -->
 <section id="engagements" aria-label="Timeline of global engagements" class="bg-off-white py-20 md:py-28">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-20">
+  <div class="engagements-bg"></div>
+
+  <div class="container mx-auto px-6 relative">
+    <!-- Sticky mini year nav (optional; remove if not needed) -->
+    <nav class="hidden md:block sticky top-16 z-10 mb-6">
+      <ul class="flex flex-wrap justify-center gap-4 text-sm font-medium text-navy/70">
+        <li><a href="#y2025" class="hover:text-crimson">2025</a></li>
+        <li><a href="#y2024" class="hover:text-crimson">2024</a></li>
+        <li><a href="#y2023" class="hover:text-crimson">2023</a></li>
+        <li><a href="#y2022" class="hover:text-crimson">2022</a></li>
+        <li><a href="#y2021" class="hover:text-crimson">2021</a></li>
+        <li><a href="#y2020" class="hover:text-crimson">2020</a></li>
+        <li><a href="#y2019" class="hover:text-crimson">2019</a></li>
+        <li><a href="#y2018" class="hover:text-crimson">2018</a></li>
+      </ul>
+    </nav>
+
+    <div class="text-center mb-12 md:mb-20">
       <h2 class="text-3xl md:text-4xl font-bold text-navy">A Record of Global Impact</h2>
       <p class="mt-4 text-lg text-navy/80 max-w-3xl mx-auto">
         A chronological record of Dr. Dunn’s leadership and collaborations across innovation, health equity, and technology-driven policy reform.
       </p>
     </div>
 
+    <!-- TIMELINE -->
     <div class="relative max-w-5xl mx-auto">
-      <div class="absolute left-1/2 -translate-x-1/2 h-full w-1 bg-light-grey" aria-hidden="true"></div>
+      <!-- animated vertical axis -->
+      <div class="timeline-axis" aria-hidden="true"></div>
 
       <!-- ========= 2025 ========= -->
-      <article class="timeline-item flex flex-col md:flex-row items-center md:justify-between relative gap-6">
-        <div class="timeline-node"></div>
+      <article id="y2025" class="timeline-item flex flex-col md:flex-row items-center md:justify-between relative gap-8">
+        <div class="timeline-node" aria-hidden="true"></div>
         <div class="w-full md:w-1/2 md:text-right md:pr-8">
-          <div class="bg-white/90 border border-light-grey/30 p-6 rounded-xl shadow-sm">
-            <h3 class="text-3xl font-bold mb-3">
-              <time datetime="2025" class="inline-block bg-crimson text-white px-3 py-1 rounded-full">2025</time>
+          <div class="card">
+            <h3 class="year">
+              <time datetime="2025">2025</time>
             </h3>
-            <ul class="list-disc list-inside text-[15px] leading-relaxed text-navy/85 space-y-2">
+
+            <p class="kicker">🎓 Fellowships & Leadership</p>
+            <ul class="bullets">
               <li>MIT AI Venture Studio – Platinum Team Award</li>
               <li>Public Health Leadership Lab Fellow, Harvard T.H. Chan School</li>
               <li>Chair of Operations, Harvard Graduate Student Council</li>
@@ -417,7 +437,7 @@
           </div>
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-start">
-          <div class="flex flex-wrap justify-center gap-6">
+          <div class="logo-grid">
             <div class="logo-frame"><img src="./Logos/Harvard_University_logo.svg.png" alt="Harvard University logo"></div>
             <div class="logo-frame"><img src="./Logos/Harvard_Chan_SPH_logo.png" alt="Harvard T.H. Chan School of Public Health logo"></div>
             <div class="logo-frame"><img src="./Logos/MIT_Logo_and_Wordmark.svg.png" alt="Massachusetts Institute of Technology logo"></div>
@@ -426,14 +446,14 @@
       </article>
 
       <!-- ========= 2024 ========= -->
-      <article class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between relative gap-6">
-        <div class="timeline-node"></div>
+      <article id="y2024" class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between relative gap-8">
+        <div class="timeline-node" aria-hidden="true"></div>
         <div class="w-full md:w-1/2 md:text-left md:pl-8">
-          <div class="bg-white/90 border border-light-grey/30 p-6 rounded-xl shadow-sm">
-            <h3 class="text-3xl font-bold mb-3">
-              <time datetime="2024" class="inline-block bg-crimson text-white px-3 py-1 rounded-full">2024</time>
-            </h3>
-            <ul class="list-disc list-inside text-[15px] leading-relaxed text-navy/85 space-y-2">
+          <div class="card">
+            <h3 class="year"><time datetime="2024">2024</time></h3>
+
+            <p class="kicker">🤝 Global Engagement</p>
+            <ul class="bullets">
               <li>Harvard South Africa Fellow</li>
               <li>G20 Startup20 Delegate representing South Africa (Macapá, Brazil)</li>
               <li>Student Leadership Council, MIT AI Ventures</li>
@@ -441,31 +461,31 @@
           </div>
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-end">
-          <div class="flex flex-wrap justify-center gap-6">
+          <div class="logo-grid">
             <div class="logo-frame"><img src="./Logos/Harvard_University_logo.svg.png" alt="Harvard University logo"></div>
             <div class="logo-frame"><img src="./Logos/G20_Brazil_2024.png" alt="G20 Brazil 2024 logo"></div>
-            <div class="logo-frame"><img src="./Logos/MIT_Logo_and_Wordmark.svg.png" alt="Massachusetts Institute of Technology logo"></div>
+            <div class="logo-frame"><img src="./Logos/MIT_Logo_and_Wordmark.svg.png" alt="MIT logo"></div>
           </div>
         </div>
       </article>
 
       <!-- ========= 2023 ========= -->
-      <article class="timeline-item flex flex-col md:flex-row items-center md:justify-between relative gap-6">
-        <div class="timeline-node"></div>
+      <article id="y2023" class="timeline-item flex flex-col md:flex-row items-center md:justify-between relative gap-8">
+        <div class="timeline-node" aria-hidden="true"></div>
         <div class="w-full md:w-1/2 md:text-right md:pr-8">
-          <div class="bg-white/90 border border-light-grey/30 p-6 rounded-xl shadow-sm">
-            <h3 class="text-3xl font-bold mb-3">
-              <time datetime="2023" class="inline-block bg-crimson text-white px-3 py-1 rounded-full">2023</time>
-            </h3>
-            <ul class="list-disc list-inside text-[15px] leading-relaxed text-navy/85 space-y-2">
+          <div class="card">
+            <h3 class="year"><time datetime="2023">2023</time></h3>
+
+            <p class="kicker">🏆 Awards & Partnerships</p>
+            <ul class="bullets">
               <li>BRICS Young Innovator Prize Finalist – AI-driven Medical Device Design</li>
-              <li>Hosted Stanford University's Vice Provost Prof. Sarah Church — Africa Makes × Stanford mentorship initiative (Jul 2023)</li>
-              <li>Explored educational & cultural implications of technology with U.S. Assistant Secretary Lee Satterfield (Mar 2023)</li>
+              <li>Hosted Stanford University’s VPUE, Prof Sarah Church — Africa Makes × Stanford mentorship (Jul 2023)</li>
+              <li>Explored education & culture with U.S. Assistant Secretary Lee Satterfield — 3D printing for cultural exchange (Mar 2023)</li>
             </ul>
           </div>
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-start">
-          <div class="flex flex-wrap justify-center gap-6">
+          <div class="logo-grid">
             <div class="logo-frame"><img src="./Logos/15th_BRICS_summit_logo.png" alt="BRICS 2023 logo"></div>
             <div class="logo-frame"><img src="./Logos/Stanford-Symbol.png" alt="Stanford University logo"></div>
             <div class="logo-frame"><img src="./Logos/US-WhiteHouse-Emblem.svg.png" alt="U.S. Government emblem"></div>
@@ -474,22 +494,22 @@
       </article>
 
       <!-- ========= 2022 ========= -->
-      <article class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between relative gap-6">
-        <div class="timeline-node"></div>
+      <article id="y2022" class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between relative gap-8">
+        <div class="timeline-node" aria-hidden="true"></div>
         <div class="w-full md:w-1/2 md:text-left md:pl-8">
-          <div class="bg-white/90 border border-light-grey/30 p-6 rounded-xl shadow-sm">
-            <h3 class="text-3xl font-bold mb-3">
-              <time datetime="2022" class="inline-block bg-crimson text-white px-3 py-1 rounded-full">2022</time>
-            </h3>
-            <ul class="list-disc list-inside text-[15px] leading-relaxed text-navy/85 space-y-2">
-              <li>Hosted U.S. Deputy Secretary of State Wendy Sherman (Jun 2022) — highlighting South Africa Makes’ innovations in cardiology and surgical guides</li>
-              <li>Presented to Dr. Alondra Nelson, Head of OSTP / White House (Dec 2022) — point-of-care manufacturing for equitable healthcare</li>
-              <li>Nedbank YouthX Technology & Innovation Changemaker — mentoring young entrepreneurs (2022)</li>
+          <div class="card">
+            <h3 class="year"><time datetime="2022">2022</time></h3>
+
+            <p class="kicker">🏛️ Policy & Youth Mentorship</p>
+            <ul class="bullets">
+              <li>Hosted U.S. Deputy Secretary of State Wendy Sherman (Jun 2022) — innovations in cardiology & surgical guides</li>
+              <li>Presented to Dr. Alondra Nelson, Head of OSTP / White House (Dec 2022) — point-of-care manufacturing for health equity</li>
+              <li>Nedbank YouthX Technology & Innovation Changemaker — mentoring young entrepreneurs</li>
             </ul>
           </div>
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-end">
-          <div class="flex flex-wrap justify-center gap-6">
+          <div class="logo-grid">
             <div class="logo-frame"><img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" alt="U.S. Department of State seal"></div>
             <div class="logo-frame"><img src="./Logos/US-WhiteHouse-Emblem.svg.png" alt="White House emblem"></div>
             <div class="logo-frame"><img src="./Logos/Nedbank_YouthX_logo.png" alt="Nedbank YouthX logo"></div>
@@ -498,22 +518,22 @@
       </article>
 
       <!-- ========= 2021 ========= -->
-      <article class="timeline-item flex flex-col md:flex-row items-center md:justify-between relative gap-6">
-        <div class="timeline-node"></div>
+      <article id="y2021" class="timeline-item flex flex-col md:flex-row items-center md:justify-between relative gap-8">
+        <div class="timeline-node" aria-hidden="true"></div>
         <div class="w-full md:w-1/2 md:text-right md:pr-8">
-          <div class="bg-white/90 border border-light-grey/30 p-6 rounded-xl shadow-sm">
-            <h3 class="text-3xl font-bold mb-3">
-              <time datetime="2021" class="inline-block bg-crimson text-white px-3 py-1 rounded-full">2021</time>
-            </h3>
-            <ul class="list-disc list-inside text-[15px] leading-relaxed text-navy/85 space-y-2">
-              <li>Fast Company “Most Innovative Companies” Award – South Africa Makes</li>
+          <div class="card">
+            <h3 class="year"><time datetime="2021">2021</time></h3>
+
+            <p class="kicker">🏆 Awards & Features</p>
+            <ul class="bullets">
+              <li>Fast Company “Most Innovative Companies” — South Africa Makes</li>
               <li>Winner — Wesgro’s Young Innovators in the Cape Health Tech Sector</li>
               <li>Featured — Wesgro’s “Pioneers in the Health Tech Industry”</li>
             </ul>
           </div>
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-start">
-          <div class="flex flex-wrap justify-center gap-6">
+          <div class="logo-grid">
             <div class="logo-frame"><img src="./Logos/Fast_Company_logo.svg" alt="Fast Company logo"></div>
             <div class="logo-frame"><img src="./Logos/Wesgro_logo.png" alt="Wesgro logo"></div>
           </div>
@@ -521,21 +541,21 @@
       </article>
 
       <!-- ========= 2020 ========= -->
-      <article class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between relative gap-6">
-        <div class="timeline-node"></div>
+      <article id="y2020" class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between relative gap-8">
+        <div class="timeline-node" aria-hidden="true"></div>
         <div class="w-full md:w-1/2 md:text-left md:pl-8">
-          <div class="bg-white/90 border border-light-grey/30 p-6 rounded-xl shadow-sm">
-            <h3 class="text-3xl font-bold mb-3">
-              <time datetime="2020" class="inline-block bg-crimson text-white px-3 py-1 rounded-full">2020</time>
-            </h3>
-            <ul class="list-disc list-inside text-[15px] leading-relaxed text-navy/85 space-y-2">
+          <div class="card">
+            <h3 class="year"><time datetime="2020">2020</time></h3>
+
+            <p class="kicker">🚀 Foundations & Fellowships</p>
+            <ul class="bullets">
               <li>Founder — Africa Makes Foundation (STEM & Digital Manufacturing for Youth)</li>
               <li>Oppenheimer Memorial Trust Fellow (Biomedical Innovation Focus)</li>
             </ul>
           </div>
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-end">
-          <div class="flex flex-wrap justify-center gap-6">
+          <div class="logo-grid">
             <div class="logo-frame"><img src="./Logos/Africa_Makes_logo.svg" alt="Africa Makes Foundation logo"></div>
             <div class="logo-frame"><img src="./Logos/OMT_Logo.svg" alt="Oppenheimer Memorial Trust logo"></div>
           </div>
@@ -543,14 +563,14 @@
       </article>
 
       <!-- ========= 2019 ========= -->
-      <article class="timeline-item flex flex-col md:flex-row items-center md:justify-between relative gap-6">
-        <div class="timeline-node"></div>
+      <article id="y2019" class="timeline-item flex flex-col md:flex-row items-center md:justify-between relative gap-8">
+        <div class="timeline-node" aria-hidden="true"></div>
         <div class="w-full md:w-1/2 md:text-right md:pr-8">
-          <div class="bg-white/90 border border-light-grey/30 p-6 rounded-xl shadow-sm">
-            <h3 class="text-3xl font-bold mb-3">
-              <time datetime="2019" class="inline-block bg-crimson text-white px-3 py-1 rounded-full">2019</time>
-            </h3>
-            <ul class="list-disc list-inside text-[15px] leading-relaxed text-navy/85 space-y-2">
+          <div class="card">
+            <h3 class="year"><time datetime="2019">2019</time></h3>
+
+            <p class="kicker">🎤 Recognition & Thought Leadership</p>
+            <ul class="bullets">
               <li>TEDx Cape Town Speaker — “Made for Africa. Made in Africa.”</li>
               <li>Top 12 Influential Young Women to Watch in SA — Standard Bank Top Women Leaders (16th Edition)</li>
               <li>Named among Inspiring Fifty Women in STEM (South Africa)</li>
@@ -558,7 +578,7 @@
           </div>
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-start">
-          <div class="flex flex-wrap justify-center gap-6">
+          <div class="logo-grid">
             <div class="logo-frame"><img src="./Logos/TEDx_Logo.png" alt="TEDx Cape Town logo"></div>
             <div class="logo-frame"><img src="./Logos/Inspiring_Fifty_Africa.svg" alt="Inspiring Fifty logo"></div>
             <div class="logo-frame"><img src="./Logos/Standard_Bank_Top_Women_logo.png" alt="Standard Bank Top Women Leaders logo"></div>
@@ -567,20 +587,22 @@
       </article>
 
       <!-- ========= 2018 ========= -->
-      <article class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between relative gap-6">
-        <div class="timeline-node"></div>
+      <article id="y2018" class="timeline-item flex flex-col md:flex-row-reverse items-center md:justify-between relative gap-8">
+        <div class="timeline-node" aria-hidden="true"></div>
         <div class="w-full md:w-1/2 md:text-left md:pl-8">
-          <div class="bg-white/90 border border-light-grey/30 p-6 rounded-xl shadow-sm">
-            <h3 class="text-3xl font-bold mb-3">
-              <time datetime="2018" class="inline-block bg-crimson text-white px-3 py-1 rounded-full">2018</time>
-            </h3>
-            <ul class="list-disc list-inside text-[15px] leading-relaxed text-navy/85 space-y-2">
+          <div class="card">
+            <h3 class="year"><time datetime="2018">2018</time></h3>
+
+            <p class="kicker">🎓 Fellowships</p>
+            <ul class="bullets">
               <li>U.S. Department of State — IVLP Fellow, Women in Business Program</li>
             </ul>
           </div>
         </div>
         <div class="w-full md:w-1/2 flex justify-center md:justify-end">
-          <div class="logo-frame"><img src="./Logos/IVLP_Logo.png" alt="U.S. Department of State — IVLP logo"></div>
+          <div class="logo-grid">
+            <div class="logo-frame"><img src="./Logos/IVLP_Logo.png" alt="U.S. Department of State — IVLP logo"></div>
+          </div>
         </div>
       </article>
     </div>
@@ -588,60 +610,123 @@
 </section>
 
 <!-- =============================== -->
-<!-- ✨ TIMELINE STYLES & ANIMATIONS -->
+<!-- ✨ TIMELINE VISUAL ENHANCEMENTS -->
 <!-- =============================== -->
 <style>
-  .logo-frame {
-    width: 5rem;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    border: 1px solid rgba(0,0,0,0.06);
-    border-radius: 0.75rem;
-    padding: 0.5rem;
-    overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .logo-frame img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
-  .logo-frame:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-  }
-  @media (min-width: 768px) {
-    .logo-frame { width: 6rem; height: 6rem; }
+  /* --- Background: soft radial gradient + circular geometric pattern --- */
+  .engagements-bg{
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(1200px 800px at 50% -10%, rgba(158,27,50,0.08), transparent 55%),
+      radial-gradient(900px 600px at 80% 110%, rgba(158,27,50,0.05), transparent 60%),
+      repeating-radial-gradient(circle at 50% 30%,
+        rgba(2,6,23,0.02) 0 6px,
+        rgba(2,6,23,0.00) 6px 18px);
+    mask-image: radial-gradient(1200px 800px at 50% 0%, rgba(0,0,0,0.95), transparent 70%);
   }
 
-  .timeline-node {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #9E1B32;
-    border-radius: 9999px;
-    width: 1.2rem;
-    height: 1.2rem;
-    animation: pulseCrimson 2s infinite;
+  /* --- Cards (glassmorphism-lite) --- */
+  .card{
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(2,6,23,0.06);
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: 0 8px 20px rgba(2,6,23,0.04);
   }
-  @keyframes pulseCrimson {
-    0%, 100% { transform: translateX(-50%) scale(1); opacity: 1; }
-    50% { transform: translateX(-50%) scale(1.3); opacity: 0.6; }
+
+  .year time{
+    display:inline-block;
+    background-color:#9E1B32;
+    color:#fff;
+    padding: .25rem .75rem;
+    border-radius:9999px;
+    font-weight:700;
+    letter-spacing:.2px;
+    font-size:1.125rem;
   }
-  .timeline-item {
-    opacity: 0;
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    transform: translateY(20px);
+
+  .kicker{
+    margin-top:.5rem;
+    margin-bottom:.5rem;
+    font-size:.75rem;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:#9E1B32;
+    font-weight:600;
   }
-  .timeline-item.is-visible {
-    opacity: 1;
-    transform: translateY(0);
+
+  .bullets{
+    margin-top:.5rem; margin-bottom:.25rem;
+    list-style:disc inside;
+    font-size:15px;
+    line-height:1.7;
+    color:rgba(17,24,39,0.85);
+  }
+
+  /* --- Axis & nodes --- */
+  .timeline-axis{
+    position:absolute; left:50%; transform:translateX(-50%);
+    width:4px; height:100%;
+    background: linear-gradient(180deg, #9E1B32 0%, #c73952 30%, #e5e7eb 100%);
+    border-radius: 2px;
+    background-size: 100% 180%;
+    animation: axisFlow 6s ease-in-out infinite alternate;
+    opacity:.9;
+  }
+  @keyframes axisFlow{
+    0%{ background-position: 0% 0%; }
+    100%{ background-position: 0% 100%; }
+  }
+
+  .timeline-node{
+    position:absolute; left:50%; transform:translateX(-50%);
+    background-color:#9E1B32;
+    border-radius:9999px;
+    width:1rem; height:1rem;
+    box-shadow: 0 0 0 6px rgba(158,27,50,0.10);
+    animation: pulseCrimson 2.2s infinite;
+  }
+  @keyframes pulseCrimson{
+    0%,100%{ transform:translateX(-50%) scale(1); opacity:1; }
+    50%{ transform:translateX(-50%) scale(1.25); opacity:.7; }
+  }
+
+  /* --- Logo tiles (standardized) --- */
+  .logo-grid{ display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; }
+  .logo-frame{
+    width:5rem; height:5rem;
+    display:flex; align-items:center; justify-content:center;
+    background:#fff;
+    border:1px solid rgba(2,6,23,0.06);
+    border-radius:12px;
+    padding:.5rem; overflow:hidden;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .logo-frame img{
+    max-width:100%; max-height:100%; object-fit:contain;
+    filter: grayscale(100%) brightness(.92);
+    transition: filter .25s ease;
+  }
+  .logo-frame:hover{ transform: translateY(-2px); box-shadow:0 8px 18px rgba(2,6,23,0.08); }
+  .logo-frame:hover img{ filter: grayscale(0%) brightness(1); }
+
+  @media (min-width:768px){
+    .logo-frame{ width:6rem; height:6rem; }
+  }
+
+  /* --- Scroll-in animation (keeps your JS) --- */
+  .timeline-item{ opacity:0; transform: translateY(18px); transition: opacity .6s ease-out, transform .6s ease-out; }
+  .timeline-item.is-visible{ opacity:1; transform: translateY(0); }
+
+  /* spacing rhythm */
+  .timeline-item{ margin-bottom: 3.5rem; }
+  @media (min-width:768px){
+    .timeline-item{ margin-bottom: 4.5rem; }
   }
 </style>
 
+<!-- Keep your existing JS fade-in (IntersectionObserver) -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.timeline-item');
