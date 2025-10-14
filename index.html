@@ -27,17 +27,19 @@
     theme: {
       extend: {
         colors: {
-          primary: '#1A1A1A',        // Deep Ebony Charcoal
-          accent: '#D4A017',         // Golden Sand
-          secondary: '#C65D2B',      // Terracotta Clay
-          neutral: '#F4F0EB',        // Soft Bone background
-          highlight: '#46C7C7',      // Turquoise Mist accent
+          // Match your existing HTML class names:
+          'navy': '#004E64',              // replaces old dark blue
+          'crimson': { 
+            DEFAULT: '#00BFA6',           // replaces red with mint-green accent
+            darker: '#009985'             // darker hover state
+          },
+          'off-white': '#FAFAFA',         // soft background
+          'light-grey': '#E8ECEF',        // section divider
         }
       }
     }
   }
 </script>
-
 
   <!-- =============================== -->
   <!-- 🧩 GLOBAL CUSTOM CSS -->
