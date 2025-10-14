@@ -818,121 +818,82 @@ document.addEventListener('DOMContentLoaded',()=>{
       </p>
     </div>
 
-    <!-- 🎬 TEDx Video (Primary) -->
-    <div class="max-w-4xl mx-auto mb-16 aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group"
-         data-aos="fade-zoom-in" data-aos-delay="100" data-aos-duration="900">
-      <img src="https://img.youtube.com/vi/ePO3FomVpwo/hqdefault.jpg"
-           alt="Dr. Cherise Dunn TEDx Talk – Made for Africa. Made in Africa."
-           class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
-           loading="lazy"
-           onclick="loadVideo(this, 'ePO3FomVpwo')">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90"></div>
-      <div class="absolute bottom-6 left-6 text-white text-lg md:text-xl font-semibold tracking-tight">
-        TEDx Cape Town – “Made for Africa. Made in Africa.”
-      </div>
-      <div class="absolute inset-0 flex items-center justify-center">
-        <button aria-label="Play video"
-                class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
-          ▶
-        </button>
-      </div>
-    </div>
+    <!-- 🎥 Video Gallery -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
-    <!-- 🎥 Additional Talks Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto mt-20">
-
-      <!-- Video 1 -->
-      <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group"
-           data-aos="fade-zoom-in" data-aos-delay="150" data-aos-duration="900">
-        <img src="https://img.youtube.com/vi/8Jy7xyOT6UM/hqdefault.jpg"
-             alt="Panel Discussion – Advancing Africa’s Digital Future"
-             class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
-             loading="lazy"
-             onclick="loadVideo(this, '8Jy7xyOT6UM')">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90"></div>
-        <div class="absolute bottom-6 left-6 text-white text-base md:text-lg font-semibold">
-          Panel Discussion – Advancing Africa’s Digital Future
+      <!-- Video 1 – TEDx -->
+      <div class="group" data-aos="fade-zoom-in" data-aos-delay="100" data-aos-duration="900">
+        <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg">
+          <img src="https://img.youtube.com/vi/ePO3FomVpwo/hqdefault.jpg"
+               alt="TEDx Cape Town – Made for Africa. Made in Africa."
+               class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
+               loading="lazy"
+               onclick="loadVideo(this, 'ePO3FomVpwo')">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <button aria-label="Play video"
+                    class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
+              ▶
+            </button>
+          </div>
         </div>
-        <div class="absolute inset-0 flex items-center justify-center">
-          <button aria-label="Play video"
-                  class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
-            ▶
-          </button>
-        </div>
+        <h3 class="mt-4 text-center text-navy font-semibold text-base md:text-lg">
+          TEDx Cape Town – “Made for Africa. Made in Africa.”
+        </h3>
       </div>
 
       <!-- Video 2 -->
-      <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group"
-           data-aos="fade-zoom-in" data-aos-delay="200" data-aos-duration="900">
-        <img src="https://img.youtube.com/vi/B92jngV144o/hqdefault.jpg"
-             alt="Keynote – Leadership and Innovation in Global Health"
-             class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
-             loading="lazy"
-             onclick="loadVideo(this, 'B92jngV144o')">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90"></div>
-        <div class="absolute bottom-6 left-6 text-white text-base md:text-lg font-semibold">
-          Keynote – Leadership and Innovation in Global Health
+      <div class="group" data-aos="fade-zoom-in" data-aos-delay="150" data-aos-duration="900">
+        <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg">
+          <img src="https://img.youtube.com/vi/8Jy7xyOT6UM/hqdefault.jpg"
+               alt="Panel Discussion – Advancing Africa’s Digital Future"
+               class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
+               loading="lazy"
+               onclick="loadVideo(this, '8Jy7xyOT6UM')">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <button aria-label="Play video"
+                    class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
+              ▶
+            </button>
+          </div>
         </div>
-        <div class="absolute inset-0 flex items-center justify-center">
-          <button aria-label="Play video"
-                  class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
-            ▶
-          </button>
-        </div>
+        <h3 class="mt-4 text-center text-navy font-semibold text-base md:text-lg">
+          Panel Discussion – “Empowering Africa’s Digital Future”
+        </h3>
       </div>
 
-      <!-- Video 3 (Placeholder) -->
-      <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group"
-           data-aos="fade-zoom-in" data-aos-delay="250" data-aos-duration="900">
-        <img src="https://img.youtube.com/vi/XXXXXXXXXXX/hqdefault.jpg"
-             alt="Future Talk or Media Feature – Coming Soon"
-             class="w-full h-full object-cover cursor-pointer opacity-80 group-hover:scale-[1.03] transition-transform duration-500 ease-out"
-             loading="lazy"
-             onclick="loadVideo(this, 'XXXXXXXXXXX')">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90"></div>
-        <div class="absolute bottom-6 left-6 text-white text-base md:text-lg font-semibold">
-          Future Talk or Media Feature – Coming Soon
+      <!-- Video 3 -->
+      <div class="group" data-aos="fade-zoom-in" data-aos-delay="200" data-aos-duration="900">
+        <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg">
+          <img src="https://img.youtube.com/vi/B92jngV144o/hqdefault.jpg"
+               alt="Keynote – Leadership and Innovation in Global Health"
+               class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
+               loading="lazy"
+               onclick="loadVideo(this, 'B92jngV144o')">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <button aria-label="Play video"
+                    class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
+              ▶
+            </button>
+          </div>
         </div>
-        <div class="absolute inset-0 flex items-center justify-center">
-          <button aria-label="Play video"
-                  class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
-            ▶
-          </button>
-        </div>
+        <h3 class="mt-4 text-center text-navy font-semibold text-base md:text-lg">
+          Keynote – “Leadership and Innovation in Global Health”
+        </h3>
       </div>
 
-      <!-- Video 4 (Placeholder) -->
-      <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group"
-           data-aos="fade-zoom-in" data-aos-delay="300" data-aos-duration="900">
-        <img src="https://img.youtube.com/vi/YYYYYYYYYYY/hqdefault.jpg"
-             alt="Upcoming Keynote or Interview – Coming Soon"
-             class="w-full h-full object-cover cursor-pointer opacity-80 group-hover:scale-[1.03] transition-transform duration-500 ease-out"
-             loading="lazy"
-             onclick="loadVideo(this, 'YYYYYYYYYYY')">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90"></div>
-        <div class="absolute bottom-6 left-6 text-white text-base md:text-lg font-semibold">
-          Upcoming Keynote or Interview – Coming Soon
-        </div>
-        <div class="absolute inset-0 flex items-center justify-center">
-          <button aria-label="Play video"
-                  class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
-            ▶
-          </button>
-        </div>
-      </div>
     </div>
 
-    <!-- Optional CTA -->
-    <p class="text-center mt-16 text-navy/70" data-aos="fade-zoom-in" data-aos-delay="350" data-aos-duration="800">
+    <!-- CTA -->
+    <p class="text-center mt-16 text-navy/70" data-aos="fade-zoom-in" data-aos-delay="300" data-aos-duration="800">
       Explore more talks and features on 
-      <a href="https://www.linkedin.com/in/dr-cherise-dunn/" class="text-crimson font-semibold hover:underline">
+      <a href="https://www.linkedin.com/in/cherisedunn" class="text-crimson font-semibold hover:underline">
         LinkedIn
       </a>.
     </p>
   </div>
 </section>
 
-<!-- 🧩 Lightweight JS for Click-to-Play -->
+<!-- 🧩 Click-to-play JavaScript -->
 <script>
   function loadVideo(img, videoId) {
     const wrapper = img.parentElement;
@@ -943,8 +904,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-        loading="lazy">
-      </iframe>`;
+        loading="lazy"></iframe>`;
   }
 </script>
 
