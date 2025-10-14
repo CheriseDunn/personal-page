@@ -811,7 +811,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 <section id="features" class="bg-light-grey/70 py-20 md:py-28">
   <div class="container mx-auto px-6">
     <!-- Header -->
-    <div class="text-center mb-16" data-aos="fade-up" data-aos-delay="50">
+    <div class="text-center mb-16" data-aos="fade-zoom-in" data-aos-delay="50" data-aos-duration="800">
       <h2 class="text-3xl md:text-4xl font-bold text-navy">Featured Talks &amp; Media</h2>
       <p class="mt-4 text-lg text-navy/90 max-w-2xl mx-auto">
         Selected talks and interviews highlighting Dr. Dunn’s leadership in innovation, equity, and digital transformation.
@@ -819,15 +819,20 @@ document.addEventListener('DOMContentLoaded',()=>{
     </div>
 
     <!-- 🎬 TEDx Video (Primary) -->
-    <div class="max-w-4xl mx-auto mb-16 aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group" data-aos="fade-up" data-aos-delay="100">
+    <div class="max-w-4xl mx-auto mb-16 aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group"
+         data-aos="fade-zoom-in" data-aos-delay="100" data-aos-duration="900">
       <img src="https://img.youtube.com/vi/ePO3FomVpwo/hqdefault.jpg"
            alt="Dr. Cherise Dunn TEDx Talk – Made for Africa. Made in Africa."
-           class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.02] transition-transform duration-300"
+           class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
            loading="lazy"
            onclick="loadVideo(this, 'ePO3FomVpwo')">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90"></div>
+      <div class="absolute bottom-6 left-6 text-white text-lg md:text-xl font-semibold tracking-tight">
+        TEDx Cape Town – “Made for Africa. Made in Africa.”
+      </div>
       <div class="absolute inset-0 flex items-center justify-center">
         <button aria-label="Play video"
-                class="bg-white/80 hover:bg-white rounded-full p-4 transition">
+                class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
           ▶
         </button>
       </div>
@@ -837,71 +842,90 @@ document.addEventListener('DOMContentLoaded',()=>{
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto mt-20">
 
       <!-- Video 1 -->
-      <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group" data-aos="fade-up" data-aos-delay="150">
+      <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group"
+           data-aos="fade-zoom-in" data-aos-delay="150" data-aos-duration="900">
         <img src="https://img.youtube.com/vi/8Jy7xyOT6UM/hqdefault.jpg"
              alt="Panel Discussion – Advancing Africa’s Digital Future"
-             class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.02] transition-transform duration-300"
+             class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
              loading="lazy"
              onclick="loadVideo(this, '8Jy7xyOT6UM')">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90"></div>
+        <div class="absolute bottom-6 left-6 text-white text-base md:text-lg font-semibold">
+          Panel Discussion – Advancing Africa’s Digital Future
+        </div>
         <div class="absolute inset-0 flex items-center justify-center">
           <button aria-label="Play video"
-                  class="bg-white/80 hover:bg-white rounded-full p-4 transition">
+                  class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
             ▶
           </button>
         </div>
       </div>
 
       <!-- Video 2 -->
-      <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group" data-aos="fade-up" data-aos-delay="200">
+      <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group"
+           data-aos="fade-zoom-in" data-aos-delay="200" data-aos-duration="900">
         <img src="https://img.youtube.com/vi/B92jngV144o/hqdefault.jpg"
              alt="Keynote – Leadership and Innovation in Global Health"
-             class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.02] transition-transform duration-300"
+             class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
              loading="lazy"
              onclick="loadVideo(this, 'B92jngV144o')">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90"></div>
+        <div class="absolute bottom-6 left-6 text-white text-base md:text-lg font-semibold">
+          Keynote – Leadership and Innovation in Global Health
+        </div>
         <div class="absolute inset-0 flex items-center justify-center">
           <button aria-label="Play video"
-                  class="bg-white/80 hover:bg-white rounded-full p-4 transition">
+                  class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
             ▶
           </button>
         </div>
       </div>
 
       <!-- Video 3 (Placeholder) -->
-      <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group" data-aos="fade-up" data-aos-delay="250">
+      <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group"
+           data-aos="fade-zoom-in" data-aos-delay="250" data-aos-duration="900">
         <img src="https://img.youtube.com/vi/XXXXXXXXXXX/hqdefault.jpg"
              alt="Future Talk or Media Feature – Coming Soon"
-             class="w-full h-full object-cover cursor-pointer opacity-80"
+             class="w-full h-full object-cover cursor-pointer opacity-80 group-hover:scale-[1.03] transition-transform duration-500 ease-out"
              loading="lazy"
              onclick="loadVideo(this, 'XXXXXXXXXXX')">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90"></div>
+        <div class="absolute bottom-6 left-6 text-white text-base md:text-lg font-semibold">
+          Future Talk or Media Feature – Coming Soon
+        </div>
         <div class="absolute inset-0 flex items-center justify-center">
           <button aria-label="Play video"
-                  class="bg-white/80 hover:bg-white rounded-full p-4 transition">
+                  class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
             ▶
           </button>
         </div>
       </div>
 
       <!-- Video 4 (Placeholder) -->
-      <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group" data-aos="fade-up" data-aos-delay="300">
+      <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg group"
+           data-aos="fade-zoom-in" data-aos-delay="300" data-aos-duration="900">
         <img src="https://img.youtube.com/vi/YYYYYYYYYYY/hqdefault.jpg"
              alt="Upcoming Keynote or Interview – Coming Soon"
-             class="w-full h-full object-cover cursor-pointer opacity-80"
+             class="w-full h-full object-cover cursor-pointer opacity-80 group-hover:scale-[1.03] transition-transform duration-500 ease-out"
              loading="lazy"
              onclick="loadVideo(this, 'YYYYYYYYYYY')">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90"></div>
+        <div class="absolute bottom-6 left-6 text-white text-base md:text-lg font-semibold">
+          Upcoming Keynote or Interview – Coming Soon
+        </div>
         <div class="absolute inset-0 flex items-center justify-center">
           <button aria-label="Play video"
-                  class="bg-white/80 hover:bg-white rounded-full p-4 transition">
+                  class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
             ▶
           </button>
         </div>
       </div>
-
     </div>
 
     <!-- Optional CTA -->
-    <p class="text-center mt-16 text-navy/70" data-aos="fade-up" data-aos-delay="350">
+    <p class="text-center mt-16 text-navy/70" data-aos="fade-zoom-in" data-aos-delay="350" data-aos-duration="800">
       Explore more talks and features on 
-      <a href="https://www.linkedin.com/in/cherisedunn" class="text-crimson font-semibold hover:underline">
+      <a href="https://www.linkedin.com/in/dr-cherise-dunn/" class="text-crimson font-semibold hover:underline">
         LinkedIn
       </a>.
     </p>
@@ -924,48 +948,63 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
 </script>
 
+<!-- =============================== -->
+<!-- 📬 ENGAGEMENT & CONTACT SECTION -->
+<!-- =============================== -->
+<section id="contact" class="bg-navy text-white py-24 md:py-32">
+  <div class="container mx-auto px-6 text-center max-w-3xl">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+      Engage Dr. Cherise Dunn for Strategic Advisory or Keynotes
+    </h2>
+    <p class="text-lg text-gray-300 mb-10">
+      For executive advisory, keynote speaking, or collaborative initiatives in health innovation and policy design,
+      reach out below to start a conversation.
+    </p>
 
-  <!-- =============================== -->
-  <!-- 📬 ENGAGEMENT & CONTACT SECTION -->
-  <!-- =============================== -->
-  <section id="contact" class="bg-navy text-white py-24 md:py-32">
-    <div class="container mx-auto px-6 text-center max-w-3xl">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">
-        Engage Dr. Cherise Dunn for Strategic Advisory or Keynotes
-      </h2>
-      <p class="text-lg text-gray-300 mb-10">
-        For executive advisory, keynote speaking, or collaborative initiatives in health innovation and policy design,
-        reach out below to start a conversation.
-      </p>
+    <!-- 💌 Accessible, prefilled mailto CTA -->
+    <a href="mailto:info@cherisedunn.com?subject=Engagement%20Inquiry%20for%20Dr.%20Cherise%20Dunn&body=Dear%20Dr.%20Dunn%2C%0A%0AI%20am%20writing%20to%20inquire%20about..."
+       aria-label="Email Dr. Cherise Dunn for engagement inquiries"
+       title="Email Dr. Cherise Dunn"
+       class="inline-block bg-crimson text-white font-semibold px-8 py-4 rounded-lg hover:bg-crimson-darker hover:shadow-lg transition">
+      Contact Dr. Dunn
+    </a>
+  </div>
+</section>
 
+<!-- 🔹 Subtle Divider Transition -->
+<div class="h-1 bg-gradient-to-r from-crimson via-navy to-crimson opacity-30"></div>
+
+<!-- =============================== -->
+<!-- ⚙️ FOOTER -->
+<!-- =============================== -->
+<footer class="bg-light-grey py-12 text-center text-navy/80 text-sm relative overflow-hidden">
+  <div class="container mx-auto px-6">
+    <p>© 2025 <strong>Dr. Cherise Dunn</strong>. All Rights Reserved.</p>
+    <p class="mt-2 hover:underline hover:text-navy/90 transition">
+      Website crafted with purpose and precision by the Health Innovation Collective.
+    </p>
+
+    <!-- 🌐 Fade-in Social Links -->
+    <div class="flex justify-center gap-6 mt-6 opacity-0 hover:opacity-100 transition-opacity duration-700 ease-in-out">
+      <a href="https://www.linkedin.com/in/cherisedunn" target="_blank" rel="noopener"
+         aria-label="Connect on LinkedIn"
+         class="hover:text-crimson transition">
+        <i class="fab fa-linkedin text-xl"></i>
+      </a>
+      <a href="https://www.youtube.com/@cherisedunn" target="_blank" rel="noopener"
+         aria-label="Watch Dr. Dunn on YouTube"
+         class="hover:text-crimson transition">
+        <i class="fab fa-youtube text-xl"></i>
+      </a>
       <a href="mailto:info@cherisedunn.com"
-         class="inline-block bg-crimson text-white font-semibold px-8 py-4 rounded-lg hover:bg-crimson-darker transition">
-        Contact Dr. Dunn
+         aria-label="Email Dr. Dunn"
+         class="hover:text-crimson transition">
+        <i class="fas fa-envelope text-xl"></i>
       </a>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- =============================== -->
-  <!-- ⚙️ FOOTER -->
-  <!-- =============================== -->
-  <footer class="bg-light-grey py-12 text-center text-navy/70 text-sm">
-    <div class="container mx-auto px-6">
-      <!-- 🎓 Partner Logos -->
-      <div class="flex flex-wrap justify-center gap-8 items-center mb-6">
-        <img src="./Logos/Harvard_University_logo.svg.png" alt="Harvard"
-             class="h-8 object-contain grayscale opacity-70 hover:opacity-100 transition">
-        <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" alt="MIT"
-             class="h-8 object-contain grayscale opacity-70 hover:opacity-100 transition">
-        <img src="./Logos/BRICS_2023_Logo.svg" alt="BRICS"
-             class="h-8 object-contain grayscale opacity-70 hover:opacity-100 transition">
-        <img src="./Logos/G20-Brasil-2024.png" alt="G20"
-             class="h-8 object-contain grayscale opacity-70 hover:opacity-100 transition">
-      </div>
-
-      <p>© 2025 Dr. Cherise Dunn. All Rights Reserved.</p>
-      <p class="mt-2">Website crafted with purpose and precision by the Health Innovation Collective.</p>
-    </div>
-  </footer>
 
   <!-- =============================== -->
   <!-- 🧠 INTERACTIVITY SCRIPTS -->
