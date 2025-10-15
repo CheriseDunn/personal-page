@@ -178,7 +178,7 @@
 <!-- =============================== -->
 <!-- 🏛 FEATURED IN: LOGO CAROUSEL -->
 <!-- =============================== -->
-<section class="bg-light-grey py-16" aria-label="Featured in global institutions and publications">
+<section class="bg-light-grey py-16" aria-label="Featured in global institutions and publications" aria-hidden="true">
   <div class="container mx-auto px-6">
     <h3 class="text-center text-[#2C2E35]/70 font-semibold uppercase tracking-wider mb-10">
       Trusted by Global Institutions & Featured In
@@ -190,52 +190,49 @@
       <div class="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-light-grey to-transparent z-10"></div>
 
       <!-- Scroll Container -->
-      <div class="scroll-track flex animate-scroll-balanced" style="--gap-size: 5rem;">
+      <div class="scroll-track flex animate-featured-scroll" style="--gap-size: 5rem;">
         <!-- 🎯 Main Row -->
         <div class="logo-row flex items-center flex-shrink-0 px-6" style="gap: var(--gap-size);">
-          <div class="logo-box logo-square"><img src="./Logos/G20_Brazil_2024.png" alt="G20 Brazil 2024"></div>
-          <div class="logo-box logo-square"><img src="./Logos/15th_BRICS_summit_logo.png" alt="BRICS Summit"></div>
-          <div class="logo-box logo-wide"><img src="./Logos/Harvard_University_logo.svg.png" alt="Harvard University"></div>
-          <div class="logo-box logo-wide"><img src="./Logos/Harvard_Chan_SPH_logo.png" alt="Harvard Chan School"></div>
-          <div class="logo-box logo-wide"><img src="./Logos/MIT_Logo_and_Wordmark.svg.png" alt="MIT"></div>
-          <div class="logo-box logo-square"><img src="./Logos/Stanford-Symbol.png" alt="Stanford"></div>
-          <div class="logo-box logo-tall"><img src="./Logos/IVLP_Logo.png" alt="IVLP"></div>
-          <div class="logo-box logo-wide"><img src="./Logos/Inspiring_Fifty_Africa.png" alt="Inspiring Fifty Africa"></div>
-          <div class="logo-box logo-wide"><img src="./Logos/Fast_Company_logo.svg" alt="Fast Company"></div>
-          <div class="logo-box logo-square"><img src="./Logos/Standard_Bank_Top_Women_logo.png" alt="Standard Bank Top Women"></div>
-          <div class="logo-box logo-wide"><img src="./Logos/Mail_and_Guardian_logo.svg" alt="Mail & Guardian"></div>
-          <div class="logo-box logo-tall"><img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" alt="U.S. Department of State"></div>
-          <div class="logo-box logo-tall"><img src="./Logos/US-WhiteHouse-Emblem.svg.png" alt="White House"></div>
-          <div class="logo-box logo-wide"><img src="./Logos/TEDx_Logo.png" alt="TEDx"></div>
-          <div class="logo-box logo-wide"><img src="./Logos/Wesgro_logo.png" alt="Wesgro"></div>
+          <div class="logo-box logo-square"><img src="./Logos/G20_Brazil_2024.png" alt="G20 Brazil 2024" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-square"><img src="./Logos/15th_BRICS_summit_logo.png" alt="BRICS Summit" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-wide"><img src="./Logos/Harvard_University_logo.svg.png" alt="Harvard University" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-wide"><img src="./Logos/Harvard_Chan_SPH_logo.png" alt="Harvard Chan School" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-wide"><img src="./Logos/MIT_Logo_and_Wordmark.svg.png" alt="MIT" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-square"><img src="./Logos/Stanford-Symbol.png" alt="Stanford" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-tall"><img src="./Logos/IVLP_Logo.png" alt="IVLP" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-wide"><img src="./Logos/Inspiring_Fifty_Africa.png" alt="Inspiring Fifty Africa" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-wide"><img src="./Logos/Fast_Company_logo.svg" alt="Fast Company" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-square"><img src="./Logos/Standard_Bank_Top_Women_logo.png" alt="Standard Bank Top Women" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-wide"><img src="./Logos/Mail_and_Guardian_logo.svg" alt="Mail & Guardian" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-tall"><img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" alt="U.S. Department of State" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-tall"><img src="./Logos/US-WhiteHouse-Emblem.svg.png" alt="White House" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-wide"><img src="./Logos/TEDx_Logo.png" alt="TEDx" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-wide"><img src="./Logos/Wesgro_logo.png" alt="Wesgro" decoding="async" loading="lazy"></div>
         </div>
 
-        <!-- Invisible spacer for perfect loop alignment -->
+        <!-- Invisible spacer for seamless loop -->
         <div style="width: var(--gap-size); flex-shrink: 0;"></div>
 
-        <!-- 🔁 Duplicate Row (exact clone) -->
-        <div class="logo-row flex items-center flex-shrink-0 px-6" style="gap: var(--gap-size);" aria-hidden="true">
-          <!-- identical logos repeated -->
-        </div>
+        <!-- 🔁 Duplicate Row (auto-cloned via JS) -->
       </div>
     </div>
   </div>
 
   <style>
-    /* === Continuous scroll === */
-    @keyframes scroll-balanced {
+    /* === Continuous scroll animation === */
+    @keyframes featured-scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
-    .animate-scroll-balanced {
+    .animate-featured-scroll {
       display: flex;
       width: max-content;
-      animation: scroll-balanced 55s linear infinite;
+      animation: featured-scroll 55s linear infinite;
       will-change: transform;
     }
-    .animate-scroll-balanced:hover { animation-play-state: running !important; }
+    .animate-featured-scroll:hover { animation-play-state: running !important; }
 
-    /* === Logo box === */
+    /* === Logo boxes === */
     .logo-box {
       display: flex;
       align-items: center;
@@ -248,7 +245,7 @@
       transition: transform 0.3s ease;
     }
 
-    /* === Logo image === */
+    /* === Logo images === */
     .logo-box img {
       width: auto;
       height: auto;
@@ -256,24 +253,27 @@
       max-width: 85%;
       object-fit: contain;
       object-position: center;
-      filter: grayscale(100%) brightness(0.9);
+      filter: grayscale(100%) brightness(0.95) contrast(1.05);
       opacity: 0.9;
       transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
     }
 
     /* === Optical balance === */
-    .logo-wide img   { max-height: 70%; }
+    .logo-wide img   { max-height: 78%; }
     .logo-square img { max-height: 85%; }
-    .logo-tall img   { max-height: 95%; }
+    .logo-tall img   { max-height: 92%; }
 
-    /* === Hover effect === */
+    /* === Hover reveal === */
     .logo-box:hover img {
       filter: grayscale(0%) brightness(1.05);
       opacity: 1;
       transform: scale(1.03);
     }
 
-    /* === Responsiveness === */
+    /* === Responsive spacing === */
+    @media (max-width: 1024px) {
+      .scroll-track { --gap-size: 4rem; }
+    }
     @media (max-width: 640px) {
       .logo-box { height: 5.5rem; width: 10rem; }
       .scroll-track { --gap-size: 3rem; }
@@ -281,17 +281,21 @@
 
     /* === Accessibility === */
     @media (prefers-reduced-motion: reduce) {
-      .animate-scroll-balanced { animation: none; }
+      .animate-featured-scroll { animation: none; }
     }
   </style>
 
-  <!-- === Optional JS for auto-cloning (ensures equal row width) === -->
+  <!-- === Auto-clone script (ensures one exact duplicate only) === -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const row = document.querySelector(".logo-row");
-      const clone = row.cloneNode(true);
-      clone.setAttribute("aria-hidden", "true");
-      document.querySelector(".scroll-track").appendChild(clone);
+      const track = document.querySelector(".scroll-track");
+      if (track && !track.dataset.cloned) {
+        const row = track.querySelector(".logo-row");
+        const clone = row.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        track.appendChild(clone);
+        track.dataset.cloned = "true";
+      }
     });
   </script>
 </section>
