@@ -514,123 +514,170 @@
 </section>
 
 <!-- =============================== -->
-<!-- 🌍 A RECORD OF GLOBAL IMPACT (BY TRACKS WITH DIVIDERS) -->
+<!-- 🌍 A RECORD OF GLOBAL IMPACT (IMPACT CARDS GRID) -->
 <!-- =============================== -->
-<section id="impact" class="bg-off-white py-20">
+<section id="impact" class="bg-off-white py-24">
   <div class="container mx-auto px-6 text-center mb-14 animate-fadeIn">
     <h2 class="text-3xl md:text-4xl font-bold text-navy">
       A Record of Global Impact
     </h2>
     <p class="mt-3 text-navy/70">
-      Grouped by tracks of innovation, leadership, and global collaboration.
+      Showcasing innovation, leadership, and global collaboration.
     </p>
   </div>
 
-  <!-- Divider animation styles -->
-  <style>
-    @keyframes pulseDivider {
-      0% { opacity: 0.3; width: 0; }
-      50% { opacity: 1; width: 80%; }
-      100% { opacity: 0.3; width: 0; }
-    }
-    .divider {
-      height: 2px;
-      margin: 3rem auto;
-      background: linear-gradient(90deg, rgba(220,38,38,0) 0%, #dc2626 50%, rgba(220,38,38,0) 100%);
-      animation: pulseDivider 6s ease-in-out infinite;
-      border-radius: 9999px;
-    }
-  </style>
-
-  <!-- 🧬 INNOVATION & TECHNOLOGY LEADERSHIP -->
-  <div class="container mx-auto px-6 mb-16 animate-slideUp">
-    <h3 class="text-2xl font-semibold text-crimson mb-6 flex items-center gap-2">
+  <!-- ========== TRACK: INNOVATION & TECHNOLOGY LEADERSHIP ========== -->
+  <div class="container mx-auto px-6 mb-20 animate-slideUp">
+    <h3 class="text-2xl font-semibold text-crimson mb-10 flex items-center gap-2">
       🧬 Innovation & Technology Leadership
     </h3>
-    <ul class="list-disc list-inside text-gray-700 space-y-3 leading-relaxed">
-      <li>Developed Africa’s first <strong>3D-printed nasopharyngeal swab</strong> during the COVID-19 pandemic, scaling localized production to hospitals nationwide.</li>
-      <li>Built a <strong>distributed manufacturing network</strong> through <em>South Africa Makes</em>, empowering local makerspaces and universities to fabricate critical medical supplies.</li>
-      <li>Partnered with <strong>Carbon3D</strong> and <strong>Autodesk</strong> to pioneer advanced additive manufacturing workflows for low-resource settings.</li>
-      <li>Led design-to-manufacture projects at the intersection of <strong>digital health</strong> and <strong>industry 4.0</strong> innovation.</li>
-    </ul>
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
+        <h4 class="text-xl font-semibold text-navy mb-3">3D-Printed Nasopharyngeal Swabs</h4>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Developed Africa’s first 3D-printed nasopharyngeal swabs during COVID-19, scaling local production to hospitals nationwide.
+        </p>
+        <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
+          <img src="./Images/Logos/southafricamakes.png" alt="South Africa Makes" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/autodesk.png" alt="Autodesk" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/carbon3d.png" alt="Carbon3D" class="h-10 object-contain mx-3">
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
+        <h4 class="text-xl font-semibold text-navy mb-3">Distributed Manufacturing Network</h4>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Built a nationwide distributed manufacturing network empowering makerspaces and universities to produce critical medical supplies.
+        </p>
+        <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
+          <img src="./Images/Logos/sabs.png" alt="SABS" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/uct.png" alt="UCT" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/harvard.png" alt="Harvard" class="h-10 object-contain mx-3">
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="divider"></div>
-
-  <!-- 🌍 GLOBAL FELLOWSHIPS & RECOGNITION -->
-  <div class="container mx-auto px-6 mb-16 animate-slideUp">
-    <h3 class="text-2xl font-semibold text-crimson mb-6 flex items-center gap-2">
+  <!-- ========== TRACK: GLOBAL FELLOWSHIPS & RECOGNITION ========== -->
+  <div class="container mx-auto px-6 mb-20 animate-slideUp">
+    <h3 class="text-2xl font-semibold text-crimson mb-10 flex items-center gap-2">
       🌍 Global Fellowships & Recognition
     </h3>
-    <ul class="list-disc list-inside text-gray-700 space-y-3 leading-relaxed">
-      <li><strong>Harvard South Africa Fellow</strong> (Harvard University, 2024) – advancing equitable innovation in health systems.</li>
-      <li><strong>MIT AI Venture Studio Platinum Team Award</strong> (2025) – recognized for excellence in AI-driven innovation and venture development.</li>
-      <li><strong>U.S. Department of State IVLP Fellow</strong> (2018) – Women in Business Leadership Program.</li>
-      <li>Named among <strong>Inspiring Fifty in STEM</strong> and <strong>Fast Company’s Most Innovative Companies</strong> (2021).</li>
-      <li>Recipient of <strong>Wesgro Innovation Award</strong> for public health technology leadership.</li>
-    </ul>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
+        <h4 class="text-xl font-semibold text-navy mb-3">Harvard South Africa Fellow</h4>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Recognized for advancing equitable innovation in health systems through research and leadership at Harvard University.
+        </p>
+        <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
+          <img src="./Images/Logos/harvard.png" alt="Harvard" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/hsph.png" alt="Harvard Chan School" class="h-10 object-contain mx-3">
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
+        <h4 class="text-xl font-semibold text-navy mb-3">MIT AI Venture Studio Platinum Team Award</h4>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Awarded for excellence in AI-driven innovation and venture development under MIT’s Innovation HQ program.
+        </p>
+        <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
+          <img src="./Images/Logos/mit.png" alt="MIT" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/aiventurestudio.png" alt="MIT AI Ventures" class="h-10 object-contain mx-3">
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="divider"></div>
-
-  <!-- 🤝 POLICY, DIPLOMACY & GLOBAL PARTNERSHIPS -->
-  <div class="container mx-auto px-6 mb-16 animate-slideUp">
-    <h3 class="text-2xl font-semibold text-crimson mb-6 flex items-center gap-2">
+  <!-- ========== TRACK: POLICY, DIPLOMACY & GLOBAL PARTNERSHIPS ========== -->
+  <div class="container mx-auto px-6 mb-20 animate-slideUp">
+    <h3 class="text-2xl font-semibold text-crimson mb-10 flex items-center gap-2">
       🤝 Policy, Diplomacy & Global Partnerships
     </h3>
-    <ul class="list-disc list-inside text-gray-700 space-y-3 leading-relaxed">
-      <li>Hosted <strong>U.S. Deputy Secretary Wendy Sherman</strong> (2022) to discuss digital manufacturing and global health resilience.</li>
-      <li>Engaged with <strong>OSTP Head Dr. Alondra Nelson</strong> at the White House on science policy and innovation equity.</li>
-      <li><strong>Delegate to G20 Startup20 Summit</strong> (Brazil, 2024) shaping global innovation policy frameworks.</li>
-      <li><strong>Finalist, BRICS Young Innovator Prize</strong> (2023) – representing South Africa in advanced manufacturing.</li>
-      <li>Contributed to cross-continental policy dialogues under the <strong>African Medicines Agency (AMA)</strong> and <strong>AfCFTA</strong> innovation agendas.</li>
-    </ul>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
+        <h4 class="text-xl font-semibold text-navy mb-3">G20 Startup20 Delegate (Brazil 2024)</h4>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Represented South Africa in shaping global innovation policy frameworks on entrepreneurship and inclusive growth.
+        </p>
+        <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
+          <img src="./Images/Logos/g20.png" alt="G20" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/startup20.png" alt="Startup20" class="h-10 object-contain mx-3">
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
+        <h4 class="text-xl font-semibold text-navy mb-3">BRICS Young Innovator Finalist</h4>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Selected among leading innovators advancing advanced manufacturing and healthtech collaboration across BRICS nations.
+        </p>
+        <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
+          <img src="./Images/Logos/brics.png" alt="BRICS" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/dst.png" alt="Department of Science & Technology" class="h-10 object-contain mx-3">
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="divider"></div>
-
-  <!-- 💡 ENTREPRENEURSHIP & INDUSTRY IMPACT -->
-  <div class="container mx-auto px-6 mb-16 animate-slideUp">
-    <h3 class="text-2xl font-semibold text-crimson mb-6 flex items-center gap-2">
-      💡 Entrepreneurship & Industry Impact
-    </h3>
-    <ul class="list-disc list-inside text-gray-700 space-y-3 leading-relaxed">
-      <li>Co-founded <strong>South Africa Makes</strong> – a social enterprise localizing 3D printing to address supply-chain gaps in healthcare.</li>
-      <li>Developed <strong>Impact Mechanica</strong>, a sports and healthtech startup integrating AI and additive manufacturing for athlete safety.</li>
-      <li>Launched distributed manufacturing pilot networks for medical devices during the COVID-19 response.</li>
-      <li>Supported transformation of <strong>healthtech manufacturing ecosystems</strong> across Africa and the Global South.</li>
-    </ul>
-  </div>
-
-  <div class="divider"></div>
-
-  <!-- 🎓 EDUCATION, MENTORSHIP & YOUTH EMPOWERMENT -->
-  <div class="container mx-auto px-6 mb-16 animate-slideUp">
-    <h3 class="text-2xl font-semibold text-crimson mb-6 flex items-center gap-2">
+  <!-- ========== TRACK: EDUCATION, MENTORSHIP & YOUTH EMPOWERMENT ========== -->
+  <div class="container mx-auto px-6 mb-20 animate-slideUp">
+    <h3 class="text-2xl font-semibold text-crimson mb-10 flex items-center gap-2">
       🎓 Education, Mentorship & Youth Empowerment
     </h3>
-    <ul class="list-disc list-inside text-gray-700 space-y-3 leading-relaxed">
-      <li><strong>YouthX Mentor</strong> in Technology & Innovation (2022), guiding young South Africans in entrepreneurship and design thinking.</li>
-      <li><strong>TEDx Cape Town Speaker</strong> (2019) – “Innovation in Crisis.”</li>
-      <li><strong>COO & Chair of Operations</strong>, Harvard Graduate Student Council (2025).</li>
-      <li>Founder of <strong>Africa Makes Foundation</strong> – equipping youth with 3D printing and STEM innovation skills.</li>
-      <li>Mentored emerging leaders through global programs at <strong>Harvard, MIT, and the U.S. State Department</strong>.</li>
-    </ul>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
+        <h4 class="text-xl font-semibold text-navy mb-3">YouthX Tech & Innovation Mentor</h4>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Guided South African youth in software, app, and product development through national YouthX programs.
+        </p>
+        <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
+          <img src="./Images/Logos/youthx.png" alt="YouthX" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/standardbank.png" alt="Standard Bank" class="h-10 object-contain mx-3">
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
+        <h4 class="text-xl font-semibold text-navy mb-3">Africa Makes STEM Programs</h4>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Founded the Africa Makes Foundation, equipping youth with 3D printing and STEM innovation skills across the continent.
+        </p>
+        <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
+          <img src="./Images/Logos/africamakes.png" alt="Africa Makes" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/scibono.png" alt="Sci-Bono" class="h-10 object-contain mx-3">
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="divider"></div>
-
-  <!-- 🏅 PUBLIC ENGAGEMENTS & MEDIA -->
+  <!-- ========== TRACK: PUBLIC ENGAGEMENTS & MEDIA ========== -->
   <div class="container mx-auto px-6 animate-slideUp">
-    <h3 class="text-2xl font-semibold text-crimson mb-6 flex items-center gap-2">
+    <h3 class="text-2xl font-semibold text-crimson mb-10 flex items-center gap-2">
       🏅 Public Engagements & Media
     </h3>
-    <ul class="list-disc list-inside text-gray-700 space-y-3 leading-relaxed">
-      <li>Featured speaker and guest on <strong>ENCA, SABC, Fast Company, Standard Bank YouthX</strong>, and other leading media outlets.</li>
-      <li>Profiled as a national <strong>innovation leader</strong> by Wesgro and Business Day.</li>
-      <li>Regular contributor to global panels on <strong>health innovation, digital manufacturing, and youth in STEM</strong>.</li>
-      <li>Ongoing media engagements amplifying Africa’s innovation capacity and women’s leadership in technology.</li>
-    </ul>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
+        <h4 class="text-xl font-semibold text-navy mb-3">TEDx Cape Town Speaker</h4>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Delivered “Innovation in Crisis,” inspiring creative resilience through science and technology.
+        </p>
+        <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
+          <img src="./Images/Logos/tedx.png" alt="TEDx" class="h-10 object-contain mx-3">
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
+        <h4 class="text-xl font-semibold text-navy mb-3">Media Features & Recognition</h4>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Featured by ENCA, Fast Company, Standard Bank YouthX, and Wesgro for advancing innovation and public health tech.
+        </p>
+        <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
+          <img src="./Images/Logos/enca.png" alt="ENCA" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/fastcompany.png" alt="Fast Company" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/wesgro.png" alt="Wesgro" class="h-10 object-contain mx-3">
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
