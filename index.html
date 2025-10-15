@@ -180,7 +180,7 @@
 <!-- =============================== -->
 <section class="bg-light-grey py-16" aria-label="Featured in global institutions and publications">
   <div class="container mx-auto px-6">
-    <h3 class="text-center text-navy/60 font-semibold uppercase tracking-wider mb-10">
+    <h3 class="text-center text-[#2C2E35]/70 font-semibold uppercase tracking-wider mb-10">
       Trusted by Global Institutions & Featured In
     </h3>
 
@@ -229,7 +229,6 @@
       animation: scroll-balanced 55s linear infinite;
       will-change: transform;
     }
-    /* Do not pause scroll on hover */
     .animate-scroll-balanced:hover { animation-play-state: running !important; }
 
     /* === 🧱 Logo box sizing === */
@@ -248,23 +247,30 @@
       .logo-box { height: 7.5rem; width: 14rem; }
     }
 
-    /* === 🎨 Logo appearance === */
+    /* === 🎨 Logo appearance (grayscale base) === */
     .logo-box img {
+      --base-scale: 1; /* default scale variable */
+      transform: scale(var(--base-scale));
       max-height: 90%;
       max-width: 90%;
       object-fit: contain;
       object-position: center;
       filter: grayscale(100%) brightness(0.9);
       opacity: 0.85;
-      transition: filter 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
-      will-change: filter, opacity, transform;
+      transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+      will-change: transform, filter, opacity;
     }
 
-    /* Hover: color + gentle pop */
+    /* === ⚖️ Visual height normalization === */
+    .logo-wide img   { --base-scale: 1.25; } /* wide wordmarks */
+    .logo-square img { --base-scale: 1.1; }  /* compact / square */
+    .logo-tall img   { --base-scale: 0.9; }  /* tall / circular seals */
+
+    /* === Hover: adds subtle pop on top of base scale === */
     .logo-box:hover img {
+      transform: scale(calc(var(--base-scale) * 1.07));
       filter: grayscale(0%) brightness(1.05);
       opacity: 1;
-      transform: scale(1.07);
     }
 
     /* Slight depth on hover */
@@ -272,11 +278,6 @@
       transform: scale(1.03);
       filter: drop-shadow(0 0 6px rgba(0,0,0,0.15));
     }
-
-    /* === ⚖️ Visual height normalization === */
-    .logo-wide img   { transform: scale(1.25); } /* wide wordmarks */
-    .logo-square img { transform: scale(1.1); }  /* compact marks */
-    .logo-tall img   { transform: scale(0.9); }  /* tall emblems */
 
     /* === 📱 Responsive tweak === */
     @media (max-width: 640px) {
