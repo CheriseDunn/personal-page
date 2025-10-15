@@ -319,6 +319,149 @@
 </section>
 
 <!-- =============================== -->
+<!-- 🏛 FEATURED IN: LOGO CAROUSEL -->
+<!-- =============================== -->
+<section class="bg-light-grey py-16" aria-label="Featured in global institutions and publications" aria-hidden="true">
+  <div class="container mx-auto px-6">
+    <h3 class="text-center text-[#2C2E35]/70 font-semibold uppercase tracking-wider mb-10">
+      Trusted by Global Institutions & Featured In
+    </h3>
+
+    <div class="relative overflow-hidden">
+      <!-- Fade edges -->
+      <div class="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-light-grey to-transparent z-10"></div>
+      <div class="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-light-grey to-transparent z-10"></div>
+
+      <!-- Scroll Container -->
+      <div class="scroll-track flex animate-featured-scroll" style="--gap-size: 5rem;">
+        <!-- 🎯 Logo Row (unordered, script auto-alternates) -->
+        <div class="logo-row flex items-center flex-shrink-0 px-6" style="gap: var(--gap-size);">
+          <div class="logo-box logo-square"><img src="./Logos/G20_Brazil_2024.png" alt="G20 Brazil 2024" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-square"><img src="./Logos/15th_BRICS_summit_logo.png" alt="BRICS Summit" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-wide"><img src="./Logos/Harvard_University_logo.svg.png" alt="Harvard University" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-wide"><img src="./Logos/Harvard_Chan_SPH_logo.png" alt="Harvard Chan School" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-wide"><img src="./Logos/MIT_Logo_and_Wordmark.svg.png" alt="MIT" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-square"><img src="./Logos/Stanford-Symbol.png" alt="Stanford" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-tall"><img src="./Logos/IVLP_Logo.png" alt="IVLP" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-wide"><img src="./Logos/Inspiring_Fifty_Africa.png" alt="Inspiring Fifty Africa" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-wide"><img src="./Logos/Fast_Company_logo.svg" alt="Fast Company" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-square"><img src="./Logos/Standard_Bank_Top_Women_logo.png" alt="Standard Bank Top Women" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-wide"><img src="./Logos/Mail_and_Guardian_logo.svg" alt="Mail & Guardian" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-tall"><img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" alt="U.S. Department of State" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-tall"><img src="./Logos/US-WhiteHouse-Emblem.svg.png" alt="White House" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-wide"><img src="./Logos/TEDx_Logo.png" alt="TEDx" decoding="async" loading="lazy"></div>
+          <div class="logo-box logo-wide"><img src="./Logos/Wesgro_logo.png" alt="Wesgro" decoding="async" loading="lazy"></div>
+        </div>
+
+        <!-- Spacer for seamless looping -->
+        <div style="width: var(--gap-size); flex-shrink: 0;"></div>
+        <!-- 🔁 Duplicate row added by JS -->
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* === Continuous Scroll Animation === */
+    @keyframes featured-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-featured-scroll {
+      display: flex;
+      width: max-content;
+      animation: featured-scroll 55s linear infinite;
+      will-change: transform;
+    }
+    .animate-featured-scroll:hover { animation-play-state: running !important; }
+
+    /* === Logo Boxes (larger size) === */
+    .logo-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 9rem;     /* larger height */
+      width: 15rem;     /* larger width */
+      overflow: hidden;
+      flex-shrink: 0;
+      border-radius: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    /* === Logo Images (larger visual fill) === */
+    .logo-box img {
+      width: auto;
+      height: auto;
+      max-height: 95%;   /* bigger than before */
+      max-width: 95%;
+      object-fit: contain;
+      object-position: center;
+      filter: grayscale(100%) brightness(0.95) contrast(1.05);
+      opacity: 0.9;
+      transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* === Optical Balance Adjustments === */
+    .logo-wide img   { max-height: 88%; }  /* wide wordmarks */
+    .logo-square img { max-height: 95%; }
+    .logo-tall img   { max-height: 98%; }
+
+    /* === Hover Reveal === */
+    .logo-box:hover img {
+      filter: grayscale(0%) brightness(1.05);
+      opacity: 1;
+      transform: scale(1.02);
+    }
+
+    /* === Responsive Scaling === */
+    @media (max-width: 1024px) {
+      .logo-box { height: 8rem; width: 13rem; }
+      .scroll-track { --gap-size: 4rem; }
+    }
+    @media (max-width: 640px) {
+      .logo-box { height: 6.5rem; width: 11rem; }
+      .scroll-track { --gap-size: 3rem; }
+    }
+
+    /* === Accessibility === */
+    @media (prefers-reduced-motion: reduce) {
+      .animate-featured-scroll { animation: none; }
+    }
+  </style>
+
+  <!-- === Auto-Alternation & Clone Script === -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const track = document.querySelector(".scroll-track");
+      if (track && !track.dataset.cloned) {
+        const row = track.querySelector(".logo-row");
+
+        /* --- Auto-alternate logos by type --- */
+        const all = Array.from(row.children);
+        const groups = {
+          square: all.filter(el => el.classList.contains("logo-square")),
+          wide: all.filter(el => el.classList.contains("logo-wide")),
+          tall: all.filter(el => el.classList.contains("logo-tall"))
+        };
+        const alternated = [];
+        while (groups.square.length || groups.wide.length || groups.tall.length) {
+          if (groups.square.length) alternated.push(groups.square.shift());
+          if (groups.wide.length)   alternated.push(groups.wide.shift());
+          if (groups.tall.length)   alternated.push(groups.tall.shift());
+        }
+        row.innerHTML = "";
+        alternated.forEach(el => row.appendChild(el));
+
+        /* --- Clone for seamless scroll loop --- */
+        const clone = row.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        track.appendChild(clone);
+        track.dataset.cloned = "true";
+      }
+    });
+  </script>
+</section>
+
+<!-- =============================== -->
 <!-- 💡 ABOUT SECTION (IMPROVED) -->
 <!-- =============================== -->
 <section id="about" class="bg-off-white py-20 md:py-28">
