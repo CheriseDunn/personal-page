@@ -514,10 +514,13 @@
 </section>
 
 <!-- =============================== -->
-<!-- 🌍 A RECORD OF GLOBAL IMPACT (IMPACT CARDS GRID) -->
+<!-- 🌍 A RECORD OF GLOBAL IMPACT (FULL GRID + FIXED LOGOS + ANIMATED BACKGROUND) -->
 <!-- =============================== -->
-<section id="impact" class="bg-off-white py-24">
-  <div class="container mx-auto px-6 text-center mb-14 animate-fadeIn">
+<section id="impact" class="relative overflow-hidden py-24">
+  <!-- ✨ Animated Gradient Background (fixed layering) -->
+  <div class="absolute inset-0 z-[-1] bg-gradient-to-br from-crimson via-[#1a1f36] to-navy opacity-15 bg-[length:300%_300%] animate-gradientShift pointer-events-none"></div>
+
+  <div class="relative container mx-auto px-6 text-center mb-14 animate-fadeIn">
     <h2 class="text-3xl md:text-4xl font-bold text-navy">
       A Record of Global Impact
     </h2>
@@ -526,155 +529,132 @@
     </p>
   </div>
 
-  <!-- ========== TRACK: INNOVATION & TECHNOLOGY LEADERSHIP ========== -->
-  <div class="container mx-auto px-6 mb-20 animate-slideUp">
+  <!-- Gradient animation keyframes -->
+  <style>
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .animate-gradientShift {
+      animation: gradientShift 30s ease infinite;
+    }
+    .logo-hover:hover {
+      filter: brightness(1.2) drop-shadow(0 0 6px rgba(220, 38, 38, 0.3));
+    }
+  </style>
+
+  <!-- ========== 🧬 INNOVATION & TECHNOLOGY LEADERSHIP ========== -->
+  <div class="relative container mx-auto px-6 mb-20 animate-slideUp">
     <h3 class="text-2xl font-semibold text-crimson mb-10 flex items-center gap-2">
       🧬 Innovation & Technology Leadership
     </h3>
-    <div class="grid md:grid-cols-2 gap-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Card 1 -->
-      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
+      <div class="bg-white/95 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
         <h4 class="text-xl font-semibold text-navy mb-3">3D-Printed Nasopharyngeal Swabs</h4>
-        <p class="text-gray-600 mb-6 leading-relaxed">
+        <p class="text-gray-700 mb-6 leading-relaxed">
           Developed Africa’s first 3D-printed nasopharyngeal swabs during COVID-19, scaling local production to hospitals nationwide.
         </p>
         <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
-          <img src="./Images/Logos/southafricamakes.png" alt="South Africa Makes" class="h-10 object-contain mx-3">
-          <img src="./Images/Logos/autodesk.png" alt="Autodesk" class="h-10 object-contain mx-3">
-          <img src="./Images/Logos/carbon3d.png" alt="Carbon3D" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/southafricamakes.png" class="h-10 object-contain mx-3 logo-hover" alt="South Africa Makes">
+          <img src="./Images/Logos/autodesk.png" class="h-10 object-contain mx-3 logo-hover" alt="Autodesk">
+          <img src="./Images/Logos/carbon3d.png" class="h-10 object-contain mx-3 logo-hover" alt="Carbon3D">
         </div>
       </div>
 
       <!-- Card 2 -->
-      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
+      <div class="bg-white/95 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
         <h4 class="text-xl font-semibold text-navy mb-3">Distributed Manufacturing Network</h4>
-        <p class="text-gray-600 mb-6 leading-relaxed">
+        <p class="text-gray-700 mb-6 leading-relaxed">
           Built a nationwide distributed manufacturing network empowering makerspaces and universities to produce critical medical supplies.
         </p>
         <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
-          <img src="./Images/Logos/sabs.png" alt="SABS" class="h-10 object-contain mx-3">
-          <img src="./Images/Logos/uct.png" alt="UCT" class="h-10 object-contain mx-3">
-          <img src="./Images/Logos/harvard.png" alt="Harvard" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/sabs.png" class="h-10 object-contain mx-3 logo-hover" alt="SABS">
+          <img src="./Images/Logos/uct.png" class="h-10 object-contain mx-3 logo-hover" alt="UCT">
+          <img src="./Images/Logos/harvard.png" class="h-10 object-contain mx-3 logo-hover" alt="Harvard">
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white/95 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
+        <h4 class="text-xl font-semibold text-navy mb-3">Advanced Additive Manufacturing</h4>
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          Partnered with Carbon3D and Autodesk to pioneer next-gen workflows for digital health devices in low-resource environments.
+        </p>
+        <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
+          <img src="./Images/Logos/carbon3d.png" class="h-10 object-contain mx-3 logo-hover" alt="Carbon3D">
+          <img src="./Images/Logos/autodesk.png" class="h-10 object-contain mx-3 logo-hover" alt="Autodesk">
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ========== TRACK: GLOBAL FELLOWSHIPS & RECOGNITION ========== -->
-  <div class="container mx-auto px-6 mb-20 animate-slideUp">
+  <!-- ========== 🌍 GLOBAL FELLOWSHIPS & RECOGNITION ========== -->
+  <div class="relative container mx-auto px-6 mb-20 animate-slideUp">
     <h3 class="text-2xl font-semibold text-crimson mb-10 flex items-center gap-2">
       🌍 Global Fellowships & Recognition
     </h3>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
-        <h4 class="text-xl font-semibold text-navy mb-3">Harvard South Africa Fellow</h4>
-        <p class="text-gray-600 mb-6 leading-relaxed">
-          Recognized for advancing equitable innovation in health systems through research and leadership at Harvard University.
-        </p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white/95 rounded-2xl shadow-md hover:shadow-xl p-8 transition-all duration-500 hover:-translate-y-1">
+        <h4 class="text-xl font-semibold text-navy mb-3">Harvard South Africa Fellowship</h4>
+        <p class="text-gray-700 mb-6 leading-relaxed">Recognized for advancing equitable innovation in health systems through Harvard University.</p>
         <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
-          <img src="./Images/Logos/harvard.png" alt="Harvard" class="h-10 object-contain mx-3">
-          <img src="./Images/Logos/hsph.png" alt="Harvard Chan School" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/harvard.png" class="h-10 object-contain mx-3 logo-hover">
+          <img src="./Images/Logos/hsph.png" class="h-10 object-contain mx-3 logo-hover">
         </div>
       </div>
 
-      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
-        <h4 class="text-xl font-semibold text-navy mb-3">MIT AI Venture Studio Platinum Team Award</h4>
-        <p class="text-gray-600 mb-6 leading-relaxed">
-          Awarded for excellence in AI-driven innovation and venture development under MIT’s Innovation HQ program.
-        </p>
+      <div class="bg-white/95 rounded-2xl shadow-md hover:shadow-xl p-8 transition-all duration-500 hover:-translate-y-1">
+        <h4 class="text-xl font-semibold text-navy mb-3">MIT AI Venture Studio Platinum Award</h4>
+        <p class="text-gray-700 mb-6 leading-relaxed">Awarded for excellence in AI-driven innovation and venture development under MIT Innovation HQ.</p>
         <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
-          <img src="./Images/Logos/mit.png" alt="MIT" class="h-10 object-contain mx-3">
-          <img src="./Images/Logos/aiventurestudio.png" alt="MIT AI Ventures" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/mit.png" class="h-10 object-contain mx-3 logo-hover">
+          <img src="./Images/Logos/aiventurestudio.png" class="h-10 object-contain mx-3 logo-hover">
+        </div>
+      </div>
+
+      <div class="bg-white/95 rounded-2xl shadow-md hover:shadow-xl p-8 transition-all duration-500 hover:-translate-y-1">
+        <h4 class="text-xl font-semibold text-navy mb-3">Fast Company / Inspiring Fifty</h4>
+        <p class="text-gray-700 mb-6 leading-relaxed">Named among Fast Company’s “Most Innovative Companies” and Inspiring Fifty in STEM.</p>
+        <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
+          <img src="./Images/Logos/fastcompany.png" class="h-10 object-contain mx-3 logo-hover">
+          <img src="./Images/Logos/inspiringfifty.png" class="h-10 object-contain mx-3 logo-hover">
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ========== TRACK: POLICY, DIPLOMACY & GLOBAL PARTNERSHIPS ========== -->
-  <div class="container mx-auto px-6 mb-20 animate-slideUp">
+  <!-- ========== 🤝 POLICY, DIPLOMACY & GLOBAL PARTNERSHIPS ========== -->
+  <div class="relative container mx-auto px-6 mb-20 animate-slideUp">
     <h3 class="text-2xl font-semibold text-crimson mb-10 flex items-center gap-2">
       🤝 Policy, Diplomacy & Global Partnerships
     </h3>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
-        <h4 class="text-xl font-semibold text-navy mb-3">G20 Startup20 Delegate (Brazil 2024)</h4>
-        <p class="text-gray-600 mb-6 leading-relaxed">
-          Represented South Africa in shaping global innovation policy frameworks on entrepreneurship and inclusive growth.
-        </p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white/95 rounded-2xl shadow-md hover:shadow-xl p-8 hover:-translate-y-1 transition-all duration-500">
+        <h4 class="text-xl font-semibold text-navy mb-3">G20 Startup20 Delegate (Brazil)</h4>
+        <p class="text-gray-700 mb-6 leading-relaxed">Represented South Africa in shaping global innovation policy at G20 Startup20 Summit 2024.</p>
         <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
-          <img src="./Images/Logos/g20.png" alt="G20" class="h-10 object-contain mx-3">
-          <img src="./Images/Logos/startup20.png" alt="Startup20" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/g20.png" class="h-10 object-contain mx-3 logo-hover">
+          <img src="./Images/Logos/startup20.png" class="h-10 object-contain mx-3 logo-hover">
         </div>
       </div>
 
-      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
+      <div class="bg-white/95 rounded-2xl shadow-md hover:shadow-xl p-8 hover:-translate-y-1 transition-all duration-500">
         <h4 class="text-xl font-semibold text-navy mb-3">BRICS Young Innovator Finalist</h4>
-        <p class="text-gray-600 mb-6 leading-relaxed">
-          Selected among leading innovators advancing advanced manufacturing and healthtech collaboration across BRICS nations.
-        </p>
+        <p class="text-gray-700 mb-6 leading-relaxed">Represented South Africa in advanced manufacturing collaborations across BRICS nations.</p>
         <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
-          <img src="./Images/Logos/brics.png" alt="BRICS" class="h-10 object-contain mx-3">
-          <img src="./Images/Logos/dst.png" alt="Department of Science & Technology" class="h-10 object-contain mx-3">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========== TRACK: EDUCATION, MENTORSHIP & YOUTH EMPOWERMENT ========== -->
-  <div class="container mx-auto px-6 mb-20 animate-slideUp">
-    <h3 class="text-2xl font-semibold text-crimson mb-10 flex items-center gap-2">
-      🎓 Education, Mentorship & Youth Empowerment
-    </h3>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
-        <h4 class="text-xl font-semibold text-navy mb-3">YouthX Tech & Innovation Mentor</h4>
-        <p class="text-gray-600 mb-6 leading-relaxed">
-          Guided South African youth in software, app, and product development through national YouthX programs.
-        </p>
-        <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
-          <img src="./Images/Logos/youthx.png" alt="YouthX" class="h-10 object-contain mx-3">
-          <img src="./Images/Logos/standardbank.png" alt="Standard Bank" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/brics.png" class="h-10 object-contain mx-3 logo-hover">
+          <img src="./Images/Logos/dst.png" class="h-10 object-contain mx-3 logo-hover">
         </div>
       </div>
 
-      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
-        <h4 class="text-xl font-semibold text-navy mb-3">Africa Makes STEM Programs</h4>
-        <p class="text-gray-600 mb-6 leading-relaxed">
-          Founded the Africa Makes Foundation, equipping youth with 3D printing and STEM innovation skills across the continent.
-        </p>
+      <div class="bg-white/95 rounded-2xl shadow-md hover:shadow-xl p-8 hover:-translate-y-1 transition-all duration-500">
+        <h4 class="text-xl font-semibold text-navy mb-3">OSTP & U.S. State Dept. Partnerships</h4>
+        <p class="text-gray-700 mb-6 leading-relaxed">Engaged with U.S. Deputy Secretary Wendy Sherman and OSTP Head Dr. Alondra Nelson on innovation policy.</p>
         <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
-          <img src="./Images/Logos/africamakes.png" alt="Africa Makes" class="h-10 object-contain mx-3">
-          <img src="./Images/Logos/scibono.png" alt="Sci-Bono" class="h-10 object-contain mx-3">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========== TRACK: PUBLIC ENGAGEMENTS & MEDIA ========== -->
-  <div class="container mx-auto px-6 animate-slideUp">
-    <h3 class="text-2xl font-semibold text-crimson mb-10 flex items-center gap-2">
-      🏅 Public Engagements & Media
-    </h3>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
-        <h4 class="text-xl font-semibold text-navy mb-3">TEDx Cape Town Speaker</h4>
-        <p class="text-gray-600 mb-6 leading-relaxed">
-          Delivered “Innovation in Crisis,” inspiring creative resilience through science and technology.
-        </p>
-        <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
-          <img src="./Images/Logos/tedx.png" alt="TEDx" class="h-10 object-contain mx-3">
-        </div>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 p-8">
-        <h4 class="text-xl font-semibold text-navy mb-3">Media Features & Recognition</h4>
-        <p class="text-gray-600 mb-6 leading-relaxed">
-          Featured by ENCA, Fast Company, Standard Bank YouthX, and Wesgro for advancing innovation and public health tech.
-        </p>
-        <div class="flex justify-center items-center grayscale hover:grayscale-0 transition duration-500">
-          <img src="./Images/Logos/enca.png" alt="ENCA" class="h-10 object-contain mx-3">
-          <img src="./Images/Logos/fastcompany.png" alt="Fast Company" class="h-10 object-contain mx-3">
-          <img src="./Images/Logos/wesgro.png" alt="Wesgro" class="h-10 object-contain mx-3">
+          <img src="./Images/Logos/ustate.png" class="h-10 object-contain mx-3 logo-hover">
+          <img src="./Images/Logos/ostp.png" class="h-10 object-contain mx-3 logo-hover">
         </div>
       </div>
     </div>
