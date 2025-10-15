@@ -176,57 +176,170 @@
 </section>
 
 <!-- =============================== -->
-<!-- 🏛 FEATURED IN: LOGO CAROUSEL (CLEAN VERSION) -->
+<!-- 🏛 FEATURED IN: LOGO CAROUSEL -->
 <!-- =============================== -->
-<section class="bg-light-grey py-16" aria-label="Featured in global institutions and publications">
-  <div class="container mx-auto px-6">
-    <h3 class="text-center text-navy/60 font-semibold uppercase tracking-wider mb-10">
-      Trusted by Global Institutions & Featured In
-    </h3>
+<section id="featured-in" class="bg-light-grey py-16">
+  <div class="container mx-auto px-6 text-center">
 
-    <!-- ♻️ Smooth Infinite Scroll Carousel -->
-    <div class="relative overflow-hidden">
-      <!-- Gradient fades for edges -->
-      <div class="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-light-grey to-transparent z-10"></div>
-      <div class="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-light-grey to-transparent z-10"></div>
+    <!-- =============================== -->
+    <!-- 🔹 Section Title -->
+    <!-- =============================== -->
+    <h2 class="text-3xl md:text-4xl font-bold text-navy mb-10">
+      Featured In
+    </h2>
 
-      <!-- Single infinite row -->
-      <div class="flex animate-scroll-slow items-center space-x-10 sm:space-x-14 flex-shrink-0 px-6">
-        <img src="./Logos/G20_Brazil_2024.png" alt="G20 Brazil 2024" class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all" loading="lazy">
-        <img src="./Logos/15th_BRICS_summit_logo.png" alt="BRICS Summit" class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all" loading="lazy">
-        <img src="./Logos/Harvard_University_logo.svg.png" alt="Harvard University" class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all" loading="lazy">
-        <img src="./Logos/Harvard_Chan_SPH_logo.png" alt="Harvard Chan School" class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all" loading="lazy">
-        <img src="./Logos/MIT_Logo_and_Wordmark.svg.png" alt="MIT" class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all" loading="lazy">
-        <img src="./Logos/Stanford-Symbol.png" alt="Stanford" class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all" loading="lazy">
-        <img src="./Logos/IVLP_Logo.png" alt="IVLP" class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all" loading="lazy">
-        <img src="./Logos/Inspiring_Fifty_Africa.svg" alt="Inspiring Fifty Africa" class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all" loading="lazy">
-        <img src="./Logos/Fast_Company_logo.svg" alt="Fast Company" class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all" loading="lazy">
-        <img src="./Logos/Standard_Bank_Top_Women_logo.png" alt="Standard Bank Top Women" class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all" loading="lazy">
-        <img src="./Logos/Mail_and_Guardian_logo.svg" alt="Mail & Guardian" class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all" loading="lazy">
-        <img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" alt="U.S. Department of State" class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all" loading="lazy">
-        <img src="./Logos/US-WhiteHouse-Emblem.svg.png" alt="White House" class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all" loading="lazy">
-        <img src="./Logos/TEDx_Logo.png" alt="TEDx" class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all" loading="lazy">
-        <img src="./Logos/Wesgro_logo.png" alt="Wesgro" class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all" loading="lazy">
-      </div>
-    </div>
+    <!-- =============================== -->
+    <!-- 🚀 LOGO CAROUSEL WRAPPER -->
+    <!-- =============================== -->
+    <div class="logo-carousel overflow-hidden relative w-full">
+
+      <!-- The scrolling track: contains one full set of unique logos -->
+      <!-- Duplicated once for seamless looping animation -->
+      <div class="logo-track flex items-center gap-12 animate-scroll">
+
+        <!-- 🌍 List each unique logo ONCE -->
+        <div class="carousel-logo-wrapper">
+          <img src="./Images/Harvard.png" alt="Harvard University" class="carousel-logo" loading="lazy">
+        </div>
+
+        <div class="carousel-logo-wrapper">
+          <img src="./Images/Stanford.png" alt="Stanford University" class="carousel-logo" loading="lazy">
+        </div>
+
+        <div class="carousel-logo-wrapper">
+          <img src="./Images/MIT.png" alt="Massachusetts Institute of Technology" class="carousel-logo" loading="lazy">
+        </div>
+
+        <div class="carousel-logo-wrapper">
+          <img src="./Images/WHO.png" alt="World Health Organization" class="carousel-logo" loading="lazy">
+        </div>
+
+        <div class="carousel-logo-wrapper">
+          <img src="./Images/UNESCO.png" alt="UNESCO" class="carousel-logo" loading="lazy">
+        </div>
+
+        <div class="carousel-logo-wrapper">
+          <img src="./Images/AfricaMakes.png" alt="Africa Makes Foundation" class="carousel-logo" loading="lazy">
+        </div>
+
+        <div class="carousel-logo-wrapper">
+          <img src="./Images/UCT.png" alt="University of Cape Town" class="carousel-logo" loading="lazy">
+        </div>
+
+        <div class="carousel-logo-wrapper">
+          <img src="./Images/HarvardChan.png" alt="Harvard T.H. Chan School of Public Health" class="carousel-logo" loading="lazy">
+        </div>
+
+        <!-- 🔁 Duplicate row once (for continuous looping) -->
+        <div class="carousel-logo-wrapper">
+          <img src="./Images/Harvard.png" alt="Harvard University" class="carousel-logo" loading="lazy">
+        </div>
+
+        <div class="carousel-logo-wrapper">
+          <img src="./Images/Stanford.png" alt="Stanford University" class="carousel-logo" loading="lazy">
+        </div>
+
+        <div class="carousel-logo-wrapper">
+          <img src="./Images/MIT.png" alt="Massachusetts Institute of Technology" class="carousel-logo" loading="lazy">
+        </div>
+
+        <div class="carousel-logo-wrapper">
+          <img src="./Images/WHO.png" alt="World Health Organization" class="carousel-logo" loading="lazy">
+        </div>
+
+        <div class="carousel-logo-wrapper">
+          <img src="./Images/UNESCO.png" alt="UNESCO" class="carousel-logo" loading="lazy">
+        </div>
+
+        <div class="carousel-logo-wrapper">
+          <img src="./Images/AfricaMakes.png" alt="Africa Makes Foundation" class="carousel-logo" loading="lazy">
+        </div>
+
+        <div class="carousel-logo-wrapper">
+          <img src="./Images/UCT.png" alt="University of Cape Town" class="carousel-logo" loading="lazy">
+        </div>
+
+        <div class="carousel-logo-wrapper">
+          <img src="./Images/HarvardChan.png" alt="Harvard T.H. Chan School of Public Health" class="carousel-logo" loading="lazy">
+        </div>
+      </div> <!-- end .logo-track -->
+
+    </div> <!-- end .logo-carousel -->
   </div>
-
-  <!-- ✨ Animation & Logo Styling -->
-  <style>
-    @keyframes scroll-slow {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .animate-scroll-slow {
-      display: flex;
-      width: max-content;
-      animation: scroll-slow 45s linear infinite;
-    }
-    .animate-scroll-slow:hover {
-      animation-play-state: paused;
-    }
-  </style>
 </section>
+
+<!-- =============================== -->
+<!-- 🎨 CAROUSEL STYLING -->
+<!-- =============================== -->
+<style>
+  /* --- Carousel Container --- */
+  .logo-carousel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* --- Scrolling Track --- */
+  .logo-track {
+    display: flex;
+    align-items: center;
+    width: max-content; /* expand to fit logos */
+    animation: scroll 45s linear infinite; /* smooth, continuous motion */
+    gap: 5rem; /* space between logos */
+  }
+
+  /* --- Logo Wrapper: centers each image perfectly --- */
+  .carousel-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px; /* fixed bounding box for consistent spacing */
+    height: 70px; /* ensures all logos share same visual height */
+  }
+
+  /* --- Individual Logos --- */
+  .carousel-logo {
+    max-height: 60px; /* controls visual height */
+    width: auto;
+    max-width: 110px; /* prevents oversized horizontal stretch */
+    object-fit: contain; /* preserve aspect ratio */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    filter: grayscale(20%);
+    opacity: 0.95;
+  }
+
+  /* --- Hover Enhancement --- */
+  .carousel-logo:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    filter: grayscale(0%);
+  }
+
+  /* --- Continuous Scroll Animation --- */
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* loops halfway (due to duplication) */
+  }
+
+  /* --- Responsive Adjustments --- */
+  @media (max-width: 1024px) {
+    .carousel-logo-wrapper { width: 100px; height: 60px; }
+    .carousel-logo { max-height: 45px; max-width: 90px; }
+    .logo-track { gap: 4rem; animation-duration: 55s; }
+  }
+
+  @media (max-width: 768px) {
+    .carousel-logo-wrapper { width: 80px; height: 50px; }
+    .carousel-logo { max-height: 40px; max-width: 75px; }
+    .logo-track { gap: 3rem; animation-duration: 65s; }
+  }
+
+  @media (max-width: 480px) {
+    .carousel-logo-wrapper { width: 70px; height: 45px; }
+    .carousel-logo { max-height: 35px; max-width: 65px; }
+    .logo-track { gap: 2.5rem; animation-duration: 75s; }
+  }
+</style>
 
 <!-- =============================== -->
 <!-- 💡 ABOUT SECTION (IMPROVED) -->
@@ -400,290 +513,125 @@
   </div>
 </section>
 
-<!-- ============================= -->
-<!-- 🌍 A RECORD OF GLOBAL IMPACT (CLEANED + INTERACTIVE) -->
-<!-- ============================= -->
-<section id="engagements" aria-label="Timeline of global engagements" class="bg-off-white py-20 md:py-28 relative overflow-hidden">
-  <div class="container mx-auto px-6 relative z-10">
-    <!-- Heading -->
-    <div class="text-center mb-8 md:mb-10">
-      <h2 class="text-3xl md:text-4xl font-bold text-navy">A Record of Global Impact</h2>
-      <p class="mt-4 text-lg text-navy/80 max-w-3xl mx-auto">
-        A chronological record of Dr. Dunn’s leadership and collaborations across innovation, health equity, and technology-driven policy reform.
-      </p>
-    </div>
-
-    <!-- Sticky Year Nav -->
-    <nav id="yearNav" class="sticky top-20 z-20 backdrop-blur-md bg-off-white/90 border-t border-b border-light-grey/40 py-3 mb-12 shadow-sm">
-      <ul class="flex flex-wrap justify-center gap-4 text-sm font-medium text-navy/70">
-        <li><a href="#y2025" class="year-link hover:text-crimson transition">2025</a></li>
-        <li><a href="#y2024" class="year-link hover:text-crimson transition">2024</a></li>
-        <li><a href="#y2023" class="year-link hover:text-crimson transition">2023</a></li>
-        <li><a href="#y2022" class="year-link hover:text-crimson transition">2022</a></li>
-        <li><a href="#y2021" class="year-link hover:text-crimson transition">2021</a></li>
-        <li><a href="#y2020" class="year-link hover:text-crimson transition">2020</a></li>
-        <li><a href="#y2019" class="year-link hover:text-crimson transition">2019</a></li>
-        <li><a href="#y2018" class="year-link hover:text-crimson transition">2018</a></li>
-      </ul>
-    </nav>
-
-    <!-- Timeline -->
-    <div class="relative max-w-5xl mx-auto">
-      <!-- Flowing Crimson Spine -->
-      <div class="timeline-spine" aria-hidden="true"></div>
-
-      <!-- ========== 2025 -->
-      <article id="y2025" class="timeline-item relative md:flex md:flex-row items-start md:items-center justify-between gap-8 mb-20">
-        <div class="timeline-node" aria-hidden="true"></div>
-        <div class="w-full md:w-1/2 md:order-2 md:text-right md:pr-8">
-          <div class="card hover:-translate-y-1 transition-transform duration-300">
-            <h3 class="year"><time datetime="2025">2025</time></h3>
-            <p class="kicker">🎓 Fellowships & Leadership</p>
-            <ul class="bullets">
-              <li><strong>MIT AI Venture Studio</strong> – Platinum Team Award</li>
-              <li><strong>Harvard T.H. Chan School of Public Health</strong> – Public Health Leadership Lab Fellow</li>
-              <li>Chair of Operations, <strong>Harvard Graduate Student Council</strong></li>
-              <li>Director of External Partnerships, <strong>Harvard Chan Innovation & Technology Club</strong></li>
-              <li>Member, <strong>Harvard Student Wellbeing Council</strong></li>
-            </ul>
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 md:order-1 flex justify-center md:justify-start">
-          <div class="logo-grid">
-            <div class="logo-frame"><img src="./Logos/Harvard_University_logo.svg.png" alt="Harvard University" loading="lazy"></div>
-            <div class="logo-frame"><img src="./Logos/Harvard_Chan_SPH_logo.png" alt="Harvard Chan School" loading="lazy"></div>
-            <div class="logo-frame"><img src="./Logos/MIT_Logo_and_Wordmark.svg.png" alt="MIT" loading="lazy"></div>
-          </div>
-        </div>
-      </article>
-
-      <hr class="divider my-10 md:my-14">
-
-      <!-- ========== 2024 -->
-      <article id="y2024" class="timeline-item relative md:flex md:flex-row items-start md:items-center justify-between gap-8 mb-20">
-        <div class="timeline-node" aria-hidden="true"></div>
-        <div class="w-full md:w-1/2 md:order-1 md:text-left md:pl-8">
-          <div class="card hover:-translate-y-1 transition-transform duration-300">
-            <h3 class="year"><time datetime="2024">2024</time></h3>
-            <p class="kicker">🤝 Global Engagement</p>
-            <ul class="bullets">
-              <li><strong>Harvard South Africa Fellow</strong></li>
-              <li>Delegate, <strong>G20 Startup20</strong> – Macapá, Brazil</li>
-              <li>Student Leadership Council, <strong>MIT AI Ventures</strong></li>
-            </ul>
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 md:order-2 flex justify-center md:justify-end">
-          <div class="logo-grid">
-            <div class="logo-frame"><img src="./Logos/Harvard_University_logo.svg.png" alt="Harvard" loading="lazy"></div>
-            <div class="logo-frame"><img src="./Logos/G20_Brazil_2024.png" alt="G20 Brazil 2024" loading="lazy"></div>
-            <div class="logo-frame"><img src="./Logos/MIT_Logo_and_Wordmark.svg.png" alt="MIT" loading="lazy"></div>
-          </div>
-        </div>
-      </article>
-
-      <hr class="divider my-10 md:my-14">
-
-      <!-- ========== 2023 -->
-      <article id="y2023" class="timeline-item relative md:flex md:flex-row items-start md:items-center justify-between gap-8 mb-20">
-        <div class="timeline-node" aria-hidden="true"></div>
-        <div class="w-full md:w-1/2 md:order-2 md:text-right md:pr-8">
-          <div class="card hover:-translate-y-1 transition-transform duration-300">
-            <h3 class="year"><time datetime="2023">2023</time></h3>
-            <p class="kicker">🌐 Partnerships & Thought Leadership</p>
-            <ul class="bullets">
-              <li><strong>BRICS Young Innovator Prize Finalist</strong> – AI-driven medical device design</li>
-              <li>Hosted <strong>Stanford VPUE Prof. Sarah Church</strong> – Africa Makes × Stanford mentorship</li>
-              <li>Engaged <strong>U.S. Assistant Secretary Lee Satterfield</strong> – 3D printing for cultural exchange</li>
-            </ul>
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 md:order-1 flex justify-center md:justify-start">
-          <div class="logo-grid">
-            <div class="logo-frame"><img src="./Logos/15th_BRICS_summit_logo.png" alt="BRICS 2023" loading="lazy"></div>
-            <div class="logo-frame"><img src="./Logos/Stanford-Symbol.png" alt="Stanford University" loading="lazy"></div>
-            <div class="logo-frame"><img src="./Logos/US-WhiteHouse-Emblem.svg.png" alt="White House" loading="lazy"></div>
-          </div>
-        </div>
-      </article>
-
-      <hr class="divider my-10 md:my-14">
-      
-      <!-- ========== 2022 -->
-      <article id="y2022" class="timeline-item relative md:flex md:flex-row items-start md:items-center justify-between gap-8 mb-20">
-        <div class="timeline-node" aria-hidden="true"></div>
-        <div class="w-full md:w-1/2 md:order-1 md:text-left md:pl-8">
-          <div class="card hover:-translate-y-1 transition-transform duration-300">
-            <h3 class="year"><time datetime="2022">2022</time></h3>
-            <p class="kicker">🏛️ Policy & Mentorship</p>
-            <ul class="bullets">
-              <li>Hosted <strong>U.S. Deputy Secretary Wendy Sherman</strong> – showcased South Africa Makes’ cardiology innovations</li>
-              <li>Presented to <strong>Dr. Alondra Nelson</strong>, OSTP Head – point-of-care manufacturing for health equity</li>
-              <li><strong>Nedbank YouthX Technology & Innovation Changemaker</strong> – mentoring young tech entrepreneurs</li>
-            </ul>
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 md:order-2 flex justify-center md:justify-end">
-          <div class="logo-grid">
-            <div class="logo-frame"><img src="./Logos/Seal_of_the_United_States_Department_of_State.svg" alt="U.S. Department of State" loading="lazy"></div>
-            <div class="logo-frame"><img src="./Logos/US-WhiteHouse-Emblem.svg.png" alt="White House" loading="lazy"></div>
-            <div class="logo-frame"><img src="./Logos/Nedbank_YouthX_logo.png" alt="Nedbank YouthX" loading="lazy"></div>
-          </div>
-        </div>
-      </article>
-
-      <hr class="divider my-10 md:my-14">
-
-      <!-- ========== 2021 -->
-      <article id="y2021" class="timeline-item relative md:flex md:flex-row items-start md:items-center justify-between gap-8 mb-20">
-        <div class="timeline-node" aria-hidden="true"></div>
-        <div class="w-full md:w-1/2 md:order-2 md:text-right md:pr-8">
-          <div class="card hover:-translate-y-1 transition-transform duration-300">
-            <h3 class="year"><time datetime="2021">2021</time></h3>
-            <p class="kicker">🏆 Awards & Recognition</p>
-            <ul class="bullets">
-              <li><strong>Fast Company Most Innovative Companies</strong> – distributed manufacturing during COVID-19</li>
-              <li><strong>Winner – Wesgro Young Innovators</strong> (Cape Health Tech Sector)</li>
-              <li><strong>Featured – Wesgro “Pioneers in Health Tech”</strong></li>
-            </ul>
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 md:order-1 flex justify-center md:justify-start">
-          <div class="logo-grid">
-            <div class="logo-frame"><img src="./Logos/Fast_Company_logo.svg" alt="Fast Company" loading="lazy"></div>
-            <div class="logo-frame"><img src="./Logos/Wesgro_logo.png" alt="Wesgro" loading="lazy"></div>
-          </div>
-        </div>
-      </article>
-
-      <hr class="divider my-10 md:my-14">
-
-      <!-- ========== 2020 -->
-      <article id="y2020" class="timeline-item relative md:flex md:flex-row items-start md:items-center justify-between gap-8 mb-20">
-        <div class="timeline-node" aria-hidden="true"></div>
-        <div class="w-full md:w-1/2 md:order-1 md:text-left md:pl-8">
-          <div class="card hover:-translate-y-1 transition-transform duration-300">
-            <h3 class="year"><time datetime="2020">2020</time></h3>
-            <p class="kicker">🚑 COVID-19 Innovation</p>
-            <ul class="bullets">
-              <li>Developed <strong>Africa’s first 3D-printed nasopharyngeal swab</strong> for COVID-19 testing</li>
-              <li>Established distributed additive manufacturing networks for rapid diagnostic access</li>
-            </ul>
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 md:order-2 flex justify-center md:justify-end">
-          <div class="logo-grid">
-            <div class="logo-frame"><img src="./Logos/Africa_Makes_logo.svg" alt="Africa Makes Foundation" loading="lazy"></div>
-          </div>
-        </div>
-      </article>
-
-      <hr class="divider my-10 md:my-14">
-
-      <!-- ========== 2019 -->
-      <article id="y2019" class="timeline-item relative md:flex md:flex-row items-start md:items-center justify-between gap-8 mb-20">
-        <div class="timeline-node" aria-hidden="true"></div>
-        <div class="w-full md:w-1/2 md:order-2 md:text-right md:pr-8">
-          <div class="card hover:-translate-y-1 transition-transform duration-300">
-            <h3 class="year"><time datetime="2019">2019</time></h3>
-            <p class="kicker">🎤 Thought Leadership & Recognition</p>
-            <ul class="bullets">
-              <li>TEDx Cape Town Speaker – <em>“Made for Africa. Made in Africa.”</em></li>
-              <li><strong>Top 12 Influential Young Women to Watch</strong> – <em>Standard Bank Top Women Leaders</em></li>
-              <li>Named among <strong>Inspiring Fifty Women in STEM (South Africa)</strong></li>
-            </ul>
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 md:order-1 flex justify-center md:justify-start">
-          <div class="logo-grid">
-            <div class="logo-frame"><img src="./Logos/TEDx_Logo.png" alt="TEDx Cape Town" loading="lazy"></div>
-            <div class="logo-frame"><img src="./Logos/Inspiring_Fifty_Africa.svg" alt="Inspiring Fifty" loading="lazy"></div>
-            <div class="logo-frame"><img src="./Logos/Standard_Bank_Top_Women_logo.png" alt="Standard Bank Top Women" loading="lazy"></div>
-          </div>
-        </div>
-      </article>
-
-      <hr class="divider my-10 md:my-14">
-
-      <!-- ========== 2018 -->
-      <article id="y2018" class="timeline-item relative md:flex md:flex-row items-start md:items-center justify-between gap-8">
-        <div class="timeline-node" aria-hidden="true"></div>
-        <div class="w-full md:w-1/2 md:order-1 md:text-left md:pl-8">
-          <div class="card hover:-translate-y-1 transition-transform duration-300">
-            <h3 class="year"><time datetime="2018">2018</time></h3>
-            <p class="kicker">🎓 Fellowships</p>
-            <ul class="bullets">
-              <li><strong>U.S. Department of State – IVLP Fellow</strong>, Women in Business Program</li>
-            </ul>
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 md:order-2 flex justify-center md:justify-end">
-          <div class="logo-grid">
-            <div class="logo-frame"><img src="./Logos/IVLP_Logo.png" alt="IVLP Program" loading="lazy"></div>
-          </div>
-        </div>
-      </article>
-    </div>
+<!-- =============================== -->
+<!-- 🌍 A RECORD OF GLOBAL IMPACT (BY TRACKS WITH DIVIDERS) -->
+<!-- =============================== -->
+<section id="impact" class="bg-off-white py-20">
+  <div class="container mx-auto px-6 text-center mb-14 animate-fadeIn">
+    <h2 class="text-3xl md:text-4xl font-bold text-navy">
+      A Record of Global Impact
+    </h2>
+    <p class="mt-3 text-navy/70">
+      Grouped by tracks of innovation, leadership, and global collaboration.
+    </p>
   </div>
 
-  <!-- ✨ Styles -->
+  <!-- Divider animation styles -->
   <style>
-    @keyframes pulse {0%,100%{transform:translate(-50%,-50%)scale(1);opacity:1;}50%{transform:translate(-50%,-50%)scale(1.18);opacity:.75;}}
-    @keyframes flow {0%{background-position:0 0;}100%{background-position:0 100%;}}
-    .timeline-spine {
-      position:absolute; left:50%; top:0; transform:translateX(-50%);
-      width:2px; height:100%;
-      background:linear-gradient(to bottom,#9E1B32 0%,#9E1B32aa 50%,#DCDCDC 100%);
-      background-size:100% 200%;
-      animation:flow 10s linear infinite alternate;
-      border-radius:9999px;
+    @keyframes pulseDivider {
+      0% { opacity: 0.3; width: 0; }
+      50% { opacity: 1; width: 80%; }
+      100% { opacity: 0.3; width: 0; }
     }
-    .timeline-node {
-      position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
-      width:1rem; height:1rem; border-radius:9999px; background:#9E1B32;
-      box-shadow:0 0 0 6px rgba(158,27,50,0.10);
-      animation:pulse 2s ease-in-out infinite;
+    .divider {
+      height: 2px;
+      margin: 3rem auto;
+      background: linear-gradient(90deg, rgba(220,38,38,0) 0%, #dc2626 50%, rgba(220,38,38,0) 100%);
+      animation: pulseDivider 6s ease-in-out infinite;
+      border-radius: 9999px;
     }
-    @media(max-width:768px){.timeline-node{display:none;}}
-    .divider {border:none;border-top:1px solid rgba(158,27,50,0.25);width:60%;margin:auto;opacity:.7;}
-    .card {background:rgba(255,255,255,0.9);backdrop-filter:blur(8px);border:1px solid rgba(60,60,60,0.08);
-      border-radius:18px;padding:1.5rem;box-shadow:0 8px 24px rgba(60,60,60,0.06);}
-    .year time {background:#9E1B32;color:#fff;padding:.25rem .9rem;border-radius:9999px;
-      font-weight:700;font-size:1.125rem;letter-spacing:.2px;}
-    .kicker {margin:.6rem 0 .4rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;
-      color:#9E1B32;font-weight:600;}
-    .bullets {list-style:disc inside;font-size:15px;line-height:1.75;color:#2f2f2f;}
-    .logo-grid {display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;align-items:center;}
-    .logo-frame {width:8.5rem;height:8.5rem;display:flex;align-items:center;justify-content:center;
-      background:#fff;border:1px solid rgba(60,60,60,0.08);border-radius:14px;padding:1rem;overflow:hidden;
-      transition:transform .2s ease,box-shadow .2s ease;}
-    @media(min-width:768px){.logo-frame{width:9.5rem;height:9.5rem;}}
-    .logo-frame img {max-width:100%;max-height:100%;object-fit:contain;}
-    .logo-frame:hover {transform:translateY(-3px);box-shadow:0 10px 20px rgba(60,60,60,0.10);}
-    .year-link.active {color:#9E1B32;font-weight:700;}
   </style>
 
-  <!-- 🔸 Active-Year Highlight Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const sections = document.querySelectorAll(".timeline-item");
-      const navLinks = document.querySelectorAll(".year-link");
+  <!-- 🧬 INNOVATION & TECHNOLOGY LEADERSHIP -->
+  <div class="container mx-auto px-6 mb-16 animate-slideUp">
+    <h3 class="text-2xl font-semibold text-crimson mb-6 flex items-center gap-2">
+      🧬 Innovation & Technology Leadership
+    </h3>
+    <ul class="list-disc list-inside text-gray-700 space-y-3 leading-relaxed">
+      <li>Developed Africa’s first <strong>3D-printed nasopharyngeal swab</strong> during the COVID-19 pandemic, scaling localized production to hospitals nationwide.</li>
+      <li>Built a <strong>distributed manufacturing network</strong> through <em>South Africa Makes</em>, empowering local makerspaces and universities to fabricate critical medical supplies.</li>
+      <li>Partnered with <strong>Carbon3D</strong> and <strong>Autodesk</strong> to pioneer advanced additive manufacturing workflows for low-resource settings.</li>
+      <li>Led design-to-manufacture projects at the intersection of <strong>digital health</strong> and <strong>industry 4.0</strong> innovation.</li>
+    </ul>
+  </div>
 
-      const activateLink = (id) => {
-        navLinks.forEach(link => {
-          link.classList.toggle("active", link.getAttribute("href") === "#" + id);
-        });
-      };
+  <div class="divider"></div>
 
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) activateLink(entry.target.id);
-        });
-      }, { rootMargin: "-40% 0px -40% 0px" });
+  <!-- 🌍 GLOBAL FELLOWSHIPS & RECOGNITION -->
+  <div class="container mx-auto px-6 mb-16 animate-slideUp">
+    <h3 class="text-2xl font-semibold text-crimson mb-6 flex items-center gap-2">
+      🌍 Global Fellowships & Recognition
+    </h3>
+    <ul class="list-disc list-inside text-gray-700 space-y-3 leading-relaxed">
+      <li><strong>Harvard South Africa Fellow</strong> (Harvard University, 2024) – advancing equitable innovation in health systems.</li>
+      <li><strong>MIT AI Venture Studio Platinum Team Award</strong> (2025) – recognized for excellence in AI-driven innovation and venture development.</li>
+      <li><strong>U.S. Department of State IVLP Fellow</strong> (2018) – Women in Business Leadership Program.</li>
+      <li>Named among <strong>Inspiring Fifty in STEM</strong> and <strong>Fast Company’s Most Innovative Companies</strong> (2021).</li>
+      <li>Recipient of <strong>Wesgro Innovation Award</strong> for public health technology leadership.</li>
+    </ul>
+  </div>
 
-      sections.forEach(section => observer.observe(section));
-    });
-  </script>
+  <div class="divider"></div>
+
+  <!-- 🤝 POLICY, DIPLOMACY & GLOBAL PARTNERSHIPS -->
+  <div class="container mx-auto px-6 mb-16 animate-slideUp">
+    <h3 class="text-2xl font-semibold text-crimson mb-6 flex items-center gap-2">
+      🤝 Policy, Diplomacy & Global Partnerships
+    </h3>
+    <ul class="list-disc list-inside text-gray-700 space-y-3 leading-relaxed">
+      <li>Hosted <strong>U.S. Deputy Secretary Wendy Sherman</strong> (2022) to discuss digital manufacturing and global health resilience.</li>
+      <li>Engaged with <strong>OSTP Head Dr. Alondra Nelson</strong> at the White House on science policy and innovation equity.</li>
+      <li><strong>Delegate to G20 Startup20 Summit</strong> (Brazil, 2024) shaping global innovation policy frameworks.</li>
+      <li><strong>Finalist, BRICS Young Innovator Prize</strong> (2023) – representing South Africa in advanced manufacturing.</li>
+      <li>Contributed to cross-continental policy dialogues under the <strong>African Medicines Agency (AMA)</strong> and <strong>AfCFTA</strong> innovation agendas.</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 💡 ENTREPRENEURSHIP & INDUSTRY IMPACT -->
+  <div class="container mx-auto px-6 mb-16 animate-slideUp">
+    <h3 class="text-2xl font-semibold text-crimson mb-6 flex items-center gap-2">
+      💡 Entrepreneurship & Industry Impact
+    </h3>
+    <ul class="list-disc list-inside text-gray-700 space-y-3 leading-relaxed">
+      <li>Co-founded <strong>South Africa Makes</strong> – a social enterprise localizing 3D printing to address supply-chain gaps in healthcare.</li>
+      <li>Developed <strong>Impact Mechanica</strong>, a sports and healthtech startup integrating AI and additive manufacturing for athlete safety.</li>
+      <li>Launched distributed manufacturing pilot networks for medical devices during the COVID-19 response.</li>
+      <li>Supported transformation of <strong>healthtech manufacturing ecosystems</strong> across Africa and the Global South.</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 🎓 EDUCATION, MENTORSHIP & YOUTH EMPOWERMENT -->
+  <div class="container mx-auto px-6 mb-16 animate-slideUp">
+    <h3 class="text-2xl font-semibold text-crimson mb-6 flex items-center gap-2">
+      🎓 Education, Mentorship & Youth Empowerment
+    </h3>
+    <ul class="list-disc list-inside text-gray-700 space-y-3 leading-relaxed">
+      <li><strong>YouthX Mentor</strong> in Technology & Innovation (2022), guiding young South Africans in entrepreneurship and design thinking.</li>
+      <li><strong>TEDx Cape Town Speaker</strong> (2019) – “Innovation in Crisis.”</li>
+      <li><strong>COO & Chair of Operations</strong>, Harvard Graduate Student Council (2025).</li>
+      <li>Founder of <strong>Africa Makes Foundation</strong> – equipping youth with 3D printing and STEM innovation skills.</li>
+      <li>Mentored emerging leaders through global programs at <strong>Harvard, MIT, and the U.S. State Department</strong>.</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 🏅 PUBLIC ENGAGEMENTS & MEDIA -->
+  <div class="container mx-auto px-6 animate-slideUp">
+    <h3 class="text-2xl font-semibold text-crimson mb-6 flex items-center gap-2">
+      🏅 Public Engagements & Media
+    </h3>
+    <ul class="list-disc list-inside text-gray-700 space-y-3 leading-relaxed">
+      <li>Featured speaker and guest on <strong>ENCA, SABC, Fast Company, Standard Bank YouthX</strong>, and other leading media outlets.</li>
+      <li>Profiled as a national <strong>innovation leader</strong> by Wesgro and Business Day.</li>
+      <li>Regular contributor to global panels on <strong>health innovation, digital manufacturing, and youth in STEM</strong>.</li>
+      <li>Ongoing media engagements amplifying Africa’s innovation capacity and women’s leadership in technology.</li>
+    </ul>
+  </div>
 </section>
 
 <!-- =============================== -->
