@@ -892,21 +892,19 @@ document.addEventListener('DOMContentLoaded',()=>{
       </p>
     </div>
 
-    <!-- 🎥 Video Gallery (3 videos) -->
+    <!-- 🎥 Video Gallery -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
-      <!-- Video 1 – TEDx -->
-      <div class="video-card group" data-video-id="ePO3FomVpwo" data-aos="fade-zoom-in" data-aos-delay="100" data-aos-duration="900">
-        <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg video-wrapper">
+      <!-- Video 1 -->
+      <div class="video-card group" data-video-id="ePO3FomVpwo" data-title="TEDx Cape Town – “Made for Africa. Made in Africa.”">
+        <div class="video-wrapper relative rounded-xl overflow-hidden shadow-lg">
           <img src="https://img.youtube.com/vi/ePO3FomVpwo/hqdefault.jpg"
                alt="TEDx Cape Town – Made for Africa. Made in Africa."
                class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
                loading="lazy">
           <div class="absolute inset-0 flex items-center justify-center">
             <button aria-label="Play video"
-                    class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
-              ▶
-            </button>
+                    class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">▶</button>
           </div>
         </div>
         <h3 class="video-title mt-4 text-center text-navy font-semibold text-base md:text-lg cursor-pointer">
@@ -914,18 +912,16 @@ document.addEventListener('DOMContentLoaded',()=>{
         </h3>
       </div>
 
-      <!-- Video 2 – Cape Health Tech Innovators -->
-      <div class="video-card group" data-video-id="8Jy7xyOT6UM" data-aos="fade-zoom-in" data-aos-delay="150" data-aos-duration="900">
-        <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg video-wrapper">
+      <!-- Video 2 -->
+      <div class="video-card group" data-video-id="8Jy7xyOT6UM" data-title="Cape Health Tech Innovators | Dr Cherise Dunn, Co-founder and COO of South Africa Makes">
+        <div class="video-wrapper relative rounded-xl overflow-hidden shadow-lg">
           <img src="https://img.youtube.com/vi/8Jy7xyOT6UM/hqdefault.jpg"
-               alt="Cape Health Tech Innovators | Dr Cherise Dunn, Co-founder and COO of South Africa Makes"
+               alt="Cape Health Tech Innovators | Dr Cherise Dunn"
                class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
                loading="lazy">
           <div class="absolute inset-0 flex items-center justify-center">
             <button aria-label="Play video"
-                    class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
-              ▶
-            </button>
+                    class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">▶</button>
           </div>
         </div>
         <h3 class="video-title mt-4 text-center text-navy font-semibold text-base md:text-lg cursor-pointer">
@@ -933,60 +929,89 @@ document.addEventListener('DOMContentLoaded',()=>{
         </h3>
       </div>
 
-      <!-- Video 3 – YouthX -->
-      <div class="video-card group" data-video-id="B92jngV144o" data-aos="fade-zoom-in" data-aos-delay="200" data-aos-duration="900">
-        <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg video-wrapper">
+      <!-- Video 3 -->
+      <div class="video-card group" data-video-id="B92jngV144o" data-title="YouthX | Tech &amp; Innovation: Software, App &amp; Product dev | Inside the mind of Dr. Cherise Dunn">
+        <div class="video-wrapper relative rounded-xl overflow-hidden shadow-lg">
           <img src="https://img.youtube.com/vi/B92jngV144o/hqdefault.jpg"
-               alt="YouthX | Tech & Innovation: Software, App & Product dev | Inside the mind of Dr. Cherise Dunn"
+               alt="YouthX | Tech & Innovation: Inside the mind of Dr. Cherise Dunn"
                class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
                loading="lazy">
           <div class="absolute inset-0 flex items-center justify-center">
             <button aria-label="Play video"
-                    class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
-              ▶
-            </button>
+                    class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">▶</button>
           </div>
         </div>
         <h3 class="video-title mt-4 text-center text-navy font-semibold text-base md:text-lg cursor-pointer">
-          YouthX | Tech & Innovation: Software, App & Product dev | Inside the mind of Dr. Cherise Dunn
+          YouthX | Tech &amp; Innovation: Software, App &amp; Product dev | Inside the mind of Dr. Cherise Dunn
         </h3>
       </div>
 
     </div>
 
     <!-- CTA -->
-    <p class="text-center mt-16 text-navy/70" data-aos="fade-zoom-in" data-aos-delay="300" data-aos-duration="800">
+    <p class="text-center mt-16 text-navy/70">
       Explore more talks and features on 
-      <a href="https://www.linkedin.com/in/cherisedunn" class="text-crimson font-semibold hover:underline">
-        LinkedIn
-      </a>.
+      <a href="https://www.linkedin.com/in/cherisedunn" class="text-crimson font-semibold hover:underline">LinkedIn</a>.
     </p>
   </div>
 </section>
 
-<!-- 🧩 Click-to-play JavaScript (thumbnail AND title are clickable) -->
+<!-- 🌌 Lightbox Modal -->
+<div id="videoLightbox" class="fixed inset-0 hidden bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm opacity-0 scale-95 transition-all duration-500">
+  <div class="relative w-full max-w-4xl bg-black rounded-xl overflow-hidden shadow-2xl transform transition-transform duration-500 scale-90">
+    <button id="closeLightbox" class="absolute top-3 right-4 text-white text-3xl font-light hover:text-crimson transition">&times;</button>
+    <iframe id="lightboxPlayer"
+            class="w-full aspect-video"
+            src=""
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    <div id="lightboxCaption" class="text-white text-center p-4 bg-black/60 text-base md:text-lg font-medium"></div>
+  </div>
+</div>
+
+<!-- 🧩 Styles + Script -->
+<style>
+  .video-wrapper { position: relative; width: 100%; padding-top: 56.25%; }
+  .video-wrapper img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+  #videoLightbox.show { display: flex !important; opacity: 1; transform: scale(1); }
+  #videoLightbox .scale-90 { transform: scale(1) !important; }
+  #lightboxCaption { border-top: 1px solid rgba(255,255,255,0.2); }
+</style>
+
 <script>
-  function playVideo(wrapper, videoId) {
-    wrapper.innerHTML = `
-      <iframe class="w-full h-full rounded-xl"
-        src="https://www.youtube.com/embed/${videoId}?autoplay=1"
-        title="YouTube video"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        loading="lazy"></iframe>`;
+  const lightbox = document.getElementById('videoLightbox');
+  const player = document.getElementById('lightboxPlayer');
+  const caption = document.getElementById('lightboxCaption');
+  const closeBtn = document.getElementById('closeLightbox');
+
+  function openLightbox(videoId, title) {
+    player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    caption.textContent = title;
+    lightbox.classList.remove('hidden');
+    setTimeout(() => lightbox.classList.add('show'), 10);
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('show');
+    setTimeout(() => {
+      player.src = '';
+      lightbox.classList.add('hidden');
+    }, 400);
   }
 
   document.querySelectorAll('.video-card').forEach(card => {
-    const videoId = card.getAttribute('data-video-id');
+    const videoId = card.dataset.videoId;
+    const title = card.dataset.title;
     const wrapper = card.querySelector('.video-wrapper');
-    const title = card.querySelector('.video-title');
-
-    // Click thumbnail/player area
-    wrapper.addEventListener('click', () => playVideo(wrapper, videoId));
-    // Click title (also plays)
-    title.addEventListener('click', () => playVideo(wrapper, videoId));
+    const text = card.querySelector('.video-title');
+    [wrapper, text].forEach(el => el.addEventListener('click', () => openLightbox(videoId, title)));
   });
+
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 </script>
 
 <!-- =============================== -->
