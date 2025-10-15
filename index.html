@@ -191,7 +191,7 @@
 
       <!-- Scroll Container -->
       <div class="scroll-track flex animate-featured-scroll" style="--gap-size: 5rem;">
-        <!-- 🎯 Main Row -->
+        <!-- 🎯 Initial Logo Row (unordered; script will alternate automatically) -->
         <div class="logo-row flex items-center flex-shrink-0 px-6" style="gap: var(--gap-size);">
           <div class="logo-box logo-square"><img src="./Logos/G20_Brazil_2024.png" alt="G20 Brazil 2024" decoding="async" loading="lazy"></div>
           <div class="logo-box logo-square"><img src="./Logos/15th_BRICS_summit_logo.png" alt="BRICS Summit" decoding="async" loading="lazy"></div>
@@ -200,7 +200,6 @@
           <div class="logo-box logo-wide"><img src="./Logos/MIT_Logo_and_Wordmark.svg.png" alt="MIT" decoding="async" loading="lazy"></div>
           <div class="logo-box logo-square"><img src="./Logos/Stanford-Symbol.png" alt="Stanford" decoding="async" loading="lazy"></div>
           <div class="logo-box logo-tall"><img src="./Logos/IVLP_Logo.png" alt="IVLP" decoding="async" loading="lazy"></div>
-          <div class="logo-box logo-tall"><img src="./Logos/UCT_Logo.svg" alt="IVLP" decoding="async" loading="lazy"></div>
           <div class="logo-box logo-wide"><img src="./Logos/Inspiring_Fifty_Africa.png" alt="Inspiring Fifty Africa" decoding="async" loading="lazy"></div>
           <div class="logo-box logo-wide"><img src="./Logos/Fast_Company_logo.svg" alt="Fast Company" decoding="async" loading="lazy"></div>
           <div class="logo-box logo-square"><img src="./Logos/Standard_Bank_Top_Women_logo.png" alt="Standard Bank Top Women" decoding="async" loading="lazy"></div>
@@ -211,16 +210,16 @@
           <div class="logo-box logo-wide"><img src="./Logos/Wesgro_logo.png" alt="Wesgro" decoding="async" loading="lazy"></div>
         </div>
 
-        <!-- Invisible spacer for seamless loop -->
+        <!-- Spacer for perfect loop alignment -->
         <div style="width: var(--gap-size); flex-shrink: 0;"></div>
 
-        <!-- 🔁 Duplicate Row (auto-cloned via JS) -->
+        <!-- 🔁 Duplicate Row (auto-generated below) -->
       </div>
     </div>
   </div>
 
   <style>
-    /* === Continuous scroll animation === */
+    /* === Continuous Scroll Animation === */
     @keyframes featured-scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
@@ -233,7 +232,7 @@
     }
     .animate-featured-scroll:hover { animation-play-state: running !important; }
 
-    /* === Logo boxes === */
+    /* === Logo Boxes === */
     .logo-box {
       display: flex;
       align-items: center;
@@ -246,7 +245,7 @@
       transition: transform 0.3s ease;
     }
 
-    /* === Logo images === */
+    /* === Logo Images === */
     .logo-box img {
       width: auto;
       height: auto;
@@ -259,19 +258,19 @@
       transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
     }
 
-    /* === Optical balance === */
+    /* === Optical Balance === */
     .logo-wide img   { max-height: 78%; }
     .logo-square img { max-height: 85%; }
     .logo-tall img   { max-height: 92%; }
 
-    /* === Hover reveal === */
+    /* === Hover Reveal === */
     .logo-box:hover img {
       filter: grayscale(0%) brightness(1.05);
       opacity: 1;
       transform: scale(1.03);
     }
 
-    /* === Responsive spacing === */
+    /* === Responsive Spacing === */
     @media (max-width: 1024px) {
       .scroll-track { --gap-size: 4rem; }
     }
@@ -286,12 +285,30 @@
     }
   </style>
 
-  <!-- === Auto-clone script (ensures one exact duplicate only) === -->
+  <!-- === Auto-Alternating & Clone Script === -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const track = document.querySelector(".scroll-track");
       if (track && !track.dataset.cloned) {
         const row = track.querySelector(".logo-row");
+
+        /* --- Auto-alternate logos by type --- */
+        const all = Array.from(row.children);
+        const groups = {
+          square: all.filter(el => el.classList.contains("logo-square")),
+          wide: all.filter(el => el.classList.contains("logo-wide")),
+          tall: all.filter(el => el.classList.contains("logo-tall"))
+        };
+        const alternated = [];
+        while (groups.square.length || groups.wide.length || groups.tall.length) {
+          if (groups.square.length) alternated.push(groups.square.shift());
+          if (groups.wide.length)   alternated.push(groups.wide.shift());
+          if (groups.tall.length)   alternated.push(groups.tall.shift());
+        }
+        row.innerHTML = "";
+        alternated.forEach(el => row.appendChild(el));
+
+        /* --- Clone for seamless loop --- */
         const clone = row.cloneNode(true);
         clone.setAttribute("aria-hidden", "true");
         track.appendChild(clone);
