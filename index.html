@@ -185,12 +185,10 @@
     </h3>
 
     <div class="relative overflow-hidden">
-      <!-- Fade edges -->
       <div class="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-light-grey to-transparent z-10"></div>
       <div class="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-light-grey to-transparent z-10"></div>
 
       <div class="flex animate-scroll-balanced">
-        <!-- 🎯 Main Row -->
         <div class="flex items-center gap-14 sm:gap-20 flex-shrink-0 px-6">
           <div class="logo-box logo-square"><img src="./Logos/G20_Brazil_2024.png" alt="G20 Brazil 2024" loading="lazy"></div>
           <div class="logo-box logo-square"><img src="./Logos/15th_BRICS_summit_logo.png" alt="BRICS Summit" loading="lazy"></div>
@@ -209,16 +207,14 @@
           <div class="logo-box logo-wide"><img src="./Logos/Wesgro_logo.png" alt="Wesgro" loading="lazy"></div>
         </div>
 
-        <!-- 🔁 Duplicate Row (for seamless loop) -->
-        <div class="flex items-center gap-14 sm:gap-20 flex-shrink-0 px-6" aria-hidden="true">
-          <!-- same logos repeated -->
-        </div>
+        <!-- duplicate row for seamless scroll -->
+        <div class="flex items-center gap-14 sm:gap-20 flex-shrink-0 px-6" aria-hidden="true"></div>
       </div>
     </div>
   </div>
 
   <style>
-    /* === 🎞 Continuous scroll animation === */
+    /* === Continuous scroll animation === */
     @keyframes scroll-balanced {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
@@ -231,15 +227,15 @@
     }
     .animate-scroll-balanced:hover { animation-play-state: running !important; }
 
-    /* === 🧱 Logo box sizing === */
+    /* === Logo boxes === */
     .logo-box {
       display: flex;
       align-items: center;
       justify-content: center;
       height: 7rem;
       width: 13rem;
-      overflow: hidden;
       flex-shrink: 0;
+      overflow: hidden;
       border-radius: 0.5rem;
       transition: transform 0.3s ease;
     }
@@ -247,45 +243,38 @@
       .logo-box { height: 7.5rem; width: 14rem; }
     }
 
-    /* === 🎨 Logo appearance (grayscale base) === */
+    /* === Base logo styling === */
     .logo-box img {
-      --base-scale: 1; /* default scale variable */
-      transform: scale(var(--base-scale));
-      max-height: 90%;
-      max-width: 90%;
+      width: auto;
+      height: auto;
+      max-height: 85%;
+      max-width: 85%;
       object-fit: contain;
       object-position: center;
       filter: grayscale(100%) brightness(0.9);
-      opacity: 0.85;
+      opacity: 0.9;
       transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
-      will-change: transform, filter, opacity;
     }
 
-    /* === ⚖️ Visual height normalization === */
-    .logo-wide img   { --base-scale: 1.25; } /* wide wordmarks */
-    .logo-square img { --base-scale: 1.1; }  /* compact / square */
-    .logo-tall img   { --base-scale: 0.9; }  /* tall / circular seals */
+    /* === Optical size adjustment === */
+    .logo-wide img   { max-height: 70%; } /* wide wordmarks slightly smaller vertically */
+    .logo-square img { max-height: 85%; }
+    .logo-tall img   { max-height: 95%; } /* tall logos fill more height */
 
-    /* === Hover: adds subtle pop on top of base scale === */
+    /* === Hover: gentle reveal === */
     .logo-box:hover img {
-      transform: scale(calc(var(--base-scale) * 1.07));
       filter: grayscale(0%) brightness(1.05);
       opacity: 1;
-    }
-
-    /* Slight depth on hover */
-    .logo-box:hover {
       transform: scale(1.03);
-      filter: drop-shadow(0 0 6px rgba(0,0,0,0.15));
     }
 
-    /* === 📱 Responsive tweak === */
+    /* === Responsive === */
     @media (max-width: 640px) {
       .logo-box { height: 5.5rem; width: 10rem; }
-      .logo-box img { max-height: 85%; max-width: 85%; }
+      .logo-box img { max-height: 80%; max-width: 80%; }
     }
 
-    /* ♿ Accessibility */
+    /* === Accessibility === */
     @media (prefers-reduced-motion: reduce) {
       .animate-scroll-balanced { animation: none; }
     }
