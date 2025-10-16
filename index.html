@@ -113,6 +113,25 @@
       display: flex;
       animation: scroll-slow 45s linear infinite;
     }
+
+    /* 🌈 Unified section divider (standardized across all sections) */
+    .section-divider{
+      position:absolute;
+      top:0;
+      left:50%;
+      transform:translateX(-50%) translateY(-50%);
+      width:6rem;
+      height:3px;
+      background:linear-gradient(to right,
+        rgba(158,27,50,.35),
+        rgba(60,60,60,.30),
+        rgba(158,27,50,.35)
+      );
+      border-radius:9999px;
+      animation:pulse-slow 3s ease-in-out infinite;
+      opacity:.85;
+      z-index:5;
+    }
   </style>
 </head>
 
@@ -292,8 +311,8 @@
 <!-- 🌍 ABOUT DR. CHERISE DUNN — FULL SECTION -->
 <!-- =============================== -->
 <section id="about" class="bg-off-white pt-28 pb-28 md:pt-36 md:pb-36 relative">
-  <!-- 🔹 Subtle divider from previous section -->
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[3px] bg-gradient-to-r from-crimson/30 via-navy/30 to-crimson/30 rounded-full mb-10"></div>
+  <!-- 🔹 Standardized divider -->
+  <div class="section-divider"></div>
 
   <div class="container mx-auto px-6 grid md:grid-cols-3 gap-16 items-start">
     
@@ -344,7 +363,6 @@
           “Innovation is only meaningful when it improves lives — not just systems.”
         </blockquote>
       </div>
-
       <!-- 🌐 Global Policy & Innovation Systems -->
       <div class="space-y-3" data-aos="fade-up" data-aos-delay="300">
         <h3 class="text-xl font-semibold text-crimson">Global Policy &amp; Innovation Systems</h3>
@@ -391,58 +409,16 @@
   </div>
 </section>
 
-<!-- Animation utility -->
-<style>
-@keyframes pulse-slow {0%,100%{transform:scaleX(1);opacity:.9}50%{transform:scaleX(1.25);opacity:.5}}
-.animate-pulse-slow {animation:pulse-slow 3s ease-in-out infinite;}
-</style>
-
-
 <!-- =============================== -->
-<!-- 🌍 STRUCTURED DATA FOR SEO -->
-<!-- =============================== -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Dr Cherise Dunn",
-  "image": "https://cherisedunn.github.io/personal-page/assets/dr-cherise-dunn-headshot.jpg",
-  "affiliation": [
-    "Harvard University",
-    "Massachusetts Institute of Technology (MIT)",
-    "Impact Mechanica Inc.",
-    "Oppenheimer Memorial Trust"
-  ],
-  "jobTitle": "Global Health Innovation Leader, CEO & Scientist",
-  "url": "https://cherisedunn.github.io/personal-page/",
-  "alumniOf": ["University of Cape Town","Harvard University"],
-  "knowsAbout": [
-    "Digital Health Policy",
-    "AI Ethics",
-    "Additive Manufacturing",
-    "Innovation Ecosystems"
-  ],
-  "sameAs": [
-    "https://linkedin.com/in/cherisedunn",
-    "https://impactmechanica.com"
-  ]
-}
-</script>
-
-</script>
-
-
-<!-- =============================== -->
-<!-- 🧬 AREAS OF EXPERTISE (Lucide CDN Version) -->
+<!-- 🧬 AREAS OF EXPERTISE -->
 <!-- =============================== -->
 <section id="expertise" class="relative bg-light-grey pt-28 pb-28 md:pt-36 md:pb-36 overflow-hidden">
+  <div class="section-divider"></div>
 
-  <!-- Subtle gradient backdrop + divider -->
   <div class="absolute inset-0 bg-gradient-to-br from-white via-light-grey to-navy/5 opacity-70"></div>
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[3px] bg-gradient-to-r from-crimson/30 via-navy/30 to-crimson/30 rounded-full"></div>
 
   <div class="relative container mx-auto px-6">
-    <!-- 🏛 Header -->
+    <!-- Header -->
     <div class="text-center mb-20" data-aos="fade-up" data-aos-duration="900">
       <h2 class="relative text-3xl md:text-4xl font-bold text-navy inline-block pb-3">
         Areas of Expertise
@@ -453,14 +429,20 @@
       </p>
     </div>
 
-    <!-- 🧩 Expertise Grid -->
+    <!-- Expertise Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 gap-y-12 max-w-6xl mx-auto">
 
-      <!-- 🩺 Health System Transformation -->
-      <div class="bg-off-white p-8 rounded-xl shadow-lg hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 text-center backdrop-blur-sm"
+      <!-- Health System Transformation -->
+      <div class="bg-off-white p-8 rounded-xl shadow-lg hover:-translate-y-1.5 hover:shadow-xl transition-transform duration-300 text-center backdrop-blur-sm"
            data-aos="fade-up" data-aos-delay="0">
         <div class="flex justify-center mb-5">
-          <i data-lucide="heart-pulse" class="w-12 h-12 text-crimson transition-transform duration-300 hover:scale-110"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Health System"
+               class="w-12 h-12 text-crimson" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M2.25 12.75C3 6.75 7.5 3 12 3s9 3.75 9.75 9.75c-.75 6-5.25 9.75-9.75 9.75s-9-3.75-9.75-9.75z" />
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M8.25 12l2.25 2.25 2.25-4.5 2.25 4.5L17.25 12" />
+          </svg>
         </div>
         <h3 class="font-bold text-lg text-crimson mb-3">Health System Transformation</h3>
         <p class="text-navy/80 text-[15px] leading-relaxed">
@@ -468,11 +450,15 @@
         </p>
       </div>
 
-      <!-- 🔗 Supply Chain Resilience -->
-      <div class="bg-off-white p-8 rounded-xl shadow-lg hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 text-center backdrop-blur-sm"
+      <!-- Supply Chain Resilience -->
+      <div class="bg-off-white p-8 rounded-xl shadow-lg hover:-translate-y-1.5 hover:shadow-xl transition-transform duration-300 text-center backdrop-blur-sm"
            data-aos="fade-up" data-aos-delay="100">
         <div class="flex justify-center mb-5">
-          <i data-lucide="link-2" class="w-12 h-12 text-crimson transition-transform duration-300 hover:scale-110"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Supply Chain"
+               class="w-12 h-12 text-crimson" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M10 13a5 5 0 010-7l2-2a5 5 0 017 7l-1 1M14 11a5 5 0 010 7l-2 2a5 5 0 01-7-7l1-1" />
+          </svg>
         </div>
         <h3 class="font-bold text-lg text-crimson mb-3">Supply Chain Resilience</h3>
         <p class="text-navy/80 text-[15px] leading-relaxed">
@@ -480,23 +466,31 @@
         </p>
       </div>
 
-      <!-- 🤖 AI & Technology Strategy -->
-      <div class="bg-off-white p-8 rounded-xl shadow-lg hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 text-center backdrop-blur-sm"
+      <!-- AI & Technology Strategy -->
+      <div class="bg-off-white p-8 rounded-xl shadow-lg hover:-translate-y-1.5 hover:shadow-xl transition-transform duration-300 text-center backdrop-blur-sm"
            data-aos="fade-up" data-aos-delay="200">
         <div class="flex justify-center mb-5">
-          <i data-lucide="cpu" class="w-12 h-12 text-crimson transition-transform duration-300 hover:scale-110"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI & Technology"
+               class="w-12 h-12 text-crimson" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor">
+            <rect width="16" height="16" x="4" y="4" rx="2" ry="2" />
+            <rect width="6" height="6" x="9" y="9" rx="1" />
+            <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3" />
+          </svg>
         </div>
         <h3 class="font-bold text-lg text-crimson mb-3">AI &amp; Technology Strategy</h3>
         <p class="text-navy/80 text-[15px] leading-relaxed">
           Guiding ethical, scalable AI integration across healthcare and manufacturing systems, bridging innovation with regulation.
         </p>
       </div>
-
       <!-- 🌐 Strategic Ecosystem Development -->
-      <div class="bg-off-white p-8 rounded-xl shadow-lg hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 text-center backdrop-blur-sm"
+      <div class="bg-off-white p-8 rounded-xl shadow-lg hover:-translate-y-1.5 hover:shadow-xl transition-transform duration-300 text-center backdrop-blur-sm"
            data-aos="fade-up" data-aos-delay="300">
         <div class="flex justify-center mb-5">
-          <i data-lucide="orbit" class="w-12 h-12 text-crimson transition-transform duration-300 hover:scale-110"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ecosystem Development"
+               class="w-12 h-12 text-crimson" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+          </svg>
         </div>
         <h3 class="font-bold text-lg text-crimson mb-3">Strategic Ecosystem Development</h3>
         <p class="text-navy/80 text-[15px] leading-relaxed">
@@ -505,10 +499,14 @@
       </div>
 
       <!-- 💼 Health-Tech Go-to-Market -->
-      <div class="bg-off-white p-8 rounded-xl shadow-lg hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 text-center backdrop-blur-sm"
+      <div class="bg-off-white p-8 rounded-xl shadow-lg hover:-translate-y-1.5 hover:shadow-xl transition-transform duration-300 text-center backdrop-blur-sm"
            data-aos="fade-up" data-aos-delay="400">
         <div class="flex justify-center mb-5">
-          <i data-lucide="rocket" class="w-12 h-12 text-crimson transition-transform duration-300 hover:scale-110"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Go to Market"
+               class="w-12 h-12 text-crimson" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M5 12l5 5L20 7" />
+          </svg>
         </div>
         <h3 class="font-bold text-lg text-crimson mb-3">Health-Tech Go-to-Market</h3>
         <p class="text-navy/80 text-[15px] leading-relaxed">
@@ -517,10 +515,14 @@
       </div>
 
       <!-- 🧭 Future-Ready Talent Strategy -->
-      <div class="bg-off-white p-8 rounded-xl shadow-lg hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 text-center backdrop-blur-sm"
+      <div class="bg-off-white p-8 rounded-xl shadow-lg hover:-translate-y-1.5 hover:shadow-xl transition-transform duration-300 text-center backdrop-blur-sm"
            data-aos="fade-up" data-aos-delay="500">
         <div class="flex justify-center mb-5">
-          <i data-lucide="compass" class="w-12 h-12 text-crimson transition-transform duration-300 hover:scale-110"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Talent Strategy"
+               class="w-12 h-12 text-crimson" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 2v20M2 12h20" />
+          </svg>
         </div>
         <h3 class="font-bold text-lg text-crimson mb-3">Future-Ready Talent Strategy</h3>
         <p class="text-navy/80 text-[15px] leading-relaxed">
@@ -531,36 +533,21 @@
     </div>
   </div>
 </section>
+  
+<!-- =============================== -->
+<!-- 🌍 GLOBAL IMPACT TIMELINE -->
+<!-- =============================== -->
+<section id="engagements" class="bg-off-white py-20 md:py-28 relative overflow-hidden">
+  <div class="section-divider"></div>
 
-<!-- Load Lucide Icon Library -->
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-</script>
-
-<!-- Animation utility -->
-<style>
-@keyframes pulse-slow {
-  0%,100% { transform:scaleX(1); opacity:.9 }
-  50% { transform:scaleX(1.25); opacity:.5 }
-}
-.animate-pulse-slow { animation:pulse-slow 3s ease-in-out infinite; }
-</style>
-
-<!-- ============================= -->
-<!-- 🌍 A RECORD OF GLOBAL IMPACT (FIXED SPINE + SMOOTH FLOW) -->
-<!-- ============================= -->
-<section id="engagements" aria-label="Timeline of global engagements" class="bg-off-white py-20 md:py-28 relative overflow-hidden">
-  <div class="container mx-auto px-6 relative z-10">
-    <!-- Heading -->
-    <div class="text-center mb-8 md:mb-10 relative z-20">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-8 md:mb-10">
       <h2 class="text-3xl md:text-4xl font-bold text-navy">A Record of Global Impact</h2>
       <p class="mt-4 text-lg text-navy/80 max-w-3xl mx-auto">
         A chronological record of Dr. Dunn’s leadership and collaborations across innovation, health equity, and technology-driven policy reform.
       </p>
     </div>
-
-    <!-- Flowing Crimson Spine -->
+<!-- Flowing Crimson Spine -->
     <div class="timeline-spine" aria-hidden="true"></div>
 
     <!-- Accordion Container -->
@@ -880,311 +867,101 @@
 </section>
 
 <!-- =============================== -->
-<!-- 📸 PHOTO COLLAGE SECTION (5 images, Uniform Height + Parallax + AOS) -->
+<!-- 📸 PHOTO GALLERY SECTION -->
 <!-- =============================== -->
-<!-- Include this in your <head> once -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<style>
-  /* 🌄 Gentle parallax background */
-  .parallax-bg {
-    background-image: url('./Images/bg-texture.jpg'); /* Replace with your own image or gradient */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-
-  /* 🎨 Soft white overlay for readability */
-  .parallax-bg::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(2px);
-  }
-</style>
-
 <section id="gallery" class="relative parallax-bg py-20 overflow-hidden">
+  <div class="section-divider"></div>
+
   <div class="relative container mx-auto px-6 text-center mb-10" data-aos="fade-up">
     <h2 class="text-3xl md:text-4xl font-bold text-navy">In Focus</h2>
     <p class="mt-3 text-navy/70">Leadership in Action</p>
   </div>
 
-  <!-- 🖼️ 5 Image Layout -->
   <div class="relative max-w-7xl mx-auto flex flex-wrap justify-center gap-6 md:gap-10">
-    <img src="./Images/Dr-Cherise-Dunn-1.jpg"
-         loading="lazy"
-         data-aos="fade-up"
-         data-aos-delay="100"
-         class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover object-center hover:scale-[1.02] transition-transform duration-300 ease-out"
+    <img src="./Images/Dr-Cherise-Dunn-1.jpg" loading="lazy"
+         data-aos="fade-up" data-aos-delay="100"
+         class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover hover:scale-[1.02] transition-transform duration-300 ease-out"
          alt="Dr Dunn speaking at a conference">
 
-    <img src="./Images/Dr-Cherise-Dunn-2.jpg"
-         loading="lazy"
-         data-aos="fade-up"
-         data-aos-delay="200"
-         class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover object-center hover:scale-[1.02] transition-transform duration-300 ease-out"
+    <img src="./Images/Dr-Cherise-Dunn-2.jpg" loading="lazy"
+         data-aos="fade-up" data-aos-delay="200"
+         class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover hover:scale-[1.02] transition-transform duration-300 ease-out"
          alt="Dr Dunn with leadership team">
 
-    <img src="./Images/Dr-Cherise-Dunn-3.jpg"
-         loading="lazy"
-         data-aos="fade-up"
-         data-aos-delay="300"
-         class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover object-center hover:scale-[1.02] transition-transform duration-300 ease-out"
+    <img src="./Images/Dr-Cherise-Dunn-3.jpg" loading="lazy"
+         data-aos="fade-up" data-aos-delay="300"
+         class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover hover:scale-[1.02] transition-transform duration-300 ease-out"
          alt="Dr Dunn delivering a keynote address">
-
-    <img src="./Images/Dr-Cherise-Dunn-4.jpg"
-         loading="lazy"
-         data-aos="fade-up"
-         data-aos-delay="400"
-         class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover object-center hover:scale-[1.02] transition-transform duration-300 ease-out"
-         alt="Dr Dunn mentoring students">
-
-    <img src="./Images/Dr-Cherise-Dunn-5.jpg"
-         loading="lazy"
-         data-aos="fade-up"
-         data-aos-delay="500"
-         class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover object-center hover:scale-[1.02] transition-transform duration-300 ease-out"
-         alt="Dr Dunn at a global leadership summit">
-  </div>
-
-  <p class="relative text-sm text-navy/60 mt-8 text-center" data-aos="fade-up" data-aos-delay="600">
-    Moments of leadership, collaboration, and innovation from Dr. Dunn’s journey across global platforms.
-  </p>
-</section>
-
-<!-- AOS Script (Place before </body>) -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 900,
-    offset: 120,
-    once: true,
-    easing: 'ease-out'
-  });
-</script>
-
-<!-- =============================== -->
-<!-- 🎥 FEATURED TALKS & MEDIA SECTION -->
-<!-- =============================== -->
-<section id="features" class="bg-light-grey/70 py-20 md:py-28">
-  <div class="container mx-auto px-6">
-    <!-- Header -->
-    <div class="text-center mb-16" data-aos="fade-zoom-in" data-aos-delay="50" data-aos-duration="800">
-      <h2 class="text-3xl md:text-4xl font-bold text-navy">Featured Talks & Media</h2>
-      <p class="mt-4 text-lg text-navy/90 max-w-2xl mx-auto">
-        Selected talks and interviews highlighting Dr. Dunn’s leadership in innovation, equity, and digital transformation.
-      </p>
-    </div>
-
-    <!-- 🎥 Video Gallery (3 videos) -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-
-      <!-- Video 1 – TEDx -->
-      <div class="video-card group" data-video-id="ePO3FomVpwo" data-aos="fade-zoom-in" data-aos-delay="100" data-aos-duration="900">
-        <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg video-wrapper">
-          <img src="https://img.youtube.com/vi/ePO3FomVpwo/hqdefault.jpg"
-               alt="TEDx Cape Town – Made for Africa. Made in Africa."
-               class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
-               loading="lazy">
-          <div class="absolute inset-0 flex items-center justify-center">
-            <button aria-label="Play video"
-                    class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
-              ▶
-            </button>
-          </div>
-        </div>
-        <h3 class="video-title mt-4 text-center text-navy font-semibold text-base md:text-lg cursor-pointer">
-          TEDx Cape Town – “Made for Africa. Made in Africa.”
-        </h3>
-      </div>
-
-      <!-- Video 2 – Cape Health Tech Innovators -->
-      <div class="video-card group" data-video-id="8Jy7xyOT6UM" data-aos="fade-zoom-in" data-aos-delay="150" data-aos-duration="900">
-        <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg video-wrapper">
-          <img src="https://img.youtube.com/vi/8Jy7xyOT6UM/hqdefault.jpg"
-               alt="Cape Health Tech Innovators | Dr Cherise Dunn, Co-founder and COO of South Africa Makes"
-               class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
-               loading="lazy">
-          <div class="absolute inset-0 flex items-center justify-center">
-            <button aria-label="Play video"
-                    class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
-              ▶
-            </button>
-          </div>
-        </div>
-        <h3 class="video-title mt-4 text-center text-navy font-semibold text-base md:text-lg cursor-pointer">
-          Cape Health Tech Innovators | Dr Cherise Dunn, Co-founder and COO of South Africa Makes
-        </h3>
-      </div>
-
-      <!-- Video 3 – YouthX -->
-      <div class="video-card group" data-video-id="B92jngV144o" data-aos="fade-zoom-in" data-aos-delay="200" data-aos-duration="900">
-        <div class="aspect-w-16 aspect-h-9 relative rounded-xl overflow-hidden shadow-lg video-wrapper">
-          <img src="https://img.youtube.com/vi/B92jngV144o/hqdefault.jpg"
-               alt="YouthX | Tech & Innovation: Software, App & Product dev | Inside the mind of Dr. Cherise Dunn"
-               class="w-full h-full object-cover cursor-pointer group-hover:scale-[1.03] transition-transform duration-500 ease-out"
-               loading="lazy">
-          <div class="absolute inset-0 flex items-center justify-center">
-            <button aria-label="Play video"
-                    class="bg-white/90 hover:bg-white rounded-full p-4 shadow-md transition-transform transform hover:scale-110">
-              ▶
-            </button>
-          </div>
-        </div>
-        <h3 class="video-title mt-4 text-center text-navy font-semibold text-base md:text-lg cursor-pointer">
-          YouthX | Tech & Innovation: Software, App & Product dev | Inside the mind of Dr. Cherise Dunn
-        </h3>
-      </div>
-
-    </div>
-
-    <!-- CTA -->
-    <p class="text-center mt-16 text-navy/70" data-aos="fade-zoom-in" data-aos-delay="300" data-aos-duration="800">
-      Explore more talks and features on 
-      <a href="https://www.linkedin.com/in/cherisedunn" class="text-crimson font-semibold hover:underline">
-        LinkedIn
-      </a>.
-    </p>
   </div>
 </section>
 
-<!-- 🧩 Click-to-play JavaScript (thumbnail AND title are clickable) -->
-<script>
-  function playVideo(wrapper, videoId) {
-    wrapper.innerHTML = `
-      <iframe class="w-full h-full rounded-xl"
-        src="https://www.youtube.com/embed/${videoId}?autoplay=1"
-        title="YouTube video"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        loading="lazy"></iframe>`;
-  }
-
-  document.querySelectorAll('.video-card').forEach(card => {
-    const videoId = card.getAttribute('data-video-id');
-    const wrapper = card.querySelector('.video-wrapper');
-    const title = card.querySelector('.video-title');
-
-    // Click thumbnail/player area
-    wrapper.addEventListener('click', () => playVideo(wrapper, videoId));
-    // Click title (also plays)
-    title.addEventListener('click', () => playVideo(wrapper, videoId));
-  });
-</script>
-
 <!-- =============================== -->
-<!-- 📬 ENGAGEMENT & CONTACT SECTION -->
+<!-- 📬 CONTACT SECTION -->
 <!-- =============================== -->
 <section id="contact" class="bg-navy text-white py-24 md:py-32 relative overflow-hidden">
+  <div class="section-divider"></div>
+
   <div class="container mx-auto px-6 text-center max-w-3xl relative z-10">
     <h2 class="text-3xl md:text-4xl font-bold mb-6">
       Engage Dr. Cherise Dunn for Strategic Advisory or Keynotes
     </h2>
-
     <p class="text-lg text-gray-300 mb-10">
       For executive advisory, keynote speaking, or collaborative initiatives in health innovation and policy design,
       reach out below to start a conversation.
     </p>
 
-    <!-- 💌 Accessible, prefilled mailto CTA -->
-    <a href="mailto:cherise_dunn@hsph.harvard.edu?subject=Engagement%20Inquiry%20for%20Dr.%20Cherise%20Dunn&body=Dear%20Dr.%20Dunn%2C%0A%0AI%20am%20writing%20to%20inquire%20about..."
-       aria-label="Email Dr. Cherise Dunn for engagement inquiries"
-       title="Email Dr. Cherise Dunn"
-       class="inline-block bg-crimson text-white font-semibold px-8 py-4 rounded-lg hover:bg-crimson-darker hover:shadow-lg transition">
-      Contact Dr. Dunn
+    <a href="mailto:cherise_dunn@hsph.harvard.edu?subject=Engagement%20Inquiry"
+       class="inline-block bg-crimson text-white font-semibold px-8 py-4 rounded-lg hover:bg-crimson-darker transition">
+       Contact Dr. Dunn
     </a>
-
-    <!-- 👥 Optional Secondary CTA -->
-    <div class="mt-8 flex justify-center">
-      <a href="https://www.linkedin.com/in/dr-cherise-dunn/"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="Visit Dr. Cherise Dunn's LinkedIn profile"
-         class="flex items-center gap-2 text-gray-300 hover:text-white transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.761 0 5-2.24 5-5v-14c0-2.76-2.239-5-5-5zm-11.75 20h-2.5v-11h2.5v11zm-1.25-12.268c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5c.829 0 1.5.672 1.5 1.5s-.671 1.5-1.5 1.5zm13 12.268h-2.5v-5.604c0-1.337-.026-3.061-1.865-3.061-1.867 0-2.154 1.46-2.154 2.967v5.698h-2.5v-11h2.4v1.507h.034c.334-.634 1.153-1.3 2.373-1.3 2.537 0 3.012 1.671 3.012 3.843v6.95z"/>
-        </svg>
-        Connect on LinkedIn
-      </a>
-    </div>
   </div>
 
-  <!-- 🌌 Gradient overlay -->
   <div class="absolute inset-0 bg-gradient-to-b from-navy via-navy/95 to-navy/80 opacity-95"></div>
 </section>
-
-<!-- 🔹 Subtle Divider Transition -->
-<div class="h-1 bg-gradient-to-r from-crimson via-navy to-crimson opacity-30"></div>
 
 <!-- =============================== -->
 <!-- ⚙️ FOOTER -->
 <!-- =============================== -->
 <footer class="bg-light-grey py-12 text-center text-navy/80 text-sm relative overflow-hidden">
+  <div class="section-divider"></div>
+
   <div class="container mx-auto px-6">
     <p>© 2025 <strong>Dr. Cherise Dunn</strong>. All Rights Reserved.</p>
     <p class="mt-2 text-navy/60 hover:text-navy/90 transition">
       Website crafted with purpose and precision by the Health Innovation Collective.
     </p>
 
-    <!-- 🌐 Social Icons -->
     <div class="flex justify-center gap-6 mt-6">
-      <a href="https://www.linkedin.com/in/cherisedunn"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="LinkedIn"
-         class="text-navy/60 hover:text-crimson transition transform hover:scale-110">
+      <a href="https://www.linkedin.com/in/cherisedunn" target="_blank" class="text-navy/60 hover:text-crimson transition transform hover:scale-110">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.761 0 5-2.24 5-5v-14c0-2.76-2.239-5-5-5zm-11.75 20h-2.5v-11h2.5v11zm-1.25-12.268c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5c.829 0 1.5.672 1.5 1.5s-.671 1.5-1.5 1.5zm13 12.268h-2.5v-5.604c0-1.337-.026-3.061-1.865-3.061-1.867 0-2.154 1.46-2.154 2.967v5.698h-2.5v-11h2.4v1.507h.034c.334-.634 1.153-1.3 2.373-1.3 2.537 0 3.012 1.671 3.012 3.843v6.95z"/>
-        </svg>
-      </a>
-
-      <a href="mailto:cherise_dunn@hsph.harvard.edu"
-         aria-label="Email"
-         class="text-navy/60 hover:text-crimson transition transform hover:scale-110">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 13.065l-11.99-7.065h23.98l-11.99 7.065zm0 2.87l-12-7.071v11.136h24v-11.136l-12 7.071z"/>
         </svg>
       </a>
     </div>
   </div>
 
-  <!-- 🔸 Decorative gradient pulse line -->
   <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-crimson via-navy to-crimson animate-pulse opacity-20"></div>
 </footer>
 
-  <!-- =============================== -->
-  <!-- 🧠 INTERACTIVITY SCRIPTS -->
-  <!-- =============================== -->
-  <script>
-    // 📱 Toggle Mobile Navigation
-    const menuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (menuButton) {
-      menuButton.addEventListener('click', () => {
-        const expanded = menuButton.getAttribute('aria-expanded') === 'true';
-        menuButton.setAttribute('aria-expanded', !expanded);
-        mobileMenu.classList.toggle('hidden');
-      });
-    }
-
-    // 🌟 Fade-in on Scroll for Timeline Items and Nodes
-    document.addEventListener('DOMContentLoaded', () => {
-      const items = document.querySelectorAll('.timeline-item');
-      const nodes = document.querySelectorAll('.timeline-node');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-          }
-        });
-      }, { threshold: 0.2 });
-
-      items.forEach(i => observer.observe(i));
-      nodes.forEach(n => observer.observe(n));
-    });
-  </script>
+<!-- =============================== -->
+<!-- ✨ UNIFIED DIVIDER STYLES -->
+<!-- =============================== -->
+<style>
+.section-divider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6rem;
+  height: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, rgba(158,27,50,0.4), rgba(60,60,60,0.3), rgba(158,27,50,0.4));
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+@keyframes pulse-slow {
+  0%,100% { opacity: 0.7; transform: translateX(-50%) scaleX(1);}
+  50% { opacity: 1; transform: translateX(-50%) scaleX(1.25);}
+}
+</style>
 </body>
 </html>
