@@ -540,34 +540,34 @@ section {
 
     <div id="photo-carousel" class="flex items-center gap-8 animate-scroll-carousel hover:[animation-play-state:paused] cursor-pointer">
       <img src="./Images/Dr-Cherise-Dunn-1.jpg" alt="Dr Dunn speaking at a conference"
-           class="rounded-2xl shadow-lg w-[320px] md:w-[420px] h-[280px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out"
+           class="rounded-2xl shadow-lg max-h-[420px] max-w-[420px] object-contain flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out bg-white"
            onclick="openLightbox(this.src)">
       <img src="./Images/Dr-Cherise-Dunn-2.jpg" alt="Dr Dunn with leadership team"
-           class="rounded-2xl shadow-lg w-[320px] md:w-[420px] h-[280px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out"
+           class="rounded-2xl shadow-lg max-h-[420px] max-w-[420px] object-contain flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out bg-white"
            onclick="openLightbox(this.src)">
       <img src="./Images/Dr-Cherise-Dunn-3.jpg" alt="Dr Dunn delivering a keynote address"
-           class="rounded-2xl shadow-lg w-[320px] md:w-[420px] h-[280px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out"
+           class="rounded-2xl shadow-lg max-h-[420px] max-w-[420px] object-contain flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out bg-white"
            onclick="openLightbox(this.src)">
       <img src="./Images/Dr-Cherise-Dunn-4.jpg" alt="Dr Dunn speaking at conference"
-           class="rounded-2xl shadow-lg w-[320px] md:w-[420px] h-[280px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out"
+           class="rounded-2xl shadow-lg max-h-[420px] max-w-[420px] object-contain flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out bg-white"
            onclick="openLightbox(this.src)">
       <img src="./Images/Dr-Cherise-Dunn-5.jpg" alt="Dr Dunn speaking at conference"
-           class="rounded-2xl shadow-lg w-[320px] md:w-[420px] h-[280px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out"
+           class="rounded-2xl shadow-lg max-h-[420px] max-w-[420px] object-contain flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out bg-white"
            onclick="openLightbox(this.src)">
       <img src="./Images/Dr-Cherise-Dunn-6.jpg" alt="Dr Dunn speaking at conference"
-           class="rounded-2xl shadow-lg w-[320px] md:w-[420px] h-[280px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out"
+           class="rounded-2xl shadow-lg max-h-[420px] max-w-[420px] object-contain flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out bg-white"
            onclick="openLightbox(this.src)">
       <img src="./Images/Dr-Cherise-Dunn-7.jpg" alt="Dr Dunn speaking at conference"
-           class="rounded-2xl shadow-lg w-[320px] md:w-[420px] h-[280px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out"
+           class="rounded-2xl shadow-lg max-h-[420px] max-w-[420px] object-contain flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out bg-white"
            onclick="openLightbox(this.src)">
       <img src="./Images/Dr-Cherise-Dunn-8.jpg" alt="Dr Dunn speaking at conference"
-           class="rounded-2xl shadow-lg w-[320px] md:w-[420px] h-[280px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out"
+           class="rounded-2xl shadow-lg max-h-[420px] max-w-[420px] object-contain flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out bg-white"
            onclick="openLightbox(this.src)">
       <img src="./Images/Dr-Cherise-Dunn-9.jpg" alt="Dr Dunn speaking at conference"
-           class="rounded-2xl shadow-lg w-[320px] md:w-[420px] h-[280px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out"
+           class="rounded-2xl shadow-lg max-h-[420px] max-w-[420px] object-contain flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out bg-white"
            onclick="openLightbox(this.src)">
       <img src="./Images/Dr-Cherise-Dunn-10.jpg" alt="Dr Dunn speaking at conference"
-           class="rounded-2xl shadow-lg w-[320px] md:w-[420px] h-[280px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out"
+           class="rounded-2xl shadow-lg max-h-[420px] max-w-[420px] object-contain flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out bg-white"
            onclick="openLightbox(this.src)">
     </div>
   </div>
@@ -1199,6 +1199,16 @@ section {
 <!-- 🎠 PHOTO CAROUSEL BEHAVIOR + LIGHTBOX -->
 <!-- =============================== -->
 <style>
+  /* 🌟 Bonus improvement: Proper alignment for portrait & landscape photos */
+  #photo-carousel {
+    display: flex;
+    width: max-content;
+    animation: scroll-carousel 60s linear infinite;
+    will-change: transform;
+    align-items: center; /* keeps portrait images vertically aligned */
+    gap: 2rem;           /* consistent spacing between all images */
+  }
+
   /* ✅ Seamless continuous scroll without cloning */
   @keyframes scroll-carousel {
     0% { transform: translateX(0); }
