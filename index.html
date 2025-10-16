@@ -535,68 +535,6 @@ section {
 
   </div>
 </section>
-  
-<!-- 📸 PHOTO GALLERY: INFINITE SCROLLING CAROUSEL -->
-<div class="pt-16" data-aos="fade-up" data-aos-delay="400">
-  <h3 class="text-xl font-semibold text-crimson text-center mb-8">
-    In Focus: Leadership in Action
-  </h3>
-
-  <div class="relative overflow-hidden">
-    <!-- Fade edges -->
-    <div class="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-off-white to-transparent z-10"></div>
-    <div class="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-off-white to-transparent z-10"></div>
-
-    <!-- Carousel Track -->
-    <div id="photo-carousel"
-         class="flex items-center gap-8 animate-scroll-carousel hover:[animation-play-state:paused]">
-      <img src="./Images/Dr-Cherise-Dunn-1.jpg" alt="Dr Dunn speaking at a conference"
-           class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out" />
-      <img src="./Images/Dr-Cherise-Dunn-2.jpg" alt="Dr Dunn with leadership team"
-           class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out" />
-      <img src="./Images/Dr-Cherise-Dunn-3.jpg" alt="Dr Dunn delivering a keynote address"
-           class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out" />
-      <img src="./Images/Dr-Cherise-Dunn-1.jpg" alt="Dr Dunn TEDx keynote"
-           class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out" />
-
-      <!-- Clone set for seamless loop -->
-      <img src="./Images/Dr-Cherise-Dunn-1.jpg" alt="Dr Dunn speaking at a conference"
-           class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover flex-shrink-0" />
-      <img src="./Images/Dr-Cherise-Dunn-2.jpg" alt="Dr Dunn with leadership team"
-           class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover flex-shrink-0" />
-      <img src="./Images/Dr-Cherise-Dunn-3.jpg" alt="Dr Dunn delivering a keynote address"
-           class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover flex-shrink-0" />
-      <img src="./Images/Dr-Cherise-Dunn-1.jpg" alt="Dr Dunn TEDx keynote"
-           class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover flex-shrink-0" />
-    </div>
-  </div>
-</div>
-
-<!-- ✨ Carousel Animation Styles -->
-<style>
-  @keyframes scroll-carousel {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-
-  .animate-scroll-carousel {
-    display: flex;
-    width: max-content;
-    animation: scroll-carousel 40s linear infinite;
-    will-change: transform;
-  }
-
-  /* Pause animation on hover */
-  .animate-scroll-carousel:hover {
-    animation-play-state: paused;
-  }
-
-  /* Smooth fade edges */
-  .overflow-hidden::before,
-  .overflow-hidden::after {
-    pointer-events: none;
-  }
-</style>
 
 <!-- =============================== -->
 <!-- 🧬 AREAS OF EXPERTISE -->
