@@ -115,23 +115,26 @@
     }
 
     /* 🌈 Unified section divider (standardized across all sections) */
-    .section-divider{
-      position:absolute;
-      top:0;
-      left:50%;
-      transform:translateX(-50%) translateY(-50%);
-      width:6rem;
-      height:3px;
-      background:linear-gradient(to right,
-        rgba(158,27,50,.35),
-        rgba(60,60,60,.30),
-        rgba(158,27,50,.35)
-      );
-      border-radius:9999px;
-      animation:pulse-slow 3s ease-in-out infinite;
-      opacity:.85;
-      z-index:5;
-    }
+.section-divider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8rem;
+  height: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    to right,
+    rgba(158, 27, 50, 0.6),   /* crimson core */
+    rgba(126, 20, 40, 0.4),   /* deeper crimson for gradient flow */
+    rgba(158, 27, 50, 0.6)
+  );
+  animation: pulse-slow 4s ease-in-out infinite;
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(158, 27, 50, 0.25);
+}
+  
+    h2 { @apply text-crimson/90; }
   </style>
 </head>
 
