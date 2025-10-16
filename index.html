@@ -1216,57 +1216,134 @@ section {
     animation-play-state: paused; /* pause on hover */
   }
 
+  /* 🎞️ Photo hover grayscale → color */
+  #photo-carousel img {
+    filter: grayscale(100%) brightness(0.9) contrast(1.05);
+    transition: filter 0.35s ease, transform 0.35s ease;
+    cursor: pointer;
+  }
+
+  #photo-carousel img:hover {
+    filter: grayscale(0%) brightness(1.05);
+    transform: scale(1.03);
+  }
+
   /* 🕶️ Lightbox overlay */
   #lightbox {
     display: none;
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.92);
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
 
   #lightbox img {
     max-width: 90%;
-    max-height: 90%;
+    max-height: 85%;
     border-radius: 1rem;
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(0%);
   }
 
-  #lightbox img:hover {
-    transform: scale(1.02);
+  /* ✖️ Close button */
+  #lightbox .close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 0.25rem 0.7rem;
+    transition: background 0.3s ease;
+  }
+
+  #lightbox .close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  /* ⬅️➡️ Navigation arrows */
+  #lightbox .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    transition: background 0.3s ease;
+    user-select: none;
+  }
+
+  #lightbox .nav-arrow:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  #lightbox .nav-arrow.left {
+    left: 2rem;
+  }
+
+  #lightbox .nav-arrow.right {
+    right: 2rem;
   }
 </style>
 
 <!-- 💡 Lightbox JavaScript -->
 <script>
-  function openLightbox(src) {
-    let lightbox = document.getElementById("lightbox");
-    if (!lightbox) {
-      lightbox = document.createElement("div");
-      lightbox.id = "lightbox";
-      lightbox.innerHTML = `<img src="" alt="Expanded view of Dr. Cherise Dunn" />`;
-      document.body.appendChild(lightbox);
-    }
+  let currentIndex = 0;
+  let images = [];
 
+  function openLightbox(src) {
+    images = Array.from(document.querySelectorAll('#photo-carousel img'));
+    currentIndex = images.findIndex(img => img.src.includes(src.split('/').pop()));
+
+    const lightbox = document.getElementById("lightbox");
     const img = lightbox.querySelector("img");
     img.src = src;
     lightbox.style.display = "flex";
   }
 
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+
+  function showImage(index) {
+    if (!images.length) return;
+    currentIndex = (index + images.length) % images.length;
+    const img = document.querySelector("#lightbox img");
+    img.src = images[currentIndex].src;
+  }
+
+  // Keyboard navigation
+  document.addEventListener("keydown", (e) => {
+    const lightbox = document.getElementById("lightbox");
+    if (lightbox.style.display === "flex") {
+      if (e.key === "ArrowRight") showImage(currentIndex + 1);
+      if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+      if (e.key === "Escape") closeLightbox();
+    }
+  });
+
+  // Close lightbox when clicking outside image
   document.addEventListener("click", (e) => {
     const lightbox = document.getElementById("lightbox");
-    if (lightbox && e.target === lightbox) {
-      lightbox.style.display = "none";
-    }
+    if (e.target === lightbox) closeLightbox();
   });
 </script>
 
 <!-- 🖼️ Lightbox HTML -->
 <div id="lightbox">
+  <span class="close-btn" onclick="closeLightbox()">×</span>
+  <span class="nav-arrow left" onclick="showImage(currentIndex - 1)">&#10094;</span>
   <img src="" alt="Expanded view of Dr. Cherise Dunn" />
+  <span class="nav-arrow right" onclick="showImage(currentIndex + 1)">&#10095;</span>
 </div>
 
 </body>
