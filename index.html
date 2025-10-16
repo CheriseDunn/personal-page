@@ -433,14 +433,15 @@ section {
 </section>
 
 <!-- =============================== -->
-<!-- 🌍 ABOUT DR. CHERISE DUNN — WITH STICKY "AT A GLANCE" + AUTO CAROUSEL + LIGHTBOX -->
+<!-- 🌍 ABOUT DR. CHERISE DUNN — FULL-WIDTH CAROUSEL + TRUE STICKY ASIDE -->
 <!-- =============================== -->
-<section id="about" class="bg-off-white pt-28 pb-28 md:pt-36 md:pb-36 relative overflow-hidden">
+<section id="about" class="relative bg-off-white pt-28 pb-0 md:pt-36 md:pb-0 overflow-hidden">
   <div class="section-divider"></div>
 
+  <!-- GRID WRAPPER -->
   <div class="container mx-auto px-6 grid md:grid-cols-3 gap-16 items-start">
 
-    <!-- 👩‍🔬 LEFT: MAIN BIOGRAPHY -->
+    <!-- 👩‍🔬 LEFT: MAIN BIO -->
     <div class="md:col-span-2 space-y-12 max-w-2xl" data-aos="fade-up" data-aos-duration="900">
 
       <!-- ✨ HEADLINE -->
@@ -455,143 +456,129 @@ section {
         </p>
       </div>
 
-      <!-- 🔹 BIOGRAPHY -->
       <p class="text-navy/80 text-[16px] leading-relaxed mb-8">
-        Dr&nbsp;Cherise&nbsp;Dunn is redefining how innovation in health is imagined and implemented worldwide.  
-        A <strong>Harvard and Oppenheimer Fellow</strong> with a background bridging <strong>biomedical science, public health, and strategy</strong>,  
-        she leads <strong>global partnerships</strong> that connect technology, design, and policy to build equitable, data-driven systems of care.  
-        Her work sits at the intersection of <em>evidence-based science and executive leadership</em> — guiding governments, global institutions,  
-        and emerging ventures to translate breakthrough research into scalable, human-centered solutions that strengthen health systems worldwide.
+        Dr&nbsp;Cherise&nbsp;Dunn is redefining how innovation in health is imagined and implemented worldwide.
+        A <strong>Harvard and Oppenheimer Fellow</strong> with a background bridging
+        <strong>biomedical science, public health, and strategy</strong>,
+        she leads <strong>global partnerships</strong> that connect technology, design, and policy to build equitable, data-driven systems of care.
       </p>
 
-      <!-- 🎓 EDUCATION -->
       <div class="space-y-3">
         <h3 class="text-xl font-semibold text-crimson">Education</h3>
         <p class="text-navy/80 leading-relaxed text-[15.5px]">
-          Dr&nbsp;Dunn holds a <strong>PhD in Medical Biochemistry</strong> from the University of Cape Town and a 
-          <strong>Master of Public Health in Health Management</strong> from the Harvard&nbsp;T.H.&nbsp;Chan School of Public Health.
+          PhD in Medical Biochemistry (University of Cape Town) · MPH in Health Management (Harvard T.H. Chan School of Public Health)
         </p>
       </div>
 
-      <!-- 🚀 ENTREPRENEURSHIP -->
       <div class="space-y-3">
         <h3 class="text-xl font-semibold text-crimson">Entrepreneurship</h3>
         <p class="text-navy/80 leading-relaxed text-[15.5px]">
-          As Founder &amp; COO of <strong class="text-navy">SOUTH&nbsp;AFRICA&nbsp;MAKES</strong>, Dr&nbsp;Dunn transforms breakthrough research into scalable, 
-          real-world solutions. Her ventures harness <strong>AI and advanced manufacturing</strong> to enhance health equity and accelerate innovation across global markets.
+          As Founder &amp; COO of <strong class="text-navy">South Africa Makes</strong>,
+          Dr Dunn transforms breakthrough research into scalable, real-world solutions using AI and advanced manufacturing.
         </p>
         <blockquote class="border-l-4 border-crimson pl-5 italic text-crimson/90 mt-6 py-2">
           “Innovation is only meaningful when it improves lives — not just systems.”
         </blockquote>
       </div>
 
-      <!-- 🌐 GLOBAL POLICY -->
       <div class="space-y-3">
         <h3 class="text-xl font-semibold text-crimson">Global Policy &amp; Innovation Systems</h3>
         <p class="text-navy/80 leading-relaxed text-[15.5px]">
-          At the intersection of technology and governance, Dr&nbsp;Dunn advises international organizations and governments 
-          on building inclusive innovation ecosystems that align technological advancement with public-health outcomes.
+          Advises governments and international organizations on building inclusive innovation ecosystems that align technology with public-health outcomes across the G20 Startup20, BRICS Young Innovators and Harvard–MIT collaborations.
         </p>
-      </div>
-
-      <!-- 📸 PHOTO GALLERY (AUTO CAROUSEL + LIGHTBOX) -->
-      <div class="pt-16" data-aos="fade-up" data-aos-delay="400">
-        <h3 class="text-xl font-semibold text-crimson text-center mb-8">
-          In Focus: Leadership in Action
-        </h3>
-
-        <div class="relative overflow-hidden">
-          <!-- Fading edges -->
-          <div class="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-off-white to-transparent z-10"></div>
-          <div class="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-off-white to-transparent z-10"></div>
-
-          <!-- Carousel Track -->
-          <div id="photo-carousel" class="flex items-center gap-8 animate-scroll-carousel hover:[animation-play-state:paused] cursor-pointer">
-            <img src="./Images/Dr-Cherise-Dunn-1.jpg" alt="Dr Dunn speaking at a conference"
-                 class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out" onclick="openLightbox(this.src)">
-            <img src="./Images/Dr-Cherise-Dunn-2.jpg" alt="Dr Dunn with leadership team"
-                 class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out" onclick="openLightbox(this.src)">
-            <img src="./Images/Dr-Cherise-Dunn-3.jpg" alt="Dr Dunn delivering a keynote address"
-                 class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out" onclick="openLightbox(this.src)">
-          </div>
-        </div>
       </div>
     </div>
 
-    <!-- 🧭 RIGHT: STICKY AT A GLANCE -->
-    <aside class="bg-white border border-light-grey/40 p-6 md:p-8 rounded-xl shadow-lg max-w-sm mx-auto text-center 
-                 md:sticky md:top-28 self-start" 
-           data-aos="fade-left" data-aos-delay="500">
+    <!-- 🧭 RIGHT: STICKY ASIDE -->
+    <aside class="bg-white border border-light-grey/40 p-6 md:p-8 rounded-xl shadow-lg max-w-sm text-center 
+                 md:sticky md:top-24 self-start h-fit" data-aos="fade-left" data-aos-delay="400">
       <h3 class="text-lg font-bold text-crimson mb-4 uppercase tracking-wide">At a Glance</h3>
       <p class="text-sm text-navy/80 mb-6 leading-relaxed">
-        Harvard- and Oppenheimer-funded health-technology innovator advancing equitable, digitally enabled healthcare systems. 
-        Dr&nbsp;Dunn advises governments and innovation ecosystems across <strong>four continents</strong>.
+        Harvard- and Oppenheimer-funded health-technology innovator advising governments and innovation ecosystems on the responsible integration of AI and technology in health across four continents.
       </p>
       <ul class="text-sm text-navy/80 space-y-2 text-left inline-block">
-        <li><strong>Leadership:</strong> Chair of Operations, Harvard GSC · Co-Founder, South&nbsp;Africa&nbsp;Makes</li>
-        <li><strong>Education:</strong> MPH, Harvard&nbsp;Chan&nbsp;School · PhD, UCT</li>
-        <li><strong>Fellowships:</strong> Harvard&nbsp;SAF · Oppenheimer&nbsp;Memorial&nbsp;Trust</li>
-        <li><strong>Advisory:</strong> U.S.&nbsp;State&nbsp;Dept · African&nbsp;Union · G20&nbsp;Startup20</li>
-        <li><strong>Expertise:</strong> Digital&nbsp;Health · Additive&nbsp;Manufacturing · Policy</li>
+        <li><strong>Leadership:</strong> Chair of Operations, Harvard GSC · Co-Founder South Africa Makes</li>
+        <li><strong>Education:</strong> MPH Harvard Chan · PhD UCT</li>
+        <li><strong>Fellowships:</strong> Harvard SAF · Oppenheimer Trust</li>
+        <li><strong>Advisory:</strong> U.S. State Dept · African Union · G20 Startup20</li>
+        <li><strong>Expertise:</strong> Digital Health · Additive Manufacturing · Policy</li>
       </ul>
       <a href="./assets/dr-cherise-dunn-cv.pdf" download
          class="mt-8 inline-block w-full text-center bg-crimson text-white px-4 py-3 rounded-lg font-semibold text-sm hover:bg-crimson-darker transition">
         Download Full CV
       </a>
     </aside>
+  </div>
 
+  <!-- 📸 FULL-WIDTH AUTO-SCROLLING CAROUSEL -->
+  <div class="mt-24 w-full bg-off-white py-12 overflow-hidden relative" data-aos="fade-up" data-aos-delay="300">
+    <div class="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-off-white to-transparent z-10"></div>
+    <div class="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-off-white to-transparent z-10"></div>
+
+    <div id="photo-carousel" class="flex items-center gap-8 animate-scroll-carousel hover:[animation-play-state:paused] cursor-pointer">
+      <img src="./Images/Dr-Cherise-Dunn-1.jpg" alt="Dr Dunn speaking at a conference"
+           class="rounded-2xl shadow-lg w-[320px] md:w-[420px] h-[280px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out"
+           onclick="openLightbox(this.src)">
+      <img src="./Images/Dr-Cherise-Dunn-2.jpg" alt="Dr Dunn with leadership team"
+           class="rounded-2xl shadow-lg w-[320px] md:w-[420px] h-[280px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out"
+           onclick="openLightbox(this.src)">
+      <img src="./Images/Dr-Cherise-Dunn-3.jpg" alt="Dr Dunn delivering a keynote address"
+           class="rounded-2xl shadow-lg w-[320px] md:w-[420px] h-[280px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out"
+           onclick="openLightbox(this.src)">
+      <!-- duplicate for seamless loop -->
+      <img src="./Images/Dr-Cherise-Dunn-1.jpg" class="rounded-2xl shadow-lg w-[320px] md:w-[420px] h-[280px] object-cover flex-shrink-0" />
+      <img src="./Images/Dr-Cherise-Dunn-2.jpg" class="rounded-2xl shadow-lg w-[320px] md:w-[420px] h-[280px] object-cover flex-shrink-0" />
+      <img src="./Images/Dr-Cherise-Dunn-3.jpg" class="rounded-2xl shadow-lg w-[320px] md:w-[420px] h-[280px] object-cover flex-shrink-0" />
+    </div>
   </div>
 </section>
 
-<!-- ✨ ANIMATIONS + LIGHTBOX -->
+<!-- ✨ CAROUSEL + LIGHTBOX STYLES -->
 <style>
-  /* Auto-scrolling carousel */
-  @keyframes scroll-carousel {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  .animate-scroll-carousel {
-    display: flex;
-    width: max-content;
-    animation: scroll-carousel 40s linear infinite;
-    will-change: transform;
-  }
-  .animate-scroll-carousel:hover {
-    animation-play-state: paused;
-  }
+@keyframes scroll-carousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll-carousel {
+  display: flex;
+  width: max-content;
+  animation: scroll-carousel 35s linear infinite;
+  will-change: transform;
+}
+.animate-scroll-carousel:hover { animation-play-state: paused; }
 
-  /* Lightbox styles */
-  #lightbox {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  #lightbox img {
-    max-width: 90%;
-    max-height: 85%;
-    border-radius: 1rem;
-    box-shadow: 0 0 25px rgba(255,255,255,0.2);
-  }
+/* sticky behaviour on tall content */
+@media (min-width: 768px) {
+  aside.md\\:sticky { position: sticky; top: 6rem; align-self: start; }
+}
+
+/* lightbox */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#lightbox img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(255,255,255,0.3);
+}
 </style>
 
-<!-- Lightbox Script -->
 <script>
-  function openLightbox(src) {
-    const lightbox = document.getElementById('lightbox');
-    const img = lightbox.querySelector('img');
-    img.src = src;
-    lightbox.style.display = 'flex';
-  }
-  function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
-  }
+function openLightbox(src){
+  const lb=document.getElementById('lightbox');
+  lb.querySelector('img').src=src;
+  lb.style.display='flex';
+}
+function closeLightbox(){ document.getElementById('lightbox').style.display='none'; }
 </script>
 
-<!-- Lightbox HTML -->
 <div id="lightbox" onclick="closeLightbox()">
   <img src="" alt="Expanded photo of Dr Cherise Dunn">
 </div>
