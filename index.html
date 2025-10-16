@@ -287,105 +287,106 @@
 </section>
 
 <!-- =============================== -->
-<!-- 🌍 ABOUT DR. CHERISE DUNN — GLOBAL + HARVARD / MIT INTEGRATED -->
+<!-- 💡 ABOUT SECTION — FINAL GLOBAL + HARVARD / MIT ACCESSIBLE VERSION -->
 <!-- =============================== -->
-<section id="about" class="relative bg-white pt-28 pb-28 md:pt-36 md:pb-36 overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-b from-white via-light-grey/40 to-navy/5 opacity-70"></div>
+<section id="about" class="bg-off-white pt-28 pb-28 md:pt-36 md:pb-36 relative" aria-labelledby="about-heading">
+  <!-- 🔹 Subtle divider -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[3px] bg-gradient-to-r from-crimson/30 via-navy/30 to-crimson/30 rounded-full mb-10"></div>
 
-  <div class="relative container mx-auto px-6 max-w-5xl">
-    <!-- Header -->
-    <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="900">
-      <h2 class="relative text-3xl md:text-4xl font-bold text-navy inline-block pb-3">
-        About Dr Cherise Dunn
-        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-[3px] bg-gradient-to-r from-crimson via-crimson/70 to-navy/60 rounded-full animate-pulse-slow"></span>
+  <div class="container mx-auto px-6 grid md:grid-cols-3 gap-16 items-start">
+    
+    <!-- 👩‍🔬 MAIN BIOGRAPHY -->
+    <article class="md:col-span-2 space-y-12 max-w-2xl" data-aos="fade-up" data-aos-duration="900" aria-label="Main biography">
+      <h2 id="about-heading" class="text-3xl md:text-4xl font-bold text-navy mb-6">
+        A New Model for Global Innovation
       </h2>
-      <p class="mt-6 text-lg text-navy/80 max-w-2xl mx-auto">
-        Scientist · Entrepreneur · Policy Innovator — advancing human-centered innovation at the intersection of technology, health, and global systems design.
+
+      <!-- 🎓 Education -->
+      <section aria-labelledby="education-heading" class="space-y-3">
+        <h3 id="education-heading" class="text-xl font-semibold text-crimson">Education</h3>
+        <p class="text-navy/80 leading-relaxed text-[15.5px]">
+          Dr.&nbsp;Cherise Dunn holds a <strong>PhD in Medical Biochemistry (University of Cape Town)</strong> and a 
+          <strong>Master of Public Health in Health Management (Harvard T.H. Chan School of Public Health)</strong>, where she was awarded the 
+          <strong>Harvard South Africa Fellowship</strong>.  
+          Her academic foundation combines scientific precision with strategic leadership — equipping her to bridge biomedical research, digital health systems, and innovation policy for globally equitable outcomes.
+        </p>
+        <p class="text-navy/80 leading-relaxed text-[15.5px]">
+          At Harvard, she serves as <strong>Chair of Operations and COO of the Harvard Graduate Council</strong> and 
+          <strong>Director of External Partnerships for the Harvard Chan Public Health Innovation &amp; Technology Club</strong>.  
+          She also contributes to the <strong>Harvard Student Wellbeing Council</strong> and the <strong>MIT AI Ventures Leadership Council</strong>, fostering cross-institutional collaborations that unite design thinking, AI ethics, and global innovation strategy.
+        </p>
+      </section>
+
+      <!-- 🚀 Entrepreneurship -->
+      <section aria-labelledby="entrepreneurship-heading" class="space-y-3" data-aos="fade-up" data-aos-delay="100">
+        <h3 id="entrepreneurship-heading" class="text-xl font-semibold text-crimson">Entrepreneurship</h3>
+        <p class="text-navy/80 leading-relaxed text-[15.5px]">
+          As an award-winning entrepreneur and <strong>Founder &amp; CEO of Impact Mechanica</strong> and 
+          <strong>Co-Founder of South Africa Makes</strong>, Dr.&nbsp;Dunn transforms breakthrough research into scalable, real-world solutions.  
+          Her ventures harness <em>advanced manufacturing and artificial intelligence</em> to design custom-fit medical and sports technologies that advance health equity and performance safety worldwide.  
+          Her work has been recognized by <strong>Fast Company South Africa</strong>, the <strong>Kingdom of the Netherlands Inspiring Fifty</strong>, and the <strong>U.S. State Department IVLP Program</strong>.
+        </p>
+        <blockquote class="border-l-4 border-crimson pl-5 italic text-crimson/90 mt-6 py-2" aria-label="Inspirational quote">
+          “Innovation is only meaningful when it improves lives — not just systems.”
+        </blockquote>
+      </section>
+
+      <!-- 🌍 Global Policy & Innovation Systems -->
+      <section aria-labelledby="policy-heading" class="space-y-3" data-aos="fade-up" data-aos-delay="200">
+        <h3 id="policy-heading" class="text-xl font-semibold text-crimson">Global Policy &amp; Innovation Systems</h3>
+        <p class="text-navy/80 leading-relaxed text-[15.5px]">
+          At the intersection of technology and governance, Dr.&nbsp;Dunn advises international organizations and governments on 
+          building inclusive innovation ecosystems that align technological advancement with public-health outcomes.  
+          Her policy engagement spans global forums including the <strong>G20 Startup20 Initiative</strong>, 
+          <strong>BRICS Young Innovators Forum</strong>, and <strong>Harvard–MIT innovation networks</strong> — 
+          driving evidence-based policy design for equitable, human-centered health systems.
+        </p>
+        <p class="text-navy/80 leading-relaxed text-[15.5px] mb-2">
+          Guided by the belief that innovation must serve humanity first, she continues to mentor emerging leaders and design frameworks 
+          that connect science, policy, and society — shaping measurable, systems-level impact across continents.
+        </p>
+      </section>
+
+      <!-- 🖼️ Headshot -->
+      <figure class="mt-10 text-center" role="img" aria-label="Portrait of Dr Cherise Dunn">
+        <img src="assets/dr-cherise-dunn-headshot.jpg" 
+             alt="Portrait of Dr Cherise Dunn" 
+             class="rounded-full mx-auto w-40 h-40 object-cover shadow-lg border-4 border-crimson/20">
+        <figcaption class="sr-only">Dr Cherise Dunn, Harvard South Africa Fellow and CEO of Impact Mechanica</figcaption>
+      </figure>
+    </article>
+
+    <!-- 🧭 AT A GLANCE CARD -->
+    <aside class="bg-white border border-light-grey/40 p-6 md:p-8 rounded-xl shadow-lg mt-16 md:mt-0 max-w-sm mx-auto md:mx-0" 
+           data-aos="fade-left" data-aos-delay="250" aria-labelledby="glance-heading">
+      <h3 id="glance-heading" class="text-lg font-bold text-navy mb-4 uppercase tracking-wide">At a Glance</h3>
+      <p class="text-sm text-navy/80 mb-6 leading-relaxed">
+        Dr.&nbsp;Cherise Dunn is a <strong>Harvard- and Oppenheimer-funded health-technology innovator</strong> 
+        dedicated to advancing equitable, digitally enabled healthcare systems worldwide.
       </p>
-    </div>
-
-    <!-- Main Bio -->
-    <div class="space-y-8 text-navy/80 text-[16px] leading-relaxed" data-aos="fade-up" data-aos-duration="1000">
-      <p>
-        Dr Cherise Dunn is a medical scientist turned technology entrepreneur and global innovation strategist.
-        She holds a <strong>PhD in Medical Biochemistry (University of Cape Town)</strong> and a
-        <strong>Master of Public Health in Health Management (Harvard University)</strong>,
-        where she was awarded the <strong>Harvard South Africa Fellowship</strong>.
-        Her work connects <em>digital health, AI ethics, and advanced manufacturing</em> to build more resilient, equitable, and data-driven systems worldwide.
-      </p>
-
-      <!-- 🌐 Harvard & MIT roles -->
-      <p>
-        At Harvard, Dr Dunn serves as <strong>Chair of Operations and COO of the Graduate Students Council</strong> and sits on the
-        <strong>Student Wellbeing Council at the Harvard T.H. Chan School of Public Health</strong>,
-        where she drives initiatives that integrate design thinking, technology, and community wellbeing.
-        She also collaborates with the <strong>MIT AI Ventures Studio</strong> on advancing responsible AI in innovation ecosystems — bridging academic research with entrepreneurship across the Harvard–MIT network.
-      </p>
-
-      <p>
-        Her transition from research to entrepreneurship began while mentoring young scientists during her doctoral studies — witnessing how technology gaps restricted brilliant minds.
-        That experience inspired her mission to democratize access to frontier innovation through design, policy, and technology transfer.
-      </p>
-
-      <p>
-        As <strong>Co-founder &amp; CEO of Impact Mechanica Inc.</strong>, Dr Dunn leads a multidisciplinary team developing
-        <em>AI-assisted, custom-fit 3D-printed protective equipment</em> using Carbon3D’s DLS technology.
-        Supported by the <strong>Harvard T.H. Chan School of Public Health</strong> and <strong>Stanford University’s Additive Manufacturing Lab</strong>,
-        the company’s prototypes have <strong>reduced material waste by 40 %</strong> and <strong>shortened fit-testing cycles by 60 %</strong>.
-        Impact Mechanica partners with elite sports programs and research institutes across North America and Europe to redefine performance and safety design.
-      </p>
-
-      <p>
-        Beyond entrepreneurship, Dr Dunn advises governments and multilateral organizations on
-        <em>innovation ecosystems, supply-chain resilience, and technology governance</em>.
-        Her frameworks have informed national health-tech strategies and digital manufacturing roadmaps adopted across multiple regions.
-        She has been a featured speaker at <strong>Harvard, MIT, Stanford, the G20 Startup20 Summit, and the World Economic Forum</strong>,
-        where she advocates for ethical AI, gender inclusion, and sustainable industrialization.
-      </p>
-
-      <p>
-        Recognized globally for leadership in science-to-systems translation, she has received fellowships from
-        <strong>Oppenheimer Generations Research &amp; Conservation</strong> and the
-        <strong>U.S. Department of State’s International Visitor Leadership Program (IVLP)</strong>.
-        She believes that innovation achieves its highest purpose when <em>scientific rigor meets social empathy</em> — a philosophy that drives her work across continents and disciplines.
-      </p>
-
-      <blockquote class="border-l-4 border-crimson pl-5 italic text-navy/70">
-        “Science should serve humanity — not the other way around. My work is about translating advanced technology into equitable systems that keep people at the center.”
-      </blockquote>
-
-      <p>
-        Her long-term vision is to create globally networked innovation systems where knowledge, manufacturing, and talent flow freely — empowering every region to contribute to a healthier, more resilient world.
-      </p>
-
-      <!-- Headshot -->
-      <div class="mt-10 text-center">
-        <img src="assets/dr-cherise-dunn-headshot.jpg" alt="Dr Cherise Dunn" class="rounded-full mx-auto w-40 h-40 object-cover shadow-lg border-4 border-crimson/20">
-      </div>
-    </div>
-
-    <!-- Quick Summary -->
-    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center" data-aos="fade-up" data-aos-delay="200">
-      <div>
-        <h4 class="text-crimson font-bold text-2xl mb-2">15 + Years</h4>
-        <p class="text-navy/70 text-[15px]">bridging science, technology &amp; global health innovation</p>
-      </div>
-      <div>
-        <h4 class="text-crimson font-bold text-2xl mb-2">Global Reach</h4>
-        <p class="text-navy/70 text-[15px]">collaborations across the U.S., Europe, Africa &amp; Asia</p>
-      </div>
-      <div>
-        <h4 class="text-crimson font-bold text-2xl mb-2">Cross-Institutional Leadership</h4>
-        <p class="text-navy/70 text-[15px]">active roles at Harvard &amp; MIT driving innovation ecosystems</p>
-      </div>
-    </div>
+      <ul class="text-sm text-navy/80 space-y-2" role="list">
+        <li><strong class="text-navy">Leadership:</strong> Chair of Operations &amp; COO, Harvard Graduate Council · Founder &amp; CEO, Impact Mechanica</li>
+        <li><strong class="text-navy">Education:</strong> MPH, Harvard T.H. Chan School · PhD, University of Cape Town</li>
+        <li><strong class="text-navy">Fellowships:</strong> Harvard South Africa Fellow · Oppenheimer Memorial Trust Fellow</li>
+        <li><strong class="text-navy">Expertise:</strong> Digital Health Systems · Additive Manufacturing · AI Ethics &amp; Innovation Policy</li>
+        <li><strong class="text-navy">Advisory:</strong> U.S. Department of State · African Union Health Platforms · G20 Startup20 Policy Track</li>
+        <li><strong class="text-navy">Recognition:</strong> Inspiring Fifty Women in STEM Awardee · Fast Company Most Innovative Companies</li>
+      </ul>
+      <a href="./assets/dr-cherise-dunn-cv.pdf" 
+         download="Dr-Cherise-Dunn-CV.pdf"
+         class="mt-8 inline-block w-full text-center bg-crimson text-white px-4 py-3 rounded-lg font-semibold text-sm hover:bg-crimson-darker focus:ring-2 focus:ring-crimson focus:ring-offset-2 transition duration-300"
+         aria-label="Download full CV as PDF">
+         Download Full CV (PDF)
+      </a>
+    </aside>
   </div>
 </section>
 
-<!-- Animation utility -->
+<!-- ♿ Accessibility Utility Styles -->
 <style>
 @keyframes pulse-slow {0%,100%{transform:scaleX(1);opacity:.9}50%{transform:scaleX(1.25);opacity:.5}}
 .animate-pulse-slow {animation:pulse-slow 3s ease-in-out infinite;}
+html:focus-within {scroll-behavior: smooth;}
 </style>
 
 <!-- =============================== -->
@@ -400,9 +401,10 @@
   "affiliation": [
     "Harvard University",
     "Massachusetts Institute of Technology (MIT)",
-    "Impact Mechanica Inc."
+    "Impact Mechanica Inc.",
+    "Oppenheimer Memorial Trust"
   ],
-  "jobTitle": "Global Health Innovation Leader, CEO &amp; Scientist",
+  "jobTitle": "Global Health Innovation Leader, CEO & Scientist",
   "url": "https://cherisedunn.github.io/personal-page/",
   "alumniOf": ["University of Cape Town","Harvard University"],
   "knowsAbout": [
@@ -416,6 +418,8 @@
     "https://impactmechanica.com"
   ]
 }
+</script>
+
 </script>
 
 
