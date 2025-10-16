@@ -1038,23 +1038,25 @@ section {
   <div class="section-divider"></div>
 
   <div class="container mx-auto px-6 text-center max-w-6xl">
-     <h2 class="text-3xl md:text-4xl font-bold">Featured Talks & Media</h2>
+    <h2 class="text-3xl md:text-4xl font-bold">Featured Talks & Media</h2>
     <p class="text-lg text-navy/80 mb-16 max-w-2xl mx-auto">
       Highlights from Dr. Cherise Dunn’s global speaking engagements and media coverage in innovation, technology, and public health leadership.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-      
+
       <!-- 🎤 TEDx Talk -->
-      <div class="rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform duration-300" data-aos="fade-up" data-aos-delay="0">
-        <div class="aspect-w-16 aspect-h-9">
-          <iframe width="100%" height="315"
-            src="https://www.youtube.com/embed/ePO3FomVpwo"
-            title="Made for Africa. Made in Africa: 3D-printing for development | Cherise Dunn | TEDxCapeTownWomen"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
+      <div class="rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform duration-300 cursor-pointer"
+           onclick="openVideo('https://www.youtube.com/embed/ePO3FomVpwo')">
+        <div class="relative">
+          <img src="https://img.youtube.com/vi/ePO3FomVpwo/hqdefault.jpg"
+               alt="TEDx Cape Town: Made for Africa. Made in Africa."
+               class="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-white opacity-80 group-hover:opacity-100" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
         </div>
         <div class="bg-white p-5 text-left">
           <h3 class="font-semibold text-crimson text-lg mb-1">
@@ -1067,15 +1069,17 @@ section {
       </div>
 
       <!-- 🚀 YouthX Interview -->
-      <div class="rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
-        <div class="aspect-w-16 aspect-h-9">
-          <iframe width="100%" height="315"
-            src="https://www.youtube.com/embed/B92jngV144o"
-            title="YouthX | Tech & Innovation: Inside the mind of Dr. Cherise Dunn"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
+      <div class="rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform duration-300 cursor-pointer"
+           onclick="openVideo('https://www.youtube.com/embed/B92jngV144o')">
+        <div class="relative">
+          <img src="https://img.youtube.com/vi/B92jngV144o/hqdefault.jpg"
+               alt="YouthX | Tech & Innovation"
+               class="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-white opacity-80 group-hover:opacity-100" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
         </div>
         <div class="bg-white p-5 text-left">
           <h3 class="font-semibold text-crimson text-lg mb-1">
@@ -1088,15 +1092,17 @@ section {
       </div>
 
       <!-- 🧬 Cape Health Tech -->
-      <div class="rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
-        <div class="aspect-w-16 aspect-h-9">
-          <iframe width="100%" height="315"
-            src="https://www.youtube.com/embed/8Jy7xyOT6UM"
-            title="Cape Health Tech Innovators | Dr Cherise Dunn, South Africa Makes"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
+      <div class="rounded-xl overflow-hidden shadow-lg hover:-translate-y-1 transition-transform duration-300 cursor-pointer"
+           onclick="openVideo('https://www.youtube.com/embed/8Jy7xyOT6UM')">
+        <div class="relative">
+          <img src="https://img.youtube.com/vi/8Jy7xyOT6UM/hqdefault.jpg"
+               alt="Cape Health Tech Innovators"
+               class="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition duration-300">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-white opacity-80 group-hover:opacity-100" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
         </div>
         <div class="bg-white p-5 text-left">
           <h3 class="font-semibold text-crimson text-lg mb-1">
@@ -1111,6 +1117,7 @@ section {
     </div>
   </div>
 </section>
+
 
 <!-- =============================== -->
 <!-- 📬 CONTACT SECTION -->
@@ -1354,6 +1361,63 @@ section {
   <span class="nav-arrow left" onclick="showImage(currentIndex - 1)">&#10094;</span>
   <img src="" alt="Expanded view of Dr. Cherise Dunn" />
   <span class="nav-arrow right" onclick="showImage(currentIndex + 1)">&#10095;</span>
+</div>
+
+<!-- =============================== -->
+<!-- 🎬 VIDEO LIGHTBOX -->
+<!-- =============================== -->
+<style>
+  #video-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  #video-lightbox iframe {
+    width: 80%;
+    max-width: 960px;
+    height: 540px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.25);
+  }
+
+  @media (max-width: 768px) {
+    #video-lightbox iframe {
+      width: 95%;
+      height: 240px;
+    }
+  }
+</style>
+
+<script>
+  // 🎥 Open YouTube Lightbox
+  function openVideo(url) {
+    const lightbox = document.getElementById("video-lightbox");
+    const iframe = lightbox.querySelector("iframe");
+    iframe.src = url + "?autoplay=1";
+    lightbox.style.display = "flex";
+  }
+
+  // 🎬 Close Lightbox on click
+  document.addEventListener("click", e => {
+    const lightbox = document.getElementById("video-lightbox");
+    if (e.target === lightbox) {
+      const iframe = lightbox.querySelector("iframe");
+      iframe.src = ""; // Stop video playback
+      lightbox.style.display = "none";
+    }
+  });
+</script>
+
+<!-- 🎥 Lightbox HTML -->
+<div id="video-lightbox">
+  <iframe src="" frameborder="0"
+          allow="autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
 </div>
 
 </body>
