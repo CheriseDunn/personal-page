@@ -1345,36 +1345,40 @@ ul.bullets li {
   color: rgba(20,30,50,0.9);
   font-size: 15px;
 }
-.logo-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-}
-.logo-grid img {
-  height: 38px;
-  width: auto;
-  filter: grayscale(100%) brightness(0.9);
-  opacity: 0.7;
-  transition: all 0.3s ease;
-}
-.logo-grid img:hover {
-  filter: none;
-  opacity: 1;
-  transform: scale(1.05);
-}
-@media (max-width: 768px) {
-  .timeline-article {
-    flex-direction: column !important;
-    text-align: center !important;
+  .logo-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    align-items: center;
   }
+
   .logo-grid img {
-    height: 34px;
+    height: auto;
+    width: auto;
+    max-height: 42px;       /* ✅ uniform optical height */
+    max-width: 120px;       /* ✅ prevents wide logos from dominating */
+    object-fit: contain;
+    padding: 6px;           /* ✅ balances uneven whitespace */
+    background: transparent;
+    filter: grayscale(100%) brightness(0.9);
+    opacity: 0.75;
+    transition: all 0.3s ease;
   }
-  .card {
-    margin-bottom: 1rem;
+
+  .logo-grid img:hover {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.05);
   }
-}
+
+  @media (max-width: 768px) {
+    .logo-grid img {
+      max-height: 34px;
+      max-width: 100px;
+      padding: 4px;
+    }
+  }
 </style>
 
 </body>
