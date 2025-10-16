@@ -1345,30 +1345,44 @@ ul.bullets li {
   color: rgba(20,30,50,0.9);
   font-size: 15px;
 }
-  .logo-grid img {
+  /* 🎯 Balanced Logo Grid — refined for clarity & breathing room */
+.logo-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* moderate spacing */
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.logo-grid img {
   height: auto;
   width: auto;
-  max-height: 120px;       /* ⬆️ doubled from 60px */
-  max-width: 320px;        /* ⬆️ doubled from 160px */
+  max-height: 70px;     /* 🧠 Ideal visual size — readable, not dominant */
+  max-width: 200px;
   object-fit: contain;
-  padding: 8px;
+  padding: 6px 10px;     /* small buffer around logos */
   background: transparent;
   filter: grayscale(100%) brightness(0.9);
-  opacity: 0.85;
+  opacity: 0.9;
   transition: all 0.3s ease;
 }
 
 .logo-grid img:hover {
   filter: none;
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
+/* 🪶 Responsive adjustment for mobile */
 @media (max-width: 768px) {
+  .logo-grid {
+    gap: 1rem;
+  }
+  
   .logo-grid img {
-    max-height: 90px;      /* slightly smaller for mobile */
-    max-width: 240px;
-    padding: 6px;
+  aspect-ratio: 3 / 1; /* normalizes visual proportion */
+  object-fit: contain;
   }
 }
 
