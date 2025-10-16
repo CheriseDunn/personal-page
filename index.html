@@ -1235,16 +1235,21 @@ section {
 </style>
 
 <script>
-  // 🖼 Auto-scrolling duplicated carousel
-  document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector("#photo-carousel");
-    if (carousel && !carousel.dataset.cloned) {
-      const clone = carousel.cloneNode(true);
-      clone.setAttribute("aria-hidden", "true");
-      carousel.parentNode.appendChild(clone);
-      carousel.dataset.cloned = "true";
-    }
-  });
+  /* ✅ Seamless continuous scroll without cloning */
+@keyframes scroll-carousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+#photo-carousel {
+  display: flex;
+  width: max-content;
+  animation: scroll-carousel 60s linear infinite;
+}
+
+#photo-carousel:hover {
+  animation-play-state: paused; /* pause on hover */
+}
 
   // 💡 Lightbox open and close logic
   function openLightbox(src) {
