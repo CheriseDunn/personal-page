@@ -1309,6 +1309,150 @@ section {
           allow="autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
 </div>
+<style>
+  
+/* =============================== */
+/* 🌍 GLOBAL IMPACT — ENHANCEMENT PACK */
+/* =============================== */
+
+/* Crimson vertical timeline spine */
+.timeline-spine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, #8b0000, #d7263d, #8b0000);
+  box-shadow: 0 0 18px rgba(215, 38, 61, 0.4);
+  z-index: 0;
+}
+
+/* Timeline node markers */
+.timeline-node {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #d7263d;
+  box-shadow: 0 0 10px rgba(215, 38, 61, 0.5);
+  flex-shrink: 0;
+  z-index: 1;
+  margin: 0 auto 1.5rem;
+}
+
+/* Card container */
+.timeline-article .card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(230, 230, 230, 0.8);
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  padding: 1.75rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.timeline-article .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(215, 38, 61, 0.15);
+}
+
+/* Year badge */
+.year-badge {
+  display: inline-block;
+  background: #d7263d;
+  color: white;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.3rem 1.25rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+/* Bullets and text spacing */
+ul.bullets {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+ul.bullets li {
+  position: relative;
+  margin-bottom: 0.5rem;
+  color: rgba(25, 35, 55, 0.9);
+  font-size: 15.5px;
+  line-height: 1.6;
+}
+ul.bullets li::before {
+  content: "•";
+  color: #d7263d;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+/* Logos grid */
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.logo-grid img {
+  height: 55px;
+  width: auto;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.logo-grid img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* Domain titles */
+#engagements h3.text-2xl {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+#engagements h3.text-2xl::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(to right, #d7263d, #8b0000);
+  transform: translateX(-50%);
+  border-radius: 4px;
+  animation: pulseBar 2.5s infinite ease-in-out;
+}
+
+@keyframes pulseBar {
+  0%, 100% { opacity: 0.6; transform: translateX(-50%) scaleX(0.9); }
+  50% { opacity: 1; transform: translateX(-50%) scaleX(1.1); }
+}
+
+/* Responsive alignment */
+@media (max-width: 768px) {
+  .timeline-article {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  .timeline-spine {
+    left: 10px;
+    transform: none;
+  }
+  .timeline-node {
+    margin: 0 auto 1rem;
+  }
+}
+</style>
 
 </body>
 </html>
