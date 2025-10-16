@@ -433,30 +433,29 @@ section {
 </section>
 
 <!-- =============================== -->
-<!-- 🌍 ABOUT DR. CHERISE DUNN — WITH LIGHTBOX SLIDESHOW GALLERY -->
+<!-- 🌍 ABOUT DR. CHERISE DUNN — WITH STICKY "AT A GLANCE" + AUTO CAROUSEL + LIGHTBOX -->
 <!-- =============================== -->
-<section id="about" class="bg-off-white pt-28 pb-28 md:pt-36 md:pb-36 relative">
+<section id="about" class="bg-off-white pt-28 pb-28 md:pt-36 md:pb-36 relative overflow-hidden">
   <div class="section-divider"></div>
 
-  <!-- GRID WRAPPER -->
   <div class="container mx-auto px-6 grid md:grid-cols-3 gap-16 items-start">
 
-    <!-- LEFT SIDE: Main Biography (spans 2 cols) -->
+    <!-- 👩‍🔬 LEFT: MAIN BIOGRAPHY -->
     <div class="md:col-span-2 space-y-12 max-w-2xl" data-aos="fade-up" data-aos-duration="900">
 
       <!-- ✨ HEADLINE -->
       <div class="text-center mb-8">
         <h2 class="relative text-3xl md:text-4xl font-bold inline-block pb-3">
           Leading a New Model for Global Health Innovation
-          <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-[3px] 
-          bg-gradient-to-r from-crimson via-crimson/70 to-navy/60 rounded-full animate-pulse-slow"></span>
+          <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-[3px]
+            bg-gradient-to-r from-crimson via-crimson/70 to-navy/60 rounded-full animate-pulse-slow"></span>
         </h2>
         <p class="mt-6 text-lg text-navy/80 max-w-2xl mx-auto">
           Bridging science, strategy, and innovation to shape the future of global health.
         </p>
       </div>
 
-      <!-- 🧬 Biography -->
+      <!-- 🔹 BIOGRAPHY -->
       <p class="text-navy/80 text-[16px] leading-relaxed mb-8">
         Dr&nbsp;Cherise&nbsp;Dunn is redefining how innovation in health is imagined and implemented worldwide.  
         A <strong>Harvard and Oppenheimer Fellow</strong> with a background bridging <strong>biomedical science, public health, and strategy</strong>,  
@@ -465,16 +464,16 @@ section {
         and emerging ventures to translate breakthrough research into scalable, human-centered solutions that strengthen health systems worldwide.
       </p>
 
-      <!-- 🎓 Education -->
+      <!-- 🎓 EDUCATION -->
       <div class="space-y-3">
         <h3 class="text-xl font-semibold text-crimson">Education</h3>
         <p class="text-navy/80 leading-relaxed text-[15.5px]">
           Dr&nbsp;Dunn holds a <strong>PhD in Medical Biochemistry</strong> from the University of Cape Town and a 
-          <strong>Master of Public Health in Health Management</strong> from the Harvard&nbsp;T.H.&nbsp;Chan School of Public Health. 
+          <strong>Master of Public Health in Health Management</strong> from the Harvard&nbsp;T.H.&nbsp;Chan School of Public Health.
         </p>
       </div>
 
-      <!-- 🚀 Entrepreneurship -->
+      <!-- 🚀 ENTREPRENEURSHIP -->
       <div class="space-y-3">
         <h3 class="text-xl font-semibold text-crimson">Entrepreneurship</h3>
         <p class="text-navy/80 leading-relaxed text-[15.5px]">
@@ -486,35 +485,42 @@ section {
         </blockquote>
       </div>
 
-      <!-- 🌐 Global Policy -->
+      <!-- 🌐 GLOBAL POLICY -->
       <div class="space-y-3">
         <h3 class="text-xl font-semibold text-crimson">Global Policy &amp; Innovation Systems</h3>
         <p class="text-navy/80 leading-relaxed text-[15.5px]">
           At the intersection of technology and governance, Dr&nbsp;Dunn advises international organizations and governments 
-          on building inclusive innovation ecosystems that align technological advancement with public-health outcomes. 
+          on building inclusive innovation ecosystems that align technological advancement with public-health outcomes.
         </p>
       </div>
 
-      <!-- 📸 CAROUSEL -->
+      <!-- 📸 PHOTO GALLERY (AUTO CAROUSEL + LIGHTBOX) -->
       <div class="pt-16" data-aos="fade-up" data-aos-delay="400">
         <h3 class="text-xl font-semibold text-crimson text-center mb-8">
           In Focus: Leadership in Action
         </h3>
+
         <div class="relative overflow-hidden">
+          <!-- Fading edges -->
           <div class="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-off-white to-transparent z-10"></div>
           <div class="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-off-white to-transparent z-10"></div>
 
-          <div id="photo-carousel" class="flex items-center gap-8 animate-scroll-carousel hover:[animation-play-state:paused]">
-            <img src="./Images/Dr-Cherise-Dunn-1.jpg" alt="" class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover flex-shrink-0" />
-            <img src="./Images/Dr-Cherise-Dunn-2.jpg" alt="" class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover flex-shrink-0" />
-            <img src="./Images/Dr-Cherise-Dunn-3.jpg" alt="" class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover flex-shrink-0" />
+          <!-- Carousel Track -->
+          <div id="photo-carousel" class="flex items-center gap-8 animate-scroll-carousel hover:[animation-play-state:paused] cursor-pointer">
+            <img src="./Images/Dr-Cherise-Dunn-1.jpg" alt="Dr Dunn speaking at a conference"
+                 class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out" onclick="openLightbox(this.src)">
+            <img src="./Images/Dr-Cherise-Dunn-2.jpg" alt="Dr Dunn with leadership team"
+                 class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out" onclick="openLightbox(this.src)">
+            <img src="./Images/Dr-Cherise-Dunn-3.jpg" alt="Dr Dunn delivering a keynote address"
+                 class="rounded-2xl shadow-lg w-[280px] md:w-[360px] h-[260px] object-cover flex-shrink-0 hover:scale-[1.03] transition-transform duration-300 ease-out" onclick="openLightbox(this.src)">
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 🧭 RIGHT SIDE: AT A GLANCE -->
-    <aside class="bg-white border border-light-grey/40 p-6 md:p-8 rounded-xl shadow-lg max-w-sm mx-auto text-center md:sticky md:top-32" 
+    <!-- 🧭 RIGHT: STICKY AT A GLANCE -->
+    <aside class="bg-white border border-light-grey/40 p-6 md:p-8 rounded-xl shadow-lg max-w-sm mx-auto text-center 
+                 md:sticky md:top-28 self-start" 
            data-aos="fade-left" data-aos-delay="500">
       <h3 class="text-lg font-bold text-crimson mb-4 uppercase tracking-wide">At a Glance</h3>
       <p class="text-sm text-navy/80 mb-6 leading-relaxed">
@@ -525,16 +531,70 @@ section {
         <li><strong>Leadership:</strong> Chair of Operations, Harvard GSC · Co-Founder, South&nbsp;Africa&nbsp;Makes</li>
         <li><strong>Education:</strong> MPH, Harvard&nbsp;Chan&nbsp;School · PhD, UCT</li>
         <li><strong>Fellowships:</strong> Harvard&nbsp;SAF · Oppenheimer&nbsp;Memorial&nbsp;Trust</li>
-        <li><strong>Advisory:</strong> U.S.&nbsp;State&nbsp;Dept, African&nbsp;Union, G20&nbsp;Startup20</li>
+        <li><strong>Advisory:</strong> U.S.&nbsp;State&nbsp;Dept · African&nbsp;Union · G20&nbsp;Startup20</li>
         <li><strong>Expertise:</strong> Digital&nbsp;Health · Additive&nbsp;Manufacturing · Policy</li>
       </ul>
-      <a href="./assets/dr-cherise-dunn-cv.pdf" download class="mt-8 inline-block w-full text-center bg-crimson text-white px-4 py-3 rounded-lg font-semibold text-sm hover:bg-crimson-darker transition">
+      <a href="./assets/dr-cherise-dunn-cv.pdf" download
+         class="mt-8 inline-block w-full text-center bg-crimson text-white px-4 py-3 rounded-lg font-semibold text-sm hover:bg-crimson-darker transition">
         Download Full CV
       </a>
     </aside>
 
   </div>
 </section>
+
+<!-- ✨ ANIMATIONS + LIGHTBOX -->
+<style>
+  /* Auto-scrolling carousel */
+  @keyframes scroll-carousel {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-scroll-carousel {
+    display: flex;
+    width: max-content;
+    animation: scroll-carousel 40s linear infinite;
+    will-change: transform;
+  }
+  .animate-scroll-carousel:hover {
+    animation-play-state: paused;
+  }
+
+  /* Lightbox styles */
+  #lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  #lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 1rem;
+    box-shadow: 0 0 25px rgba(255,255,255,0.2);
+  }
+</style>
+
+<!-- Lightbox Script -->
+<script>
+  function openLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const img = lightbox.querySelector('img');
+    img.src = src;
+    lightbox.style.display = 'flex';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+</script>
+
+<!-- Lightbox HTML -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img src="" alt="Expanded photo of Dr Cherise Dunn">
+</div>
 
 <!-- =============================== -->
 <!-- 🧬 AREAS OF EXPERTISE -->
