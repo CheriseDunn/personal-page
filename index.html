@@ -66,76 +66,79 @@
     }
   </script>
 
-  <!-- =============================== -->
-  <!-- 🧩 GLOBAL CUSTOM CSS -->
-  <!-- =============================== -->
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
+<!-- =============================== -->
+<!-- 🧩 GLOBAL CUSTOM CSS -->
+<!-- =============================== -->
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+  }
 
-    /* 🎨 Hero background overlay */
-    .hero-bg {
-      background-image: linear-gradient(rgba(0, 33, 71, 0.85), rgba(0, 33, 71, 0.85)),
-        url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400');
-      background-size: cover;
-      background-position: center;
-    }
+  /* 🎨 Hero background overlay */
+  .hero-bg {
+    background-image: linear-gradient(rgba(0, 33, 71, 0.85), rgba(0, 33, 71, 0.85)),
+      url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400');
+    background-size: cover;
+    background-position: center;
+  }
 
-    /* 🌟 Timeline animation */
-    .timeline-item {
-      opacity: 0;
-      transform: translateY(60px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
+  /* 🌟 Timeline animation */
+  .timeline-item {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
 
-    .timeline-item.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .timeline-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-    /* 🧭 Timeline spacing & hover */
-    .timeline-item img {
-      transition: transform 0.3s ease;
-    }
+  /* 🧭 Timeline spacing & hover */
+  .timeline-item img {
+    transition: transform 0.3s ease;
+  }
 
-    .timeline-item:hover img {
-      transform: scale(1.05);
-    }
+  .timeline-item:hover img {
+    transform: scale(1.05);
+  }
 
-    /* ♻️ Smooth infinite logo carousel */
-    @keyframes scroll-slow {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+  /* ♻️ Smooth infinite logo carousel */
+  @keyframes scroll-slow {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
 
-    .animate-scroll-slow {
-      display: flex;
-      animation: scroll-slow 45s linear infinite;
-    }
+  .animate-scroll-slow {
+    display: flex;
+    animation: scroll-slow 45s linear infinite;
+  }
 
-    /* 🌈 Unified section divider (standardized across all sections) */
-.section-divider {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 8rem;
-  height: 3px;
-  border-radius: 9999px;
-  background: linear-gradient(
-    to right,
-    rgba(158, 27, 50, 0.6),   /* crimson core */
-    rgba(126, 20, 40, 0.4),   /* deeper crimson for gradient flow */
-    rgba(158, 27, 50, 0.6)
-  );
-  animation: pulse-slow 4s ease-in-out infinite;
-  opacity: 0.9;
-  box-shadow: 0 0 10px rgba(158, 27, 50, 0.25);
-}
-  
-    h2 { @apply text-crimson/90; }
-  </style>
+  /* 🌈 Unified section divider (standardized across all sections) */
+  .section-divider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8rem;
+    height: 3px;
+    border-radius: 9999px;
+    background: linear-gradient(
+      to right,
+      rgba(158, 27, 50, 0.6),   /* crimson core */
+      rgba(126, 20, 40, 0.4),   /* deeper crimson for gradient flow */
+      rgba(158, 27, 50, 0.6)
+    );
+    animation: pulse-slow 4s ease-in-out infinite;
+    opacity: 0.9;
+    box-shadow: 0 0 10px rgba(158, 27, 50, 0.25);
+  }
+
+  /* 🩸 Headings: Global Crimson Accent */
+  h2 {
+    color: rgb(158, 27, 50); /* #9E1B32 */
+  }
+</style>
 </head>
 
 <body class="bg-off-white text-navy">
