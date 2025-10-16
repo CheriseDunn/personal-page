@@ -1346,39 +1346,40 @@ ul.bullets li {
   font-size: 15px;
 }
   .logo-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.75rem; /* more breathing room */
+  align-items: center;
+}
 
+.logo-grid img {
+  height: auto;
+  width: auto;
+  max-height: 60px;        /* ⬆️ was 42px — better readability */
+  max-width: 160px;        /* ⬆️ was 120px — accommodates wide logos */
+  object-fit: contain;
+  padding: 8px;            /* adds balanced whitespace */
+  background: transparent;
+  filter: grayscale(100%) brightness(0.9);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.logo-grid img:hover {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
   .logo-grid img {
-    height: auto;
-    width: auto;
-    max-height: 42px;       /* ✅ uniform optical height */
-    max-width: 120px;       /* ✅ prevents wide logos from dominating */
-    object-fit: contain;
-    padding: 6px;           /* ✅ balances uneven whitespace */
-    background: transparent;
-    filter: grayscale(100%) brightness(0.9);
-    opacity: 0.75;
-    transition: all 0.3s ease;
+    max-height: 46px;
+    max-width: 120px;
+    padding: 6px;
   }
+}
 
-  .logo-grid img:hover {
-    filter: none;
-    opacity: 1;
-    transform: scale(1.05);
-  }
-
-  @media (max-width: 768px) {
-    .logo-grid img {
-      max-height: 34px;
-      max-width: 100px;
-      padding: 4px;
-    }
-  }
 </style>
 
 </body>
