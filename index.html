@@ -151,16 +151,20 @@
   }
 
   /* 🌍 Center and vertically balance the At a Glance card */
-  #about aside {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;   /* vertical centering */
-    align-items: center;       /* horizontal centering */
-    margin: 0 auto;
-    box-shadow: 0 8px 30px rgba(60, 60, 60, 0.08), 0 2px 8px rgba(158, 27, 50, 0.1);
-    border: 1px solid rgba(220, 220, 220, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+#about aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 0 8px 30px rgba(60, 60, 60, 0.08), 0 2px 8px rgba(158, 27, 50, 0.1);
+  border: 1px solid rgba(220, 220, 220, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: sticky;
+  top: 8rem;
+  align-self: start;
+}
+
 
   #about aside:hover {
     transform: translateY(-3px);
@@ -1190,5 +1194,78 @@ section {
   50% { opacity: 1; transform: translateX(-50%) scaleX(1.25);}
 }
 </style>
+  <!-- =============================== -->
+<!-- 🎠 PHOTO CAROUSEL BEHAVIOR + LIGHTBOX -->
+<!-- =============================== -->
+<style>
+  @keyframes scroll-carousel {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-scroll-carousel {
+    display: flex;
+    width: max-content;
+    animation: scroll-carousel 60s linear infinite;
+    will-change: transform;
+  }
+
+  /* 🕶️ Lightbox overlay */
+  #lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+  }
+
+  #lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  }
+
+  #lightbox:target {
+    display: flex;
+  }
+</style>
+
+<script>
+  // 🖼 Auto-scrolling duplicated carousel
+  document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.querySelector("#photo-carousel");
+    if (carousel && !carousel.dataset.cloned) {
+      const clone = carousel.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      carousel.parentNode.appendChild(clone);
+      carousel.dataset.cloned = "true";
+    }
+  });
+
+  // 💡 Lightbox open and close logic
+  function openLightbox(src) {
+    const lightbox = document.getElementById("lightbox");
+    const img = lightbox.querySelector("img");
+    img.src = src;
+    lightbox.style.display = "flex";
+  }
+
+  document.addEventListener("click", (e) => {
+    const lightbox = document.getElementById("lightbox");
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+    }
+  });
+</script>
+
+<!-- 🖼️ Lightbox HTML -->
+<div id="lightbox">
+  <img src="" alt="Expanded view of Dr. Cherise Dunn" />
+</div>
+
 </body>
 </html>
