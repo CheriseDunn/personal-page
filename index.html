@@ -1472,6 +1472,63 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<!-- 🌍 GLOBAL IMPACT LOGO ENHANCEMENT -->
+<style>
+/* 🧭 Logo grid layout */
+.logo-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+/* 🎨 Full-color logos with normalized sizing and soft shadows */
+.logo-grid img {
+  max-height: 70px;
+  max-width: 200px;
+  aspect-ratio: 3 / 1;          /* balances portrait/landscape logos */
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  opacity: 0;                   /* start hidden for fade-in */
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, 
+              box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* 🖱️ Hover emphasis */
+.logo-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ✨ Fade-in once visible */
+.logo-grid img.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 📱 Mobile refinement */
+@media (max-width: 768px) {
+  .logo-grid { gap: 1rem; }
+  .logo-grid img { max-height: 60px; max-width: 160px; }
+}
+</style>
+
+<script>
+/* 👁️ Fade logos in when scrolled into view */
+document.addEventListener("scroll", () => {
+  document.querySelectorAll(".logo-grid img").forEach(img => {
+    const rect = img.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 50) {
+      img.classList.add("visible");
+    }
+  });
+});
+</script>
+
   
 </body>
 </html>
