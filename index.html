@@ -1421,6 +1421,21 @@ ul.bullets li {
 }
 </style>
 
+<style>
+.domain-content {
+  display: none; /* hidden by default */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.domain-content.active {
+  display: block; /* 👈 overrides Tailwind's hidden */
+  max-height: 4000px;
+  opacity: 1;
+}
+</style>
   
 <script>
 document.addEventListener("DOMContentLoaded", () => {
