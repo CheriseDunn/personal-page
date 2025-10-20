@@ -1408,43 +1408,55 @@ ul.bullets li {
 /* ======================================== */
 /* 🎬 Collapsible Animation for Domain Blocks */
 /* ======================================== */
+<style>
 .domain-content {
   max-height: 0;
-  opacity: 0;
   overflow: hidden;
-  transition: max-height 0.6s ease, opacity 0.4s ease;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.4s ease;
 }
 
 .domain-content.active {
-  max-height: 3000px;
   opacity: 1;
 }
 </style>
+
   
 <script>
-document.querySelectorAll('.domain-toggle').forEach(button => {
-  button.addEventListener('click', () => {
-    const content = button.nextElementSibling;
-    const icon = button.querySelector('svg');
-    const isActive = content.classList.contains('active');
+document.addEventListener("DOMContentLoaded", () => {
+  const toggles = document.querySelectorAll(".domain-toggle");
 
-    // collapse all others
-    document.querySelectorAll('.domain-content').forEach(section => {
-      section.classList.remove('active');
-    });
-    document.querySelectorAll('.domain-toggle svg').forEach(i => {
-      i.style.transform = 'rotate(0deg)';
-    });
+  toggles.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const content = toggle.nextElementSibling;
+      const icon = toggle.querySelector("svg");
+      const isOpen = content.classList.contains("active");
 
-    // expand the clicked one
-    if (!isActive) {
-      content.classList.add('active');
-      icon.style.transform = 'rotate(180deg)';
-      setTimeout(() => content.scrollIntoView({ behavior: 'smooth', block: 'start' }), 250);
-    }
+      // Collapse all others
+      document.querySelectorAll(".domain-content").forEach((c) => {
+        c.style.maxHeight = null;
+        c.classList.remove("active");
+      });
+      document.querySelectorAll(".domain-toggle svg").forEach((i) => {
+        i.style.transform = "rotate(0deg)";
+      });
+
+      // Expand clicked one
+      if (!isOpen) {
+        content.classList.add("active");
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.style.transform = "rotate(180deg)";
+        setTimeout(() => content.scrollIntoView({ behavior: "smooth", block: "start" }), 250);
+      } else {
+        content.style.maxHeight = null;
+        content.classList.remove("active");
+        icon.style.transform = "rotate(0deg)";
+      }
+    });
   });
 });
 </script>
+
   
 </body>
 </html>
